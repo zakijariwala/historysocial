@@ -1,0 +1,6 @@
+# Render + pipeline dependencies. Everything else is the standard library.
+PyYAML>=6.0
+Jinja2>=3.1
+playwright>=1.40
+pypdfium2>=4.0       # PDF page-preserving text extraction (Phase 1)
+Pillow>=10.0         # duotone and halftone passes on cover images (Phase 3)

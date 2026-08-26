@@ -1,0 +1,21 @@
+# Sources stay local. They are never deployed and never committed.
+sources/*
+!sources/manifest.yaml
+!sources/README.md
+
+# Rendered output. PNGs are never committed.
+out/
+site/posts/
+site/index.json
+*.png
+*.zip
+
+# Scratch database for cover-variant work. Not truth.
+scratch.db
+scratch.db-wal
+scratch.db-shm
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
