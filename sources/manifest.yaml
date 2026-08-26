@@ -1,0 +1,479 @@
+# The register of every volume this pipeline is allowed to cite.
+#
+# sources/ is gitignored. This file is the only part of it that is committed,
+# because it is the only part that is not somebody else's text.
+#
+# HOW A FIELD BECOMES TRUE
+#   Fields marked TODO were not filled in by the machine ON PURPOSE. Nothing
+#   here may be inferred from a book's contents or from a model's memory. An
+#   edition statement and an ISBN are bibliographic facts; a wrong one turns
+#   every claim citing it into a false citation. Fill them from the copy in
+#   your hand.
+#
+#   tools/db.py verify REFUSES to mark a claim verified when its source_key
+#   points at a record whose `edition` still starts with "TODO".
+#
+# PAGINATION tells you what "p. 212" means for that volume:
+#   print-edition   the number printed in a typeset print edition
+#   ebook-reflowed  a number printed by an ebook conversion. Stable for this
+#                   file, meaningless to a reader holding the paper book.
+#   scan            page images, no reliable text layer
+#
+# LICENCE is recorded at registration, never assumed. `user-supplied` means
+# the operator asserts a legal copy or permission. Those volumes stay local:
+# they are never committed, never uploaded, never deployed to Pages.
+
+version: 1
+
+policy:
+  fetchable:
+    # tools/fetch_sources.py will only ever download from these.
+    - openiti            # Arabic editions, CC-BY-SA / public domain
+    - archive.org        # pre-1929 imprints only (de Goeje and the like)
+  never_fetch:
+    # In copyright. Register by hand from a copy you own.
+    - "SUNY / State University of New York: The History of al-Tabari"
+    - "Cambridge histories"
+    - "Modarressi, Crisis and Consolidation"
+    - "Pierce, Twelve Infallible Men"
+    - "Dakake, The Charismatic Community"
+    - "Oxford University Press: Guillaume, The Life of Muhammad"
+
+sources:
+
+  SRC-QAR-001:
+    text_key: qarashi-the-life-of-imam-musa-bin-jafar-al-kazim
+    file: qarashi--the-life-of-imam-musa-bin-jafar-al-kazim.pdf
+    title: The Life of Imam Musa bin Ja'far al-Kazim
+    author: Baqir Sharif al-Qarashi
+    translator: Jasim al-Rasheed
+    publisher: Ansariyan Publications, Qum
+    edition: "TODO: printing and year, from the copy in hand"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: detected
+    page_offset: 0          # printed number equals pdf page in this conversion
+    notes: >
+      The principal source on hand for the Musa b. Ja'far essay. This is an
+      alhassanain.org conversion; its page numbers are the conversion's own.
+      A claim citing it should be re-checked against the Ansariyan print
+      edition before it carries weight.
+
+  SRC-QAR-002:
+    text_key: qarashi-the-life-of-imam-mahdi-a-s
+    file: qarashi--the-life-of-imam-mahdi-a-s.pdf
+    title: The Life of Imam al-Mahdi
+    author: Baqir Sharif al-Qarashi
+    translator: "TODO"
+    publisher: Ansariyan Publications, Qum
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-IRS-001:
+    text_key: irshad-kitab-al-irshad-1
+    file: irshad--kitab-al-irshad-1.pdf
+    title: "Kitab al-Irshad, Part 1: the life of 'Ali b. Abi Talib"
+    author: Shaykh al-Mufid
+    translator: "TODO: this conversion does not name one"
+    publisher: alhassanain.org (conversion)
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: detected
+    page_offset: 0
+    notes: Part 1 only. Covers 'Ali, not the later Imams.
+
+  SRC-IRS-002:
+    text_key: irshad-kitab-al-irshad-part-1
+    file: irshad--kitab-al-irshad-part-1.pdf
+    title: "Kitab al-Irshad, Part I (section on Imam 'Ali)"
+    author: Shaykh al-Mufid
+    translator: "TODO"
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+    notes: A second conversion of the same part. Kept for cross-checking wording.
+
+  SRC-IRS-003:
+    text_key: irshad-howard-candidate
+    file: irshad-howard-candidate.pdf
+    title: "Kitab al-Irshad: the Book of Guidance into the Lives of the Twelve Imams"
+    author: Shaykh al-Mufid
+    translator: I. K. A. Howard
+    publisher: "TODO: Muhammadi Trust / Balagha, confirm from the copy"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: print-edition
+    page_map: detected
+    page_offset: 0
+    notes: >
+      The complete Howard translation, all twelve Imams, including the chapter
+      on Musa b. Ja'far. The strongest source on hand for Phase 8.
+
+  SRC-MUF-001:
+    text_key: al-mufid
+    file: al mufid.pdf
+    title: The Emendation of a Shi'ite Creed (Tashih al-I'tiqad)
+    author: Shaykh al-Mufid
+    translator: "TODO"
+    publisher: World Organization for Islamic Services
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-KAF-001:
+    text_key: kafi-alkafi-201601
+    file: kafi--alkafi-201601.pdf
+    title: "Al-Kafi, Volume 1 of 8"
+    author: Muhammad b. Ya'qub al-Kulayni
+    translator: "TODO"
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: print-edition
+    page_map: detected
+    page_offset: 0
+    notes: Hadith, not chronicle. Cite for doctrine and report, not for dates.
+
+  SRC-NHB-001:
+    text_key: nahjul-balagha-part-1-the-sermons
+    file: nahjul_balagha_part_1_-_the_sermons.pdf
+    title: "Nahj al-Balagha, Part 1: the sermons"
+    author: "'Ali b. Abi Talib (comp. al-Sharif al-Radi)"
+    translator: "TODO"
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-NHB-002:
+    text_key: nahjul-balagha-part-2-letters-and-sayings
+    file: nahjul_balagha_part_2_letters_and_sayings.pdf
+    title: "Nahj al-Balagha, Part 2: letters and sayings"
+    author: "'Ali b. Abi Talib (comp. al-Sharif al-Radi)"
+    translator: "TODO"
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-SAH-001:
+    text_key: as-sahifa-al-kamilah-al-sajjadiyya
+    file: as-sahifa_al-kamilah_al-sajjadiyya_.pdf
+    title: "As-Sahifa al-Kamilah al-Sajjadiyya (The Psalms of Islam)"
+    author: "'Ali Zayn al-'Abidin"
+    translator: "TODO: the copy credits a translator, confirm the name"
+    publisher: Muhammadi Trust of Great Britain and Northern Ireland
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-HUQ-001:
+    text_key: treatise-on-rights-risalat-al-huquq
+    file: treatise_on_rights_risalat_al-huquq.pdf
+    title: Treatise on Rights (Risalat al-Huquq)
+    author: "'Ali Zayn al-'Abidin"
+    translator: "TODO"
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-TUH-001:
+    text_key: tuhaf-al-uqul
+    file: tuhaf_al-uqul.pdf
+    title: "Tuhaf al-'Uqul (The Masterpieces of the Mind)"
+    author: Ibn Shu'ba al-Harrani
+    translator: "TODO"
+    publisher: Ansariyan Publications, Qum
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+    notes: Carries sayings attributed to Musa b. Ja'far. Report, not chronicle.
+
+  SRC-UYU-001:
+    text_key: uyun-akhbar-ar-ridha-volume-1
+    file: uyun_akhbar_ar-ridha_volume_1.pdf
+    title: "'Uyun Akhbar al-Rida, Volume 1"
+    author: Ibn Babawayh al-Saduq
+    translator: "TODO: the copy credits Peiravi and Morgan, confirm"
+    publisher: Ansariyan Publications, Qum
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+    notes: >
+      Matters for Phase 8: al-Rida's own reports bear on the Waqifa dispute
+      over his father's death.
+
+  SRC-UYU-002:
+    text_key: uyun-akhbar-ar-ridha-volume-2
+    file: uyun_akhbar_ar-ridha_volume_2.pdf
+    title: "'Uyun Akhbar al-Rida, Volume 2"
+    author: Ibn Babawayh al-Saduq
+    translator: "TODO"
+    publisher: Ansariyan Publications, Qum
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: partial
+    page_offset: 0
+
+  SRC-FRT-001:
+    text_key: fourteen-the-fourteen-infallibles
+    file: fourteen--the-fourteen-infallibles.pdf
+    title: The Fourteen Infallibles
+    author: Yasin T. al-Jibouri
+    translator: n/a
+    publisher: alhassanain.org
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: detected
+    page_offset: 0
+    notes: >
+      The file states its own typing errors are uncorrected. Tertiary. Use it
+      to find a lead, never as the cited authority for a date or a number.
+
+  SRC-FRT-002:
+    text_key: fourteen-nuqoosh-e-ismat-eng-trns-s-athar-h-sh-rizvi
+    file: fourteen--nuqoosh-e-ismat-eng-trns-s-athar-h-sh-rizvi.pdf
+    title: "Nuqoosh-e-Ismat: life sketches of the Fourteen Infallibles"
+    author: Sayyid Zeeshan Haider Jawadi
+    translator: S. Athar Husain S. H. Rizvi
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: "user-supplied (the file states: no rights reserved, quote with full reference)"
+    pagination: ebook-reflowed
+    page_map: detected
+    page_offset: 0
+
+  SRC-TAB-008:
+    text_key: tabari-tabarivolume08
+    file: tabari--tabarivolume08.pdf
+    title: "The History of al-Tabari, Volume VIII: The Victory of Islam"
+    author: Muhammad b. Jarir al-Tabari
+    translator: Michael Fishbein
+    publisher: State University of New York Press
+    edition: "TODO"
+    isbn: "TODO"
+    licence: "user-supplied (in copyright; local only, never redistributed)"
+    pagination: print-edition
+    page_map: detected
+    page_offset: 0
+    notes: >
+      Volume VIII covers Medina, A.H. 5-8. It says nothing about Musa b.
+      Ja'far. The volumes that do (XXIX-XXX, the reigns from al-Mansur to
+      al-Rashid) are NOT on hand. See `wanted` below.
+
+  SRC-TAB-040:
+    text_key: tabari-the-history-of-al-tabari
+    file: tabari--the-history-of-al-tabari.pdf
+    title: "The History of al-Tabari, Volume XL: Index"
+    author: "Alex V. Popovkin (comp.), ed. Everett K. Rowson"
+    translator: n/a
+    publisher: State University of New York Press
+    edition: "TODO"
+    isbn: "TODO"
+    licence: "user-supplied (in copyright; local only, never redistributed)"
+    pagination: print-edition
+    page_map: detected
+    page_offset: 0
+    role: index-only
+    notes: >
+      An index to the whole series, not a text of it. It can tell you WHICH
+      volume and page carries a name. It can never itself be the source of a
+      claim, because it contains no narrative. tools/db.py refuses to verify
+      a claim against a source whose role is index-only.
+
+  SRC-SIR-001:
+    text_key: sira-guillaume-guillaumeathelifeofmuhammad
+    file: sira-guillaume--guillaumeathelifeofmuhammad.pdf
+    title: "The Life of Muhammad: a translation of Ishaq's Sirat Rasul Allah"
+    author: Ibn Ishaq / Ibn Hisham
+    translator: A. Guillaume
+    publisher: Oxford University Press, Karachi
+    edition: "TODO"
+    isbn: "TODO"
+    licence: "user-supplied (in copyright; local only, never redistributed)"
+    pagination: print-edition
+    page_map: detected
+    page_offset: 0
+    notes: OCR of a print copy. Spot-check any quoted line against the page image.
+
+  SRC-SIR-002:
+    text_key: sira-guillaume-thelifeofmohammedguillaume
+    file: sira-guillaume--thelifeofmohammedguillaume.pdf
+    title: "The Life of Muhammad (scan, no text layer)"
+    author: Ibn Ishaq / Ibn Hisham
+    translator: A. Guillaume
+    publisher: Oxford University Press
+    edition: "TODO"
+    isbn: "TODO"
+    licence: "user-supplied (in copyright; local only, never redistributed)"
+    pagination: scan
+    page_map: none
+    usable: false
+    notes: >
+      432 pages, 431 characters of text. Image-only. Unsearchable without OCR,
+      and SRC-SIR-001 already carries the same translation with a text layer.
+      See BLOCKED.md.
+
+  SRC-SUB-001:
+    text_key: sira-subhani-the-message-201506
+    file: sira-subhani--the-message-201506.pdf
+    title: "The Message: the life of the Holy Prophet of Islam"
+    author: Ja'far Subhani
+    translator: "TODO"
+    publisher: "TODO"
+    edition: "TODO"
+    isbn: "TODO"
+    licence: user-supplied
+    pagination: ebook-reflowed
+    page_map: detected
+    page_offset: 0
+
+  # ---- fetched by tools/fetch_sources.py, open licence ----
+
+  SRC-TAB-AR:
+    text_key: openiti-tabari-tarikh-ara
+    file: openiti--tabari-tarikh-ara.txt
+    title: "Ta'rikh al-rusul wa'l-muluk (Arabic)"
+    author: Muhammad b. Jarir al-Tabari
+    translator: n/a
+    publisher: "Dar al-Turath"
+    edition: >-
+      Dar al-Turath printing in 11 volumes, as stated in the file's own #META#
+      header (الناشر: دار التراث); OpenITI corpus version
+      0310Tabari.Tarikh.Masaha001963Vols-ara1
+    isbn: n/a
+    licence: CC-BY-SA-4.0 (OpenITI corpus)
+    pagination: print-edition
+    page_map: read
+    page_offset: 0
+    notes: >
+      The only complete al-Tabari on hand, and the only source here whose
+      edition statement did not have to be guessed: the file names its own
+      publisher. Page numbers read as VOLUME:PAGE, so "8:271" is volume 8,
+      page 271. That is the page carrying the notice of Musa b. Ja'far's
+      death at Baghdad. Arabic only, so a claim taken from it needs somebody
+      who reads Arabic, or a cross-check against a translation.
+
+  SRC-DEG-001:
+    text_key: degoeje-tabari-annales-01
+    file: degoeje--tabari-annales-01.txt
+    title: "Annales, ed. M. J. de Goeje, series I (Leiden, Brill, 1879)"
+    author: Muhammad b. Jarir al-Tabari
+    translator: n/a
+    publisher: E. J. Brill, Leiden
+    edition: "Leiden 1879, de Goeje; archive.org item annalesquosscri01unkngoog"
+    isbn: n/a
+    licence: public domain (published before 1929)
+    pagination: scan
+    page_map: none
+    usable: false
+    notes: >
+      The OCR is unusable. Arabic type came back as Latin noise, so the file
+      cannot be searched and nothing in it can be cited. Kept only as evidence
+      that the fetch worked. See BLOCKED.md.
+
+  SRC-DEG-002:
+    text_key: degoeje-tabari-annales-02
+    file: degoeje--tabari-annales-02.txt
+    title: "Annales, ed. M. J. de Goeje, series II (Leiden, Brill, 1890)"
+    author: Muhammad b. Jarir al-Tabari
+    translator: n/a
+    publisher: E. J. Brill, Leiden
+    edition: "Leiden 1890, de Goeje; archive.org item annalesquosscri02goejgoog"
+    isbn: n/a
+    licence: public domain (published before 1929)
+    pagination: scan
+    page_map: none
+    usable: false
+    notes: Same unusable OCR as SRC-DEG-001.
+
+  SRC-YAQ-001:
+    text_key: wustenfeld-yaqut-mujam-01
+    file: wustenfeld--yaqut-mujam-01.txt
+    title: "Mu'jam al-buldan, ed. Wustenfeld, vol. I (Leipzig, 1866)"
+    author: Yaqut al-Hamawi
+    translator: n/a
+    publisher: F. A. Brockhaus, Leipzig
+    edition: "Leipzig 1866, Wustenfeld; archive.org item a-t_20210613"
+    isbn: n/a
+    licence: public domain (published before 1929)
+    pagination: scan
+    page_map: none
+    usable: false
+    notes: >
+      Unusable OCR, same failure as the de Goeje volumes. Distances between
+      towns still have to come from somewhere else. See NEEDS_CLAIMS.md.
+
+  SRC-YAQ-002:
+    text_key: wustenfeld-yaqut-mujam-02
+    file: wustenfeld--yaqut-mujam-02.txt
+    title: "Mu'jam al-buldan, ed. Wustenfeld, vol. II (Leipzig, 1867)"
+    author: Yaqut al-Hamawi
+    translator: n/a
+    publisher: F. A. Brockhaus, Leipzig
+    edition: "Leipzig 1867, Wustenfeld; archive.org item g-z_20210612"
+    isbn: n/a
+    licence: public domain (published before 1929)
+    pagination: scan
+    page_map: none
+    usable: false
+    notes: Unusable OCR, same failure as SRC-YAQ-001.
+
+# Registered but NOT on hand. Nothing may cite these until a file exists.
+wanted:
+  - key: SRC-TAB-029
+    title: "The History of al-Tabari, Volume XXIX: al-Mansur and al-Mahdi"
+    why: "The chronicle years that carry Musa b. Ja'far's first arrests"
+    how: "In copyright. Buy or borrow the SUNY volume and register it by hand."
+  - key: SRC-TAB-030
+    title: "The History of al-Tabari, Volume XXX: The 'Abbasid Caliphate in Equilibrium"
+    why: "Harun al-Rashid's reign, the years of the final custody and the death"
+    how: "In copyright. Buy or borrow the SUNY volume and register it by hand."
+  - key: SRC-TAB-AR
+    title: "Ta'rikh al-rusul wa'l-muluk, ed. de Goeje (Leiden, 1879-1901)"
+    why: "Public domain. The Arabic behind every SUNY volume."
+    how: "python tools/fetch_sources.py --list, then fetch the archive.org item"
+  - key: SRC-MOD-001
+    title: "Modarressi, Crisis and Consolidation in the Formative Period of Shi'ite Islam"
+    why: "The standing scholarly treatment of the Waqifa split"
+    how: "In copyright. Register by hand."
