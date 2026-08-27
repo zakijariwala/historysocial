@@ -40,16 +40,28 @@ def main() -> int:
     ap.add_argument("--db", default=str(ROOT / "claims.db"))
     ap.add_argument("--renders", default=str(OUT),
                     help="directory holding <post_id>/manifest.json")
+    ap.add_argument("--append", action="store_true",
+                    help="add to what site/ already holds instead of replacing it. "
+                         "Used to put the sample set beside the real posts for review.")
     a = ap.parse_args()
     OUT = Path(a.renders)
     conn = sqlite3.connect(a.db)
     conn.row_factory = sqlite3.Row
 
-    if POSTS.exists():
-        shutil.rmtree(POSTS)
+    index_path = SITE / "index.json"
+    if a.append and index_path.exists():
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+    else:
+        if POSTS.exists():
+            shutil.rmtree(POSTS)
+        index = {"posts": [], "generated_from": []}
     POSTS.mkdir(parents=True, exist_ok=True)
-
-    index = {"posts": [], "generated_from": "claims.db + out/"}
+    index.setdefault("posts", [])
+    sources = index.setdefault("generated_from", [])
+    if isinstance(sources, str):
+        sources = index["generated_from"] = [sources]
+    sources.append(f"{Path(a.db).name} + {Path(a.renders).name}/")
+    seen = {p["id"] for p in index["posts"]}
     for row in conn.execute("SELECT * FROM post ORDER BY id"):
         post_id = row["id"]
         rendered = OUT / post_id
@@ -74,6 +86,10 @@ def main() -> int:
                 zf.write(rendered / slide["png"], slide["png"])
             zf.write(manifest_path, "manifest.json")
 
+        if post_id in seen:
+            index["posts"] = [p for p in index["posts"] if p["id"] != post_id]
+        placeholders = sum(
+            slide["body"].count("[[NEEDS CLAIM:") for slide in manifest["slides"])
         index["posts"].append({
             "id": post_id,
             "title": row["cover_title"],
@@ -85,11 +101,13 @@ def main() -> int:
             "caption": row["caption"],
             "zip": f"posts/{post_id}/{post_id}.zip",
             "slides": slides,
+            "placeholders": placeholders,
             "rendered_at": manifest["rendered_at"],
             "renderer_version": manifest["renderer_version"],
         })
 
-    (SITE / "index.json").write_text(
+    index["posts"].sort(key=lambda p: (p["status"] != "ready", p["id"]))
+    index_path.write_text(
         json.dumps(index, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f'site/index.json: {len(index["posts"])} posts')
     for p in index["posts"]:

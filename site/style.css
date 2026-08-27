@@ -80,3 +80,10 @@ main { padding: 8px 20px 60px; }
 @media (prefers-color-scheme: dark) {
   :root { --ground: #14161a; --ink: #d8d4cd; --rule: rgba(216, 212, 205, 0.2); }
 }
+
+/* Drafts carry unfilled facts. Say so where nobody can miss it. */
+.warn {
+  border: 1px solid var(--rule); padding: 14px 16px; margin: 18px 0 4px;
+  font-size: 15px; line-height: 1.4; opacity: 0.85;
+}
+.gap { font-style: italic; }

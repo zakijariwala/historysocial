@@ -39,6 +39,11 @@ function renderLists() {
 
   document.getElementById('ready').innerHTML =
     ready.length ? ready.map(p => card(p)).join('') : '<p class="none">none ready.</p>';
+  document.getElementById('drafts').innerHTML = draft.length
+    ? '<p class="warn">Drafts. Every one of these still has gaps in the text where a '
+      + 'fact is waiting on a page number, shown as [[NEEDS CLAIM: …]]. They are here '
+      + 'to be looked at, not posted.</p>' + draft.map(p => card(p)).join('')
+    : '<p class="none">no drafts.</p>';
   document.getElementById('archive').innerHTML =
     posted.length ? posted.map(p => card(p)).join('') : '<p class="none">nothing posted yet.</p>';
 
@@ -51,7 +56,8 @@ function card(post, big) {
   return `
     <article class="card ${big ? 'big' : ''} ${post.mourning ? 'mourning' : ''}">
       <h3>${escapeHtml(post.title)}</h3>
-      <p class="meta">${post.pillar} · ${post.slide_count} slides · ${post.status}</p>
+      <p class="meta">${post.pillar} · ${post.slide_count} slides · ${post.status}${
+        post.placeholders ? ` · <span class="gap">${post.placeholders} gaps</span>` : ''}</p>
       <button class="button" data-post="${post.id}">review</button>
     </article>`;
 }
