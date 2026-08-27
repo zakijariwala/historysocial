@@ -194,3 +194,46 @@ synchronously inside the tap handler. Any await before the call and Safari
 refuses without throwing. The caption is therefore written into `index.json` in
 full, held on the button as a string, and copied with nothing between the tap
 and the write.
+
+## 19. The spelling-family regex silently dropped every word containing an `e`
+
+Found while writing the second batch of samples, by searching for `tongue` in a
+corpus that contains the word hundreds of times and getting no hits at all.
+
+`norm()` folds `e` to `i`, and decision 6 had removed `e` from the i-class to
+stop `Sindi` matching `Sending`. The two changes together meant that any query
+whose normal form contained an `i` derived from a printed `e` could never match
+its own source text. `Hunayf`, `tongue`, `Sending`: all silent failures, and a
+silent failure in a search tool is the worst kind, because the user concludes
+the corpus does not contain the thing.
+
+`e` is back in the i-class. What actually stops `Sindi` reaching `Sending` is
+the word-boundary anchors, which were added at the same time and are doing the
+work on their own.
+
+The general lesson is in the sample set: widening the range of what you test
+is how you find the bug that narrow testing hides. The first fifteen samples
+were all drawn from one cluster of material and never asked the searcher a
+question it could fail this way.
+
+## 20. Iron ink covers come out greyscale, and that is a design decision to make
+
+The duotone maps a cover image between the post's ink and the ground. For
+rust, indigo and olive that produces an obvious tint. For iron, which is
+#191B20, the two ends are near-black and near-paper, so the cover reads as an
+ordinary black and white photograph with none of the account's colour identity
+on it.
+
+Left as it is, on purpose, because it is a legitimate look and the choice
+belongs to the operator rather than to me. Three options, in order of how much
+they change:
+
+  1. Accept it. Iron becomes the account's black and white cover, used
+     deliberately for the posts that should feel documentary.
+  2. Lift the highlight for iron only, mapping to sand rather than paper, which
+     warms the whole image without touching the other four inks.
+  3. Drop iron from cover use and keep it for interior slides, where near-black
+     on paper is exactly right.
+
+sample-19 and sample-28 are the two iron covers in the sample set. Compare
+them with sample-01 (rust) and sample-24 (indigo) to judge.

@@ -1,0 +1,113 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: third MOURNING post, solid cover, 13 slides, a poem as the evidence.
+
+post:
+  id: sample-30-tus
+  pillar: collision
+  running_head: a greeting sent to a grave in khurasan
+  cover_title: the visitor who got up early
+  ink: bone
+  mourning: true
+  caption: 'A poem printed at the front of ''Uyun Akhbar al-Rida sends greetings
+    to a
+
+    master at Tus, carried by a visitor who rose early and walked like
+
+    lightning.
+
+
+    Somebody was making that journey often enough for a poet to write
+
+    instructions for it.
+
+    '
+claims:
+- subject: '''Ali b. Musa al-Rida'
+  assertion: a poem printed in 'Uyun Akhbar al-Rida addresses a visitor who got
+    up early and walked like lightning, and asks him to recite greetings to al-Rida,
+    who is at Tus
+  source: SRC-UYU-001
+  page: '13'
+- subject: Ibn Babawayh
+  assertion: the compiler names himself as Abu Ja'far Muhammad b. 'Ali b. Husayn
+    b. Musa b. Babwaih al-Qumi, a resident of Ray
+  source: SRC-UYU-001
+  page: '13'
+slides:
+- template: cover
+- template: question
+  body: What does a poem about a journey tell you that a chronicle does not?
+- template: body
+  body: 'The poem gives instructions to a courier. It addresses a visitor who got
+    up early, ran, and walked like lightning when it flashes, and it asks him to
+    recite the poet''s greetings to his master al-Rida, who is at Tus. The grammar
+    is practical throughout: an addressee, an errand, a destination, and a message
+    to deliver on arrival. Nobody writes a courier''s poem for a road nobody travels.'
+- template: body
+  body: Practical instructions imply a practice. Nobody writes a courier's poem
+    for a journey nobody makes, and nobody names a destination that the audience
+    cannot place. The poem assumes a road to Tus, travellers on it, and a shared
+    understanding of what a person does at the other end. All of that sits under
+    the verse without being argued for. The audience is expected to know where Tus
+    is and what a person does on arrival.
+- template: body
+  body: 'Tus is in Khurasan, hundreds of miles east of the Iraqi cities where most
+    of this account''s material was written. [[NEEDS CLAIM: the road distance from
+    Baghdad to Tus, and the source]]. That gap is the reason the poem exists: a
+    poet who could go himself would not need to send greetings with somebody else.
+    A poet who could ride there himself would not be handing his greetings to a
+    stranger.'
+- template: body
+  body: Distance also explains the compiler standing behind the page. Ibn Babawayh
+    names himself as Abu Ja'far Muhammad b. 'Ali b. Husayn b. Musa b. Babwaih al-Qumi,
+    a resident of Ray. Qum is his family's town, Ray is where he lives, and the
+    grave he is writing about is further east again. A book assembled across three
+    places for readers in all of them.
+- template: body
+  body: 'Mourning posts in this account run solid covers on a night ground, and
+    this is one of them. The reason is a rule about the calendar rather than about
+    the subject. [[NEEDS CLAIM: whether the wafat of al-Rida falls inside Muharram
+    and Safar or on the wafat list]]. The design does not decide when to mourn.
+    A published calendar does, and it is not filled in yet.'
+- template: body
+  body: What the poem preserves better than any chronicle is the traffic. A chronicle
+    records a death, a place, sometimes a cause. It has no field for the fact that
+    people kept arriving afterwards, year after year, in numbers large enough that
+    a poet could assume one of them would carry a message for him. A shrine with
+    a road attached is an economy before anybody calls it an institution.
+- template: body
+  body: 'Traffic is a political fact as well as a devotional one. Travellers on
+    a long road need lodging, guides, water and safe passage, and somebody profits
+    from providing all four. [[NEEDS CLAIM: what the sources say about the road
+    to Tus and the facilities on it in the third century AH]]. A shrine with a road
+    is an economy before anyone calls it an institution.'
+- template: body
+  body: The second thing the poem carries is a title. It calls him al-Rida, and
+    the book's first chapter opens by asking why that name attached to him. Poems
+    circulate faster than treatises, so a title in verse is evidence that the name
+    was in ordinary use, whatever the argument about its origin concluded. Verse
+    moves faster than a treatise, and it carries a title into places an argument
+    never reaches.
+- template: body
+  body: 'The poem''s own attribution needs establishing before any of that stands.
+    [[NEEDS CLAIM: the poet''s name and dates, from this edition]]. A verse by a
+    contemporary is a witness. A verse by somebody writing two centuries later is
+    evidence about the later period, which is a different carousel with a different
+    claim on the same page. A witness and a piece of later evidence are two different
+    things wearing the same words.'
+- template: body
+  body: Neither version is useless, and the difference decides the wording of every
+    slide above. This is why the manifest keeps a field for the edition and refuses
+    verification without it. A poem with no date is a sentence floating free, and
+    a sentence floating free can be made to support almost any argument somebody
+    wants from it. A sentence with no date attached can be made to support almost
+    anything somebody wants from it.
+- template: body
+  body: For a mourning post the restraint matters twice over. The subject is a death
+    and a grave, the audience is a community that marks both, and the temptation
+    to write past the evidence is strongest where the feeling runs highest. The
+    design goes quiet on those days. The prose should do the same thing. The design
+    goes quiet on those days, and the prose has to match it or the quiet means nothing.
+- template: closing
+  body: A poet who could not make the journey handed his greetings to somebody who
+    could, and that arrangement is the whole of what this page proves.

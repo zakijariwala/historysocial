@@ -1,0 +1,124 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: halftone cover, iron ink, 14 slides, pre-Islamic subject.
+
+post:
+  id: sample-19-two-stones
+  pillar: collision
+  running_head: what a chronicler does with a story he doubts
+  cover_title: isaf and naila
+  cover_image: met-453385
+  ink: iron
+  caption: 'Ibn Ishaq reports that ''A''isha heard Isaf and Na''ila were a man and
+    a
+
+    woman turned to stone for what they did in the Ka''ba. Then he writes: but
+
+    God alone knows if this is the truth.
+
+
+    Guillaume, page 38. A source marking its own uncertainty is the most
+
+    useful thing on a page.
+
+    '
+claims:
+- subject: Ibn Ishaq
+  assertion: 'reports on the authority of ''Amra that ''A''isha said they always
+    heard Isaf and Na''ila were a man and a woman of Jurham transformed into two
+    stones, followed by the words: but God alone knows if this is the truth'
+  source: SRC-SIR-001
+  page: '38'
+- subject: Ibn Ishaq
+  assertion: every household had an idol in the house, and a man rubbed himself
+    against it before setting out on a journey and on returning
+  source: SRC-SIR-001
+  page: '38'
+- subject: Ibn Ishaq
+  assertion: alongside the Ka'ba the Arabs had tawaghit, temples with guardians
+    and overseers, which they circumambulated and sacrificed at
+  source: SRC-SIR-001
+  page: '38'
+slides:
+- template: cover
+- template: question
+  body: How does a chronicler tell you he does not believe the story he has just
+    written down?
+- template: body
+  body: 'Ibn Ishaq gives the story with a chain attached. It runs through ''Amra
+    to ''A''isha, and what ''A''isha said is that they always heard Isaf and Na''ila
+    were a man and a woman of Jurham who copulated in the Ka''ba, and that God turned
+    them into two stones. Then Ibn Ishaq adds six words of his own: but God alone
+    knows if this is the truth. He does not cut the story and he does not endorse
+    it.'
+- template: body
+  body: That formula is a working tool rather than a piety. It marks a report as
+    carried rather than confirmed, and it does the marking in public, on the same
+    line, where no later copyist can drop it without leaving a hole. A modern historian
+    uses a footnote for that job. Ibn Ishaq had no footnotes, so the qualification
+    travels inside the sentence, and it has travelled with the sentence for thirteen
+    hundred years and through every hand that copied it.
+- template: body
+  body: 'Watch what it lets him do. The origin story for two named stones in the
+    sanctuary is material his readers already knew, and leaving it out would have
+    looked like concealment. Printing it flat would have committed him to it. The
+    formula gives him a third option: the story is in the record, the reader knows
+    where it came from, and the compiler''s own weight stays off it.'
+- template: body
+  body: Compare that with how the same page handles ordinary practice. Every household
+    had an idol in the house, Ibn Ishaq writes, and a man about to set out on a
+    journey would rub himself against it before riding off, and rub himself against
+    it again when he came back before going in to his family. No chain, no qualification,
+    no doubt marker. He is describing a custom he expects nobody to dispute.
+- template: body
+  body: The difference between those two passages is the whole method in one page.
+    A claim about a miracle in the deep past gets a chain and a disclaimer. A claim
+    about what people did before a journey gets neither, because everyone reading
+    in the second century still had grandparents who remembered doing it. Confidence
+    tracks how close the evidence sits to the writer.
+- template: body
+  body: '[[NEEDS CLAIM: whether Guillaume notes a variant or an alternative account
+    of Isaf and Na''ila]]. Guillaume''s apparatus matters here because the translation
+    on this shelf is OCR of a print copy, and the page numbers in the margin are
+    Ibn Hisham''s Arabic pagination rather than the English one. A citation to page
+    38 of an English translation is a citation to a particular printing.'
+- template: body
+  body: The tawaghit paragraph on the same page widens the picture. Alongside the
+    Ka'ba the Arabs had temples they venerated the way they venerated the Ka'ba,
+    with guardians and overseers, and they circumambulated them and sacrificed at
+    them. That is a description of a system with staff, revenue and procedure, and
+    it is set down in three lines with no argument attached.
+- template: body
+  body: 'Staff and revenue are the part a political historian reaches for. A sanctuary
+    with overseers is an institution, and an institution has an interest in the
+    arrangements that fund it. [[NEEDS CLAIM: what Ibn Ishaq says about who held
+    the guardianship of the Ka''ba, and where]]. The sira gives the pieces and declines
+    to assemble them, which is what leaves later readers so much room.'
+- template: body
+  body: 'One line on the page shows the pressure the account was written under.
+    When God sent Muhammad with the message of monotheism, Ibn Ishaq writes, Quraysh
+    said: would he make the gods into one God, that is a strange proceeding. The
+    objection is quoted in the objectors'' own voice, without a rebuttal following
+    it. A compiler confident of his case can afford to let the other side speak.'
+- template: body
+  body: A carousel can take one of two things from this page. Either the content,
+    which is the furniture of pre-Islamic Mecca, or the method, which is a writer
+    sorting his material by how far he will stand behind it. The second is the better
+    post, because it hands a reader a tool they can use on the next page and on
+    this account.
+- template: body
+  body: 'Using that tool here means saying which of these claims this account would
+    stand behind. The household idols, yes: reported flat, without a chain and without
+    a hedge, by a writer close enough to living memory that his readers could have
+    corrected him. The two stones, no: reported with a chain and a disclaimer by
+    the writer himself. This account has no business being more certain than Ibn
+    Ishaq was about his own material.'
+- template: body
+  body: '[[NEEDS CLAIM: whether al-Tabari''s Arabic carries the Isaf and Na''ila
+    report, and with what qualification]]. That check would show whether the disclaimer
+    travelled with the story or was attached once and dropped afterwards. A story
+    that gains certainty as it moves between books is a story to trust less at each
+    stop, not more, and the six words Ibn Ishaq added are the control that makes
+    the comparison possible.'
+- template: closing
+  body: The most valuable six words on that page are the ones where the writer steps
+    back from his own sentence, and every compiler after him kept them.

@@ -1,0 +1,158 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 20 slides, the maximum the linter allows.
+
+post:
+  id: sample-17-hisham
+  pillar: fact_panel
+  running_head: a prisoner's letter about the mind
+  cover_title: the commandment to hisham
+  cover_image: met-450735
+  ink: olive
+  caption: 'The longest thing attributed to Musa b. Ja''far is not about the caliphate.
+
+    It is a commandment addressed to Hisham b. al-Hakam about the mind, and
+
+    al-Harrani prints it at length in Tuhaf al-''Uqul.
+
+
+    Eighteen slides on what a man in custody chose to spend his words on.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: Tuhaf al-'Uqul opens its section of maxims attributed to Musa b. Ja'far
+    with a commandment addressed to Hisham b. al-Hakam on the mind
+  source: SRC-TUH-001
+  page: '124'
+- subject: Musa b. Ja'far
+  assertion: the commandment opens by citing Qur'an 39:17-18, on those who listen
+    to words and follow the best of them
+  source: SRC-TUH-001
+  page: '124'
+- subject: Musa b. Ja'far
+  assertion: al-Harrani's notes record that several of these sayings appear in different
+    wording in al-Kafi and in al-Khisal
+  source: SRC-TUH-001
+  page: '124'
+slides:
+- template: cover
+- template: question
+  body: What does a man under house arrest write about when he is free to write
+    about anything?
+- template: body
+  body: Al-Harrani opens the section of maxims attributed to Musa b. Ja'far with
+    a letter rather than a saying. It is addressed to Hisham b. al-Hakam and its
+    subject is the mind. Not the succession, not the caliphs, not the men holding
+    him. The compiler had a choice about what to lead with, and he led with a piece
+    of argument about how a person reasons.
+- template: body
+  body: The opening move is a citation. God gives good news to those who listen
+    to words and follow the best of them, and the letter quotes it before it says
+    anything of its own. Starting on somebody else's authority is a choice about
+    how to be read. The writer is placing his argument inside a text his correspondent
+    already accepts.
+- template: body
+  body: 'Hisham b. al-Hakam is the reason the letter has the shape it has. [[NEEDS
+    CLAIM: who Hisham b. al-Hakam was and what he was known for arguing]]. A letter
+    about the mind addressed to a man known for disputation is not a devotional
+    exercise written for a household. It is a contribution to an argument that already
+    had participants, positions, opponents and a technical vocabulary, and the letter
+    assumes all of that without stopping to explain any of it to a stranger.'
+- template: body
+  body: 'The letter''s claim is that God submitted his arguments to people through
+    minds, and led them to his godhead through the same instrument. [[NEEDS CLAIM:
+    the full wording of that passage in the Ansariyan translation, Tuhaf p. 124]].
+    Set out in flat terms, that is a position about where authority sits. Reason
+    in it is no rival to revelation. Reason is the channel revelation arrives through,
+    which makes an attack on reasoning an attack on the delivery of the message.'
+- template: body
+  body: 'Positions like that had opponents in the same decades, and the letter reads
+    one way against one opponent and another way against a different one. [[NEEDS
+    CLAIM: which schools disputed the role of reason in the second century AH, and
+    the source]]. This shelf holds the letter and not the argument it belonged to.
+    That is the standard problem with a book of maxims: it keeps the answers and
+    throws away the questions they were answers to.'
+- template: body
+  body: Al-Harrani's own notes are the most useful thing on the page. He records
+    that some of these sayings appear in different wording in al-Kafi, others in
+    al-Khisal, and he prints the rival readings beside his own. That is unusual.
+    A compiler who shows you a competing version of his own text is telling you
+    where the text is soft, and inviting the comparison a modern reader would have
+    to make anyway.
+- template: body
+  body: One of his notes shows the size of the problem. Where his copy has a man
+    who corrects his evildoing by repentance, he records that al-Kafi has a man
+    who corrects his guilt by repentance. One noun. That noun is the whole distance
+    between an act and a state, between what a man did and what a man is, and a
+    reader building anything on either word ought to know that the other one is
+    sitting in a second manuscript a shelf away.
+- template: body
+  body: 'Another note reports a saying about the Divine Throne quivering for those
+    who answer a question with the words God is the most knowledgeable. [[NEEDS
+    CLAIM: the al-Kafi reference for that variant, from al-Harrani''s note]]. Both
+    versions praise the same refusal. Only one of them attaches a cosmic response
+    to it, and that difference is worth a slide of its own.'
+- template: body
+  body: Variants of that size accumulate into a real question about the genre. A
+    book of maxims is assembled out of circulating material, and material circulates
+    by being repeated from memory. Repetition edits. Nouns soften, clauses drop,
+    a striking image attaches itself to a more famous name. The wonder is not that
+    al-Harrani's copy differs from al-Kulayni's. It is that a compiler in that position
+    bothered to write both readings down where a reader could see them.
+- template: body
+  body: 'Now put the letter back beside the biography. Al-Mufid''s chapter on the
+    same man is a case file: dates, custodians, a public viewing, a burial, a list
+    of thirty-seven children with their mothers marked. Al-Harrani''s chapter is
+    a body of argument with no dates in it anywhere. Two compilers, one subject,
+    almost no overlap in what either thought worth keeping, and both of them working
+    inside the same tradition within a century of each other.'
+- template: body
+  body: That divergence is no contradiction and should not be reported as one. A
+    hadith collection and a biographical notice answer different questions, and
+    the community that produced both saw no tension in doing so. A reader who wants
+    the man rather than the office has to hold the two books open at once and accept
+    that neither was written to satisfy the curiosity of somebody reading a thousand
+    years later.
+- template: body
+  body: 'The custody hangs over the letter without appearing in it. [[NEEDS CLAIM:
+    whether Tuhaf al-''Uqul dates the commandment to Hisham, or places it in the
+    custody]]. If the letter belongs to the years of detention, the choice of subject
+    is remarkable. If it belongs to the years before, it is another document, and
+    the sources on this shelf do not say which.'
+- template: body
+  body: Dating a saying is harder than dating a death, which is why so few of these
+    collections attempt it. A chronicle attaches an event to a year because the
+    year is its organising principle and the entry has nowhere else to go. A maxim
+    collection attaches a saying to a speaker. The speaker supplies a range of forty
+    years, and forty years covers a man's youth, his succession, his arrests and
+    the prison, which are four different situations to write from.
+- template: body
+  body: For this account the consequence is a rule about pillars, and it is worth
+    stating as a rule rather than as a preference. A saying can carry a fact_panel,
+    or a collision post about ideas, because both of those run on argument. A saying
+    cannot carry a date_pair, a calendar or a number card, because all three of
+    those need a date, and a saying does not have one to give.
+- template: body
+  body: A second rule sits next to the first one. Where a maxim collection and a
+    chronicle disagree about a fact, the chronicle wins on chronology and the collection
+    wins on wording, because each of them is closer to the thing it was built to
+    preserve. Neither wins outright. A slide that hides the split and reports one
+    of them as settled has stopped doing history and started doing publicity for
+    a tradition.
+- template: body
+  body: Walking backwards is the whole method this account runs on. Find the sentence
+    in the edition on the shelf. Note the printed page. Then ask which earlier book
+    the editor took it from, whether that book survives, and whether anyone has
+    collated the two. Most claims fail somewhere in that walk, and the second step
+    is where. The few that survive all of it are the ones worth building a carousel
+    around.
+- template: body
+  body: 'The commandment to Hisham survives the first two steps. It is printed,
+    the page is fixed, the compiler names his variants, and the variants point at
+    two other collections that also survive. [[NEEDS CLAIM: whether al-Kafi carries
+    the commandment to Hisham in full or in part]]. That is a stronger position
+    than most of what a carousel about this man could stand on.'
+- template: closing
+  body: The state took his years, his household and at the end his life, and the
+    text his own tradition chose to keep at greatest length is a letter arguing
+    that a person should think.

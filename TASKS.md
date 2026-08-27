@@ -77,13 +77,27 @@ fill in the editions, verify claim rows, and deploy.
 - [x] Three cover variants in `scratch.db`: manuscript folio duotone, tilework
       duotone, solid (`out/scratch/`)
 
-## Phase 9 - fifteen samples
+## Phase 9 - first fifteen samples
 
 - [x] 15 carousels across six pillars, both cover passes, five inks, two
       mourning posts, image and solid covers
 - [x] Every sample passes every Phase 5 prose rule; only placeholder findings
       remain
 - [x] `out/SAMPLES.md`
+
+## Phase 10 - fifteen more samples, wider range
+
+- [x] Sources widened past the Musa material: Risalat al-Huquq, Tuhaf al-'Uqul,
+      Tabari volume VIII, Ibn Ishaq via Guillaume, Subhani, Nahj al-Balagha
+      commentary, al-Qarashi on the twelfth Imam, 'Uyun Akhbar al-Rida
+- [x] Slide counts at both ends: two posts at 20 (the maximum), several at 12
+      (the minimum), 13 to 18 in between
+- [x] Cover titles at both ends: two words, and seven, which is the limit
+- [x] Three mourning posts in the set, two of them long
+- [x] All eleven approved bank images used at least once across the thirty
+- [x] Found and fixed a real bug in the process: the spelling-family regex
+      dropped `e` from the i-class, so any query containing an `e` matched
+      nothing. `tongue` returned no hits in a corpus full of tongues.
 
 ## Yours, in order
 

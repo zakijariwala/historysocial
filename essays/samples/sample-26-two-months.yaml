@@ -1,0 +1,146 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 20 slides, MOURNING tokens, the longest running head in the set.
+
+post:
+  id: sample-26-two-months
+  pillar: calendar
+  running_head: sixty days a year when the design changes and nobody is asked
+  cover_title: muharram to safar
+  ink: bone
+  mourning: true
+  caption: 'From Muharram 1 to Safar 30 this account changes its own design: solid
+
+    covers, a night ground, bone ink, no ornament. Sixty days out of every
+
+    lunar year, decided by a calendar the pipeline is not allowed to guess at.
+
+    '
+claims:
+- subject: the mourning window
+  assertion: 'the design tokens for the mourning period are ground #14161A, ink
+    #C9C6C1, solid cover, no ornament'
+  source: SRC-IRS-003
+  page: '407'
+- subject: Musa b. Ja'far
+  assertion: al-Mufid dates the death to 6 Rajab 183, which falls outside the two
+    month window and inside the wafat list
+  hijri: 183
+  source: SRC-IRS-003
+  page: '407'
+slides:
+- template: cover
+- template: question
+  body: Who decides which sixty days a publication looks different, and what happens
+    when the machine gets it wrong?
+- template: body
+  body: The window is fixed and needs nobody's confirmation. Muharram 1 to Safar
+    30, two lunar months, about fifty-nine days. Inside it every cover in this account
+    goes solid, the ground drops to near black, the ink lifts to bone, and the ornament
+    comes off. Outside it the covers carry duotoned images and the ground is paper.
+    One boundary, two designs, no middle setting.
+- template: body
+  body: A design that changes on a date is a promise to a reader. It says the account
+    knows what season it is, and that somebody is paying attention on a morning
+    when a cheerful image would land wrong. Getting it right is unremarkable. Getting
+    it wrong once undoes the promise for every reader who noticed, and the ones
+    who noticed are the ones who cared.
+- template: body
+  body: 'So the question becomes mechanical. What decides the date, and what is
+    the machine allowed to do with it? The answer in this repository is narrow on
+    purpose: a tool converts a Gregorian date to a Hijri date by arithmetic, reports
+    both, and stops. It never flips a token. It never writes to the database. It
+    advises, and a person acts.'
+- template: body
+  body: The arithmetic it uses is the tabular Islamic calendar, a fixed cycle that
+    assigns each year a pattern of long and short months. It is exact, reproducible
+    and independent of the sky. It is also not the calendar anybody keeps Muharram
+    by, because that one is set by sighting the moon, and sighting depends on weather,
+    latitude and a judgement.
+- template: body
+  body: The two can differ by a day, and now and then by two. That is small arithmetic
+    and a large editorial problem, because the difference lands on the boundary
+    where the design changes. A day early and the account is in mourning while everyone
+    else is not. A day late and it publishes an ornamented cover on the first morning
+    of Muharram. Weather decides it, and weather is local.
+- template: body
+  body: 'The tool therefore does something unusual for a piece of software: near
+    a boundary it refuses to answer. It prints the tabular date, says a sighted
+    calendar can differ, and tells the operator to check the published calendar
+    before posting. A program that declines to decide is a program whose author
+    knew which errors were expensive. The reference is published, dated and public,
+    which is what makes it usable at all. Expensive errors deserve a program that
+    stops.'
+- template: body
+  body: 'Sistani''s published calendar is the reference this account follows, and
+    the wafat dates come from it. [[NEEDS CLAIM: the wafat dates as published in
+    Sistani''s calendar, month and day]]. The file holding them lists twelve entries
+    and every one of them still says TODO, so the mourning check today covers the
+    two month window and nothing else. An empty list that announces itself is safe.'
+- template: body
+  body: The tool reports that gap every time it runs. Twelve wafat dates are still
+    TODO, it says, so this answer covers Muharram and Safar only. An empty list
+    that stays quiet would let a wafat date pass with the ordinary design on it,
+    and nobody would find out until a reader wrote in. A wafat date that slips past
+    with an ornamented cover on it is the one failure this design cannot apologise
+    its way out of.
+- template: body
+  body: Filling those twelve entries is a religious determination and not a research
+    task, which is why no part of this pipeline attempts it. A model guessing a
+    wafat date from memory would be inventing a fact of the kind this whole system
+    exists to prevent, and it would be inventing it about something people mark
+    by fasting. Rajab sits outside the window and inside the list.
+- template: body
+  body: 'The same reasoning governs the death this account keeps returning to. Al-Mufid
+    dates it to the sixth of Rajab in 183. Rajab is not Muharram and is not Safar,
+    so that day falls outside the two month window and belongs on the wafat list
+    instead. [[NEEDS CLAIM: whether 6 Rajab appears on Sistani''s published wafat
+    list]]. Bookkeeping decides what a reader sees on the morning it matters.'
+- template: body
+  body: Notice how much of a calendar post is bookkeeping rather than history. Which
+    day, on whose authority, in which of two calendars, checked against which published
+    list. None of that is interesting to read and all of it decides what a reader
+    sees. The interesting part sits on top of it and cannot stand without it. A
+    season is not an anniversary.
+- template: body
+  body: 'Here is the interesting part. A community that keeps sixty days of mourning
+    every year is keeping a season, not an anniversary. Seasons change what a whole
+    society does: markets, weddings, music, the colour people wear. An account that
+    publishes into that season and ignores it is speaking over the top of its readers.
+    A dark ground says the account noticed, and says nothing else.'
+- template: body
+  body: The design response can go two ways and this one takes the quieter route.
+    A dark ground and a bone ink is a change anyone notices at a glance in a feed.
+    It carries no image, no ornament and no argument about how anybody should feel.
+    The account keeps publishing evidence, and it does so on a different sheet of
+    paper. Three reasons, one outcome.
+- template: body
+  body: 'Solid covers in that window are correct rather than a fallback. The same
+    rule applies to number posts and to anything whose cover image lacks a clean
+    licence. Three different reasons, one design outcome, and the renderer treats
+    all three the same way: no image, an ink block, a title, a fixed sub-line. The
+    renderer treats a missing licence and a mourning morning the same way, which
+    is the point of having tokens at all.'
+- template: body
+  body: The linter enforces the mourning rules rather than trusting a writer to
+    remember them. A mourning post carrying a cover image fails. A mourning post
+    whose tokens are not the greyscale pair raises a warning with the values printed.
+    Neither check is clever. Both catch the mistake a person makes at one in the
+    morning while queueing a post. Both of those checks exist because a writer at
+    one in the morning is the weakest part of the system.
+- template: body
+  body: 'Which leaves one gap, and it is worth naming rather than papering over.
+    The tool tells you today''s status when you run it. Nothing runs it for you.
+    [[NEEDS CLAIM: whether the render workflow should check the mourning window
+    and fail a non-mourning post inside it]]. That is a design decision the operator
+    should make awake. A habit is a person remembering; a gate is a build that stops.'
+- template: body
+  body: A reasonable version of that check is easy to describe and left unimplemented
+    on purpose. The workflow calls the mourning tool, and if the window is open
+    while a post marked ready has mourning set to zero, it stops the build and prints
+    both dates. Workable is not finished, and the difference is written down here
+    rather than hidden. The unfilled list is the largest single gap in the repository,
+    and it takes ten minutes with a published calendar to close.
+- template: closing
+  body: The account changes what it looks like for sixty days a year on the authority
+    of a calendar no machine here is allowed to compute, and that restriction is
+    the most deliberate line in the repository.

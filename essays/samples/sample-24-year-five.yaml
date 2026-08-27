@@ -1,0 +1,133 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 18 slides, date_pair pillar on a chronicle that counts by years.
+
+post:
+  id: sample-24-year-five
+  pillar: date_pair
+  running_head: a chronicle that files a siege under a year
+  cover_title: the events of the year five
+  cover_image: met-449537
+  ink: indigo
+  caption: 'Fishbein''s volume VIII prints a running head across its pages: The
+    Events
+
+    of the Year 5. Everything inside that heading happened, as far as the
+
+    chronicle is concerned, in one unit of time.
+
+
+    What a chronicle can date, and what it cannot, decides what a carousel
+
+    can claim.
+
+    '
+claims:
+- subject: al-Tabari
+  assertion: volume VIII of the translation carries the running head The Events
+    of the Year 5 across the pages narrating the siege and the Banu Qurayza
+  source: SRC-TAB-008
+  page: '15'
+- subject: Ka'b b. Asad
+  assertion: Huyayy named Dhanab Naqama beside Uhud as the camp of Quraysh and Ghatafan,
+    and Ka'b broke his treaty after Huyayy swore to share his fate
+  source: SRC-TAB-008
+  page: '15'
+slides:
+- template: cover
+- template: question
+  body: What can a reader date to a day, and what can a reader only date to a year?
+- template: body
+  body: 'Open Fishbein''s volume at the siege and the running head answers before
+    the text does. The Events of the Year 5. Everything under that heading sits
+    in one bin. A conversation in a fortress, a coalition camped beside Uhud, a
+    treaty broken, an outcome: the chronicle gives all of it a single temporal address,
+    and the address is a year rather than a month or a morning.'
+- template: body
+  body: Annalistic form is a decision about storage, and storage decides retrieval.
+    A compiler working year by year can tell you which events belong to the same
+    twelve months, which is useful, and cannot tell you the order of two events
+    inside those months unless he says so. Most of the time he does not say so,
+    because his own sources did not. Order inside the bin is the reader's problem.
+- template: body
+  body: 'That limitation reaches the slide itself. A carousel can state that the
+    conversation between Huyayy b. Akhtab and Ka''b b. Asad falls in the year 5
+    on al-Tabari''s arrangement. It cannot state the month without a source saying
+    so. [[NEEDS CLAIM: whether volume VIII gives a month for the siege or for the
+    Qurayza episode]]. The year heading is the finest resolution the chronicle offers.'
+- template: body
+  body: Compare the other end of this account's material. Al-Kulayni dates the summons
+    of Musa b. Ja'far out of Medina to the twentieth of Shawwal in 179, a day inside
+    a month inside a year, and that precision is what makes a date_pair post possible
+    at all. One tradition preserved an administrative note. The other preserved
+    a year heading. Al-Kulayni had a note from a registry; al-Tabari had a year
+    and a list.
+- template: body
+  body: 'Neither is more honest than the other. They are answering different questions
+    with different material, and a reader who treats a year heading as vagueness
+    has misread the genre. The heading is a claim: these things belong together
+    in time. Given how much of the record for that decade is unanchored, that is
+    a substantial claim rather than a hedge.'
+- template: body
+  body: 'The claim can be tested, which is the useful part. If a second chronicle
+    files the same events under the year 5, the two agree on grouping. If one files
+    them under 4 or 6, the disagreement is visible at once and can be reported on
+    a slide. [[NEEDS CLAIM: which year Ibn Ishaq via Guillaume assigns to the siege
+    and to the Qurayza episode]].'
+- template: body
+  body: 'Both books sit on this shelf, so that check costs one afternoon and produces
+    a real result either way. Agreement gives a carousel two independent witnesses
+    to a grouping. Disagreement gives a better carousel: two chronicles, two years,
+    and a reader watching a tradition sort itself out in front of them. Two books,
+    one shelf, one afternoon, and a result either way.'
+- template: body
+  body: 'The year itself needs converting before a modern reader can place it, and
+    conversion is its own trap. A hijri year overlaps two Gregorian years, so a
+    single AH date maps to a range and not to a point. [[NEEDS CLAIM: the Gregorian
+    span of AH 5, and the source used for the conversion]]. A year that maps to
+    a range cannot be printed as a point without inventing the difference. Six hundred
+    years earlier, the caution grows.'
+- template: body
+  body: This repository has a tool that does that conversion and refuses to be trusted
+    about it. It reports a tabular Hijri date, states that a sighted calendar can
+    differ by a day, and near a boundary tells the operator to check a published
+    calendar instead. The same caution applies to a year six hundred years earlier,
+    with more force rather than less.
+- template: body
+  body: 'Named places are the other anchor a date_pair post can lean on. Dhanab
+    Naqama beside Uhud is a specific camp beside a specific hill, and Uhud is a
+    landmark that has not moved. A reader can stand there. [[NEEDS CLAIM: what Fishbein''s
+    note says about the location of Dhanab Naqama]]. Uhud has not moved, and a reader
+    can stand on it.'
+- template: body
+  body: Place and year together give a carousel its two coordinates, and the pair
+    is stronger than either alone. The year 5, beside Uhud, in the fortress of a
+    named clan, with two named men talking. Nothing in that sentence requires a
+    month, and a reader who wants a month has learned something about the record
+    rather than about the event. Fifteen is a printing, not a text.
+- template: body
+  body: 'The volume also has to be registered before any of this can be verified.
+    [[NEEDS CLAIM: the edition statement and ISBN of the SUNY volume VIII on this
+    shelf]]. The manifest names Michael Fishbein as translator and State University
+    of New York Press as publisher, and leaves the edition as TODO, which blocks
+    verification by design. Registration is four lines copied off a title page,
+    and it blocks everything until somebody copies them.'
+- template: body
+  body: 'Registration matters more for a translation than for an original. Page
+    15 of Fishbein is not page 15 of anything else, and a claim citing it names
+    a printing rather than a text. The Arabic pagination in the margin is the durable
+    address. [[NEEDS CLAIM: the de Goeje page numbers printed in the margins of
+    volume VIII at this passage]].'
+- template: body
+  body: Those marginal numbers are the reason the OpenITI Arabic text matters even
+    to a reader who works in English. If a slide cites de Goeje's page alongside
+    Fishbein's, any reader with either book can find the sentence. That is what
+    a citation is for, and it costs nothing but the discipline of copying two numbers
+    instead of one. Copy both numbers.
+- template: body
+  body: 'A date_pair post is not always two dates. Sometimes it is a date and the
+    shape of a date: a year on one side, a day on the other, and an honest account
+    of why the two sides of the pair are made of different material. That is a harder
+    slide to write and a more useful one to read.'
+- template: closing
+  body: The chronicle knows which year the treaty broke in and does not know which
+    morning, and a carousel that supplies the morning has stopped quoting it.

@@ -1,0 +1,103 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 12 slides (minimum), a chapter title used as the whole subject.
+
+post:
+  id: sample-25-why-rida
+  pillar: fact_panel
+  running_head: a chapter that exists to answer one objection
+  cover_title: why they call him al-rida
+  cover_image: met-452102
+  ink: olive
+  caption: 'Ibn Babawayh opens ''Uyun Akhbar al-Rida with a chapter whose title
+    is a
+
+    question: why is ''Ali b. Musa called al-Rida. A compiler who opens with
+
+    that question is answering somebody.
+
+    '
+claims:
+- subject: '''Ali b. Musa al-Rida'
+  assertion: the first chapter of 'Uyun Akhbar al-Rida is headed with the question
+    why 'Ali b. Musa is called al-Rida
+  source: SRC-UYU-001
+  page: '13'
+- subject: Ibn Babawayh
+  assertion: the author names himself as Abu Ja'far Muhammad b. 'Ali b. Husayn b.
+    Musa b. Babwaih al-Qumi, a resident of Ray
+  source: SRC-UYU-001
+  page: '13'
+slides:
+- template: cover
+- template: question
+  body: Why would a book open by explaining a name its readers already use every
+    day?
+- template: body
+  body: 'Ibn Babawayh gives his first chapter a question for a title: why is ''Ali
+    b. Musa called al-Rida. Chapter one, before the biography, before the reports,
+    before anything else. A compiler who spends his opening on a name is not filling
+    space. He is answering an objection loud enough that his readers would have
+    met it before they met his book.'
+- template: body
+  body: The objection appears a few pages earlier in the same volume, phrased as
+    opponents think. They say al-Ma'mun called him al-Rida, meaning acceptable or
+    liked, and the name therefore records a caliph's approval rather than anything
+    else. Put that way, the title becomes a piece of Abbasid patronage attached
+    to a man the tradition venerates. The name arrives attached to a caliph's decision,
+    and that is the whole objection. Chapter one, before anything else.
+- template: body
+  body: 'That is a sharp attack because it uses the tradition''s own material. The
+    caliph did raise ''Ali b. Musa up, and the elevation is not in dispute anywhere.
+    [[NEEDS CLAIM: what al-Ma''mun''s arrangement with ''Ali b. Musa consisted of,
+    and the year]]. A name that arrives with an appointment looks like part of the
+    appointment. Elevation is not in dispute; what the name records is. The name
+    would then be a gift. Read that way, the title is an Abbasid label, and chapter
+    one exists to take it back.'
+- template: body
+  body: 'Ibn Babawayh answers with a chain rather than an argument, and the choice
+    of instrument is the interesting part. The chapter opens on a list of transmitters:
+    his father, then Muhammad b. Musa b. al-Mutawakkil, then Muhammad b. ''Ali b.
+    Majiluwayh, then Ahmad b. ''Ali b. Ibrahim b. Hashim, and more after them. The
+    reply to a claim about politics is a list of names.'
+- template: body
+  body: 'That move only works on a reader who already accepts what a chain is for.
+    A chain says: this report reached me through these men, weigh it by them. A
+    reader outside the tradition has no way to weigh those men without a biographical
+    dictionary, and the dictionaries are themselves works of the tradition. The
+    argument is closed to a stranger without help.'
+- template: body
+  body: 'Supplying that help is the job this account takes on, and the way to do
+    it is not to assert that the chain is sound. [[NEEDS CLAIM: how the rijal literature
+    grades the transmitters named in the first chain of ''Uyun Akhbar al-Rida]].
+    State who they were, state who graded them and when, and let a reader see the
+    machinery rather than the verdict. A stranger cannot weigh the men in that chain
+    without a second library.'
+- template: body
+  body: 'Ibn Babawayh also names himself in full on the page: Abu Ja''far Muhammad
+    b. ''Ali b. Husayn b. Musa b. Babwaih al-Qumi, resident of Ray. That is a man
+    from Qum living in Ray, writing about a grave in Tus, for a community spread
+    across three provinces. The geography of the book is worth a carousel of its
+    own. State the machinery, and let the reader reach the verdict.'
+- template: body
+  body: 'The poem printed just before the chapter heading gives the same geography
+    from the other side. It sends greetings to a master at Tus, carried by a visitor
+    who got up early and walked like lightning. A devotional poem that names a destination
+    is telling you people were going there. [[NEEDS CLAIM: the poet''s name and
+    date, from this edition]]. Qum, Ray and Tus are three provinces and one argument.'
+- template: body
+  body: 'Visitors going to Tus in numbers is a political fact before it is a devotional
+    one. A grave that draws travellers is a place where a community assembles, counts
+    itself and is counted by other people. [[NEEDS CLAIM: what the sources say about
+    visits to the grave at Tus in the third century AH]]. People were walking to
+    that grave, and somebody wrote a poem for them to carry. Somebody walked, and
+    somebody wrote it down.'
+- template: body
+  body: All of which sits behind a chapter that looks, from its title, like etymology.
+    Why is he called al-Rida. The answer decides whether a name records a caliph's
+    favour or something the community held first, and the compiler thought it important
+    enough to spend his opening pages on it. Counting is what a state notices. A
+    grave that draws travellers becomes a place where a community counts itself,
+    and counting is what a state notices about a crowd.
+- template: closing
+  body: A book that begins by defending a name is telling you the name was being
+    used against it.

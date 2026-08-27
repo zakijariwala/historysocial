@@ -94,7 +94,10 @@ def loose_pattern(term: str) -> str:
     expand = {
         "k": "(?:k|q|kh)", "d": "(?:d|dh)", "t": "(?:t|th)",
         "s": "(?:s|sh|th)", "g": "(?:g|gh)", "f": "(?:f|ph)",
-        "z": "(?:z|dh|d)", "i": "(?:i|y|ee|ie)", "u": "(?:u|w|oo|ou|o)",
+        # `e` folds to `i` in norm(), so the i-class has to accept a printed
+        # `e` or no English word containing one can match itself. The anchors
+        # are what keep `Sindi` away from `Sending`, not this class.
+        "z": "(?:z|dh|d)", "i": "(?:i|y|ee|ie|e)", "u": "(?:u|w|oo|ou|o)",
         "a": "(?:a|aa)",
     }
     parts = []

@@ -2,7 +2,7 @@
 
     python tools/build_samples.py
 
-Fifteen carousels across the six pillars, both cover passes, the whole ink
+Thirty carousels across the six pillars, both cover passes, the whole ink
 set, mourning and normal. They exist so a human can judge design and voice
 before any of this touches claims.db.
 
@@ -61,6 +61,38 @@ SAMPLES = {
         "collision / MOURNING. The second mourning post, non-calendar."),
     "sample-15-names": ("halftone",
         "fact_panel / olive / tilework HALFTONE. Third screened cover."),
+
+    # Second batch: wider range, and the typographic extremes.
+    "sample-16-tongue": ("duotone",
+        "fact_panel / indigo / SOLID cover. Shortest legal title, two words, 12 slides."),
+    "sample-17-hisham": ("duotone",
+        "fact_panel / olive / textile duotone. TWENTY slides, the maximum."),
+    "sample-18-qurayza": ("duotone",
+        "collision / rust / stone duotone. Tabari volume VIII, the year 5."),
+    "sample-19-two-stones": ("halftone",
+        "collision / iron / folio HALFTONE. Ibn Ishaq marking his own doubt."),
+    "sample-20-dirafsh": ("duotone",
+        "number / olive / solid. A price in two currencies, and a long question slide."),
+    "sample-21-hunayf": ("duotone",
+        "collision / rust / tilework duotone. Nahj commentary, the first civil war."),
+    "sample-22-cellar": ("duotone",
+        "collision / indigo / carved panel duotone. A modern devotional book read as a source."),
+    "sample-23-tawaghit": ("halftone",
+        "map / indigo / stone HALFTONE. A map post with no coordinates on it."),
+    "sample-24-year-five": ("duotone",
+        "date_pair / indigo / mihrab duotone. EIGHTEEN slides on annalistic dating."),
+    "sample-25-why-rida": ("duotone",
+        "fact_panel / olive / interior duotone. 12 slides, a chapter title as the subject."),
+    "sample-26-two-months": ("duotone",
+        "calendar / MOURNING / solid. TWENTY slides and the longest running head."),
+    "sample-27-what-a-page-is": ("duotone",
+        "number / indigo / solid. The corpus counting itself."),
+    "sample-28-source-of-sin": ("duotone",
+        "fact_panel / iron / tile duotone. Cover title at the seven-word maximum."),
+    "sample-29-refusal": ("halftone",
+        "collision / rust / tile HALFTONE. 17 slides on a report that refuses to teach."),
+    "sample-30-tus": ("duotone",
+        "collision / MOURNING / solid. A poem as the only evidence."),
 }
 
 
@@ -101,7 +133,7 @@ def main() -> int:
               f'{len(placeholders):>2} placeholders  {len(other)} other findings')
 
     lines = [
-        "# Fifteen samples",
+        "# Thirty samples",
         "",
         "Rendered from `scratch.db` by `python tools/build_samples.py`. PNGs are",
         "in `out/samples/<id>/`, one manifest each.",

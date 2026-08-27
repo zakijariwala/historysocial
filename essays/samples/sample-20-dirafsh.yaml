@@ -1,0 +1,106 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: number pillar, solid cover, 12 slides, an unusually long question slide.
+
+post:
+  id: sample-20-dirafsh
+  pillar: number
+  running_head: one flag, priced twice, in two currencies
+  cover_title: twelve hundred thousand dirhams
+  ink: olive
+  caption: 'Subhani puts a price on the Sasanian battle standard: 1,200,000 dirhams,
+
+    or 30,000 pounds. The second figure is a translator converting for a
+
+    reader in the twentieth century, and the two numbers are not the same kind
+
+    of fact.
+
+    '
+claims:
+- subject: the Sasanian court
+  assertion: the flag called Dirafsh-i Kavyani was hoisted in the battlefield or
+    installed at the top of the palace at ceremonial celebrations
+  source: SRC-SUB-001
+  page: '43'
+- subject: the Sasanian court
+  assertion: according to a writer cited by Subhani, the flag was studded with gems
+    and other precious things, whose cost has been estimated at 1,200,000 dirhams,
+    or 30,000 pounds
+  source: SRC-SUB-001
+  page: '43'
+slides:
+- template: cover
+- template: question
+  body: When a modern book prices an object from the sixth century in two currencies
+    at once, which of the two numbers is the evidence, and which one is the author
+    talking to you?
+- template: body
+  body: Subhani is setting the scene before Islam and reaches for the Sasanian court.
+    The flag called Dirafsh-i Kavyani went up in the battlefield or stood at the
+    top of the palace on ceremonial days. It was studded with gems, he writes, and
+    according to a writer the cost has been estimated at 1,200,000 dirhams, or 30,000
+    pounds. Two figures, one sentence, and a footnote hanging off the end of it.
+- template: body
+  body: 'Separate the two numbers before doing anything else with them. The 1,200,000
+    dirhams is a figure Subhani attributes to somebody: according to a writer, he
+    says, and the note points at the source. [[NEEDS CLAIM: which writer Subhani''s
+    footnote 2 on page 43 names]]. The 30,000 pounds is nobody''s medieval figure.
+    It is a conversion, done for a reader who thinks in pounds.'
+- template: body
+  body: 'Conversions rot. A sum in pounds carries an exchange rate and a year inside
+    it, and the moment either of those moves the number stops meaning what it meant
+    on the day it was set in type. A reader quoting 30,000 pounds today is quoting
+    a translator''s arithmetic from the decade the book went to press, at a silver
+    price nobody wrote down. [[NEEDS CLAIM: the year this translation of The Message
+    was printed]]. The pound has moved since. So has the silver.'
+- template: body
+  body: 'The dirham figure carries its own problem, and it is the older one. A dirham
+    is a weight of silver before it is a coin, and the weight moved between periods
+    and between mints. [[NEEDS CLAIM: the standard weight of a dirham in the Sasanian
+    period and in the first century AH]]. Without that figure, 1,200,000 dirhams
+    is a large number rather than a quantity of metal, and a large number is a feeling
+    somebody wants you to have.'
+- template: body
+  body: 'Feeling is what the figure was made to produce. It sits in a paragraph
+    about the fondness of the Sasanian court for luxury, whose pomp dazzled the
+    eyes. That is the argument the number is serving. [[NEEDS CLAIM: whether Subhani''s
+    source gives the estimate as a contemporary valuation or as a later reckoning]].
+    An estimate made three centuries after the object was melted down is a different
+    object.'
+- template: body
+  body: A number card in this account states its arithmetic and the two dates it
+    spans. Here the arithmetic is a division nobody can perform. Take 1,200,000
+    dirhams, divide by an unknown weight, in an unknown year, against an unrecorded
+    silver price, then convert at an unstated rate to reach 30,000 pounds. Four
+    unknowns and one product. That is a rhetorical figure wearing the clothes of
+    a measurement, and the clothes are the whole effect.
+- template: body
+  body: So the honest version of this card reports the sentence instead of the sum.
+    Subhani, writing in the twentieth century, cites a writer who estimated the
+    Sasanian standard at 1,200,000 dirhams, and his translator sets 30,000 pounds
+    beside it. Every element of that is checkable against the page. None of it requires
+    anyone to know what the flag was worth, which is fortunate, because nobody does.
+- template: body
+  body: That is a smaller claim and a much stronger one. It survives a reader who
+    knows more about Sasanian metrology than the writer does, which is the test
+    any figure on a slide has to pass before it goes out. The alternative is a caption
+    announcing that the flag was worth thirty thousand pounds, which will be wrong
+    in a way no reader can trace back to the decision that made it wrong.
+- template: body
+  body: 'The card needs two dates to stand at all, and the page supplies neither.
+    [[NEEDS CLAIM: the years of the Sasanian reign Subhani is describing on page
+    43]]. [[NEEDS CLAIM: the year of the edition of The Message on this shelf, from
+    its title page]]. One date places the object. The other places the estimate.
+    Between them sits the gap the whole figure has to cross, and on the rough count
+    that gap runs to 1,400 years of other people''s arithmetic.'
+- template: body
+  body: Until those two rows exist this stays a draft, and the machinery in the
+    repository enforces that rather than trusting anybody's memory. The manifest
+    carries no edition statement for SRC-SUB-001, so nothing citing it can be verified.
+    The linter counts the placeholders above and refuses the render. Two independent
+    locks, and the card cannot become a picture by accident or by somebody being
+    in a hurry on a Sunday night.
+- template: closing
+  body: A price in two currencies is one estimate and one act of translation, and
+    the slide that repeats both without saying which is which has invented a fact
+    out of a footnote.
