@@ -1,0 +1,247 @@
+# The first essay. Sixteen slides on Musa b. Ja'far.
+#
+# Every factual assertion here is a placeholder, because no claim row in
+# claims.db is verified yet. That is the correct state of this file, not a
+# defect in it: a placeholder is output, an invented date is a build failure.
+# tools/lint_post.py refuses to render a single slide while a placeholder
+# remains, so this essay lives in the database and never reaches a PNG until
+# the rows below are checked against the printed page.
+#
+# The `claims` block holds CANDIDATE rows. Each names a source and a printed
+# page that a search of the local corpus actually returned, so verifying one
+# means opening the book at that page and reading the sentence. None of them
+# is verified, and nothing in this pipeline can verify them except a person.
+
+post:
+  id: musa-bridge
+  pillar: collision
+  running_head: the imam who spent nineteen years in custody
+  cover_title: the bridge at baghdad
+  cover_image: met-449028
+  ink: rust
+  mourning: false
+  status: draft
+  caption: |
+    Al-Sindi b. Shahik ran the prison where Musa b. Ja'far died. He did not
+    bury the body. He walked the jurists of Baghdad past it, had them state
+    that they saw no wound, then carried it to the bridge and invited the
+    city to look at the face.
+
+    A man does not stage a viewing to prove a death nobody doubts.
+
+    Sources are named on the slides. Every figure traces to a page in the
+    edition cited, and where the chronicles differ the slides say so.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      died in the prison of al-Sindi b. Shahik at Baghdad on 6 Rajab 183 AH,
+      aged fifty-five
+    hijri: 183
+    source: SRC-IRS-003
+    page: "407"
+    pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      was born at al-Abwa' in 128 AH, and held the Imamate for thirty-five
+      years after his father
+    hijri: 128
+    source: SRC-IRS-003
+    page: "407"
+    pillar: date_pair
+  - subject: Musa b. Ja'far
+    assertion: >-
+      al-Sindi brought the jurists and notable men of Baghdad to view the body,
+      including al-Haytham b. 'Adi, and had them testify that there was no
+      wound and no mark of strangulation
+    source: SRC-IRS-003
+    page: "427"
+    pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      the body was put on the bridge at Baghdad and an announcement called the
+      people to come and look at him
+    source: SRC-IRS-003
+    page: "427"
+    pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      a group had claimed during his life that he was the awaited Imam who
+      would hold the Imamate for the rest of time
+    source: SRC-IRS-003
+    page: "427"
+    pillar: collision
+  - subject: Harun al-Rashid
+    assertion: >-
+      Yahya b. Khalid travelled to Baghdad, gave out that he came to look at
+      the tax administration of the Sawad, then summoned al-Sindi b. Shahik and
+      gave him his instructions concerning Musa
+    source: SRC-IRS-003
+    page: "427"
+    pillar: collision
+    dispute: >-
+      al-Mufid reports the poisoning as a report he received ("it is said that
+      he put it in dates"), not as a fact he witnesses. Al-Tabari's Arabic
+      notice of the death at 8:271 carries no poison at all. Name both.
+  - subject: Musa b. Ja'far
+    assertion: >-
+      the Arabic chronicle records the death at Baghdad in the same year as
+      that of Muhammad b. al-Sammak the qadi
+    source: SRC-TAB-AR
+    page: "8:271"
+    pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      he refused al-Sindi's offer to shroud him and named a retainer of his own
+      household to wash and prepare the body
+    source: SRC-IRS-003
+    page: "428"
+    pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      the eldest and most prominent of his thirty-seven children was 'Ali b.
+      Musa al-Rida
+    source: SRC-IRS-003
+    page: "429"
+    pillar: fact_panel
+  - subject: the Waqifa
+    assertion: >-
+      men of the Waqifa are named in the chains of al-Kafi, among them Marwan
+      al-Qandi and a companion who says he left the sect in Khurasan
+    source: SRC-KAF-001
+    page: "279"
+    pillar: collision
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      Why did the men who held Musa b. Ja'far need a crowd to look at his face?
+
+  - template: body
+    body: >-
+      Al-Mufid puts the death of Musa b. Ja'far in the prison of al-Sindi b.
+      Shahik at Baghdad.
+      [[NEEDS CLAIM: the date and the age at death, Irshad p. 407]]. The jailer
+      did not bury him. He sent for the jurists of the city and for its notable
+      men, walked them past the body, and asked them to say what they saw. They
+      saw no wound. They saw no mark of strangling. Al-Sindi took their
+      testimony, wrote it down, and only then had the body carried out of the
+      prison.
+
+  - template: body
+    body: >-
+      Out of the prison, and onto the bridge. Al-Sindi's men set the body down
+      in the open and called the city to come and look at the face of Musa b.
+      Ja'far. [[NEEDS CLAIM: who al-Sindi named among the witnesses on the
+      bridge, Irshad p. 427]]. A jailer with a corpse he cannot explain buries
+      it at night. This jailer did the opposite of hiding, and he did it in the
+      most public place in Baghdad.
+
+  - template: body
+    body: >-
+      The face was the whole point. Al-Sindi needed Baghdad to carry away one
+      sentence: I saw him, and he was dead. He was answering a claim that had
+      been running through the city while Musa b. Ja'far was still alive.
+      [[NEEDS CLAIM: how long before the death the claim of a hidden imamate is
+      first attested]]. Al-Mufid states the claim without softening it. A group
+      held that this man would not die at all.
+
+  - template: body
+    body: >-
+      The claim was that Musa b. Ja'far was the awaited one, and that he would
+      hold the office for the rest of time. Al-Mufid reports it in those words
+      at the point where he explains the viewing. A man who cannot die cannot
+      leave a successor, so the claim was not devotional decoration. It decided
+      who received the money, who gave the orders, and who inherited the network
+      that ran from Medina to Kufa.
+
+  - template: body
+    body: >-
+      That network is what put him in custody in the first place. [[NEEDS CLAIM:
+      the year of the first arrest and the caliph who ordered it]]. [[NEEDS
+      CLAIM: the total years Musa b. Ja'far spent in custody, and the arithmetic
+      behind the figure of nineteen]]. He was moved between Medina, Basra and
+      Baghdad. Each move handed him to a different jailer, and each jailer
+      inherited the same problem: a prisoner whose followers counted his absence
+      as proof rather than as a defeat.
+
+  - template: body
+    body: >-
+      Harun al-Rashid solved the problem by sending a minister. Al-Mufid has
+      Yahya b. Khalid arrive at Baghdad giving out that he had come to inspect
+      the tax administration of the Sawad. He spent a few days on the paperwork.
+      Then he sent for al-Sindi b. Shahik and gave him his instructions
+      concerning the prisoner. [[NEEDS CLAIM: the date of Yahya b. Khalid's
+      journey to Baghdad, and by whose order]].
+
+  - template: body
+    body: >-
+      Here the two accounts differ. Al-Mufid gives the poison as something
+      reported to him and marks it as such: it is said that it went into dates,
+      that Musa b. Ja'far ate them, that a fever held him three days. The Arabic
+      chronicle of al-Tabari enters the death at Baghdad in its year and says
+      nothing of poison at all. [[NEEDS CLAIM: what al-Tabari's notice states in
+      full, Arabic text at 8:271]]. Two men writing about one prisoner, and one
+      of them declines to name a cause.
+
+  - template: body
+    body: >-
+      The disagreement is the reason the viewing happened. Al-Sindi did not need
+      a testimony against the charge of poison, which is a charge the jurists on
+      the bridge could not have answered by looking. He needed a testimony
+      against the charge that there was no body. Those are different accusations
+      and they call for different theatre. He staged the one that fitted the
+      second.
+
+  - template: body
+    body: >-
+      Al-Mufid keeps one refusal in the record. Al-Sindi asked to shroud the
+      body himself. Musa b. Ja'far refused him and named a retainer of his own
+      household to wash and prepare it. [[NEEDS CLAIM: the name of the retainer,
+      Irshad p. 428]]. A prisoner who arranges his own burial expects to be
+      buried. That expectation sits against the claim his followers were making
+      on his behalf outside the wall.
+
+  - template: body
+    body: >-
+      The succession went to 'Ali b. Musa al-Rida, the eldest and the most
+      prominent of thirty-seven children. [[NEEDS CLAIM: al-Rida's age at his
+      father's death]]. He took an inheritance that came with agents, deposits
+      and standing instructions across three provinces. Some of the men holding
+      that money had spent nineteen years relaying it into a prison. When the
+      prison emptied, the accounts stayed open.
+
+  - template: body
+    body: >-
+      Those men did not all accept the son. A part of the following stopped at
+      the father, held that he had not died, and waited. Later writers call them
+      the Waqifa, the ones who halted. [[NEEDS CLAIM: the earliest source that
+      uses the name Waqifa, and its date]]. Their names survive in the chains of
+      al-Kafi, where a transmitter is marked as belonging to the sect before his
+      report is given.
+
+  - template: body
+    body: >-
+      Al-Kulayni's chains preserve one of them changing his mind. A companion
+      says that he came to Khurasan while he was a member of the Waqifa and then
+      left it. [[NEEDS CLAIM: the full text and page of the Khurasan report,
+      al-Kafi]]. The compiler kept the label on the man rather than erasing it.
+      He wanted a reader to weigh the report knowing who carried it, which is
+      what a chain is for.
+
+  - template: body
+    body: >-
+      Al-Rida inherited the argument along with the office. [[NEEDS CLAIM: what
+      al-Rida is reported to have said about his father's death, 'Uyun Akhbar
+      al-Rida]]. The dispute ran on inside the community for
+      [[NEEDS CLAIM: how long the Waqifa persisted as a distinct group]], and it
+      ran on in the sources long after the men who started it died, which is why
+      a compiler two generations later still had to label a transmitter.
+
+  - template: closing
+    body: >-
+      Al-Sindi b. Shahik put a face on a bridge to end an argument about whether
+      a man had died, and the argument outlived the jailer, the caliph and the
+      prison.

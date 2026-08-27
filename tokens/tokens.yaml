@@ -1,0 +1,106 @@
+# Every colour, size and measure the renderer is allowed to use.
+#
+# FIVE INKS. Not six. The whole account reads as one hand because the palette
+# is small enough to recognise across a feed. A post names one ink; the cover
+# duotone maps its image into that ink plus the ground, which is what makes a
+# bank of unrelated museum photographs look like a single publication.
+#
+# TWO TYPEFACES. A serif for body, headings and the running head; a grotesque
+# for the cover title box and nothing else. Both are bundled in fonts/ and
+# loaded from disk. The renderer never fetches a font: Chromium in a GitHub
+# runner has no serif and no Arabic face, and a missing font renders as boxes
+# in an image nobody looks at again before it posts.
+
+canvas:
+  width: 1080
+  height: 1350
+  margin: 96           # px, all four sides on interior slides
+  bleed: 0
+
+fonts:
+  serif:
+    family: "EB Garamond"
+    regular: fonts/EBGaramond[wght].ttf
+    italic: fonts/EBGaramond-Italic[wght].ttf
+    licence: SIL Open Font License 1.1 (fonts/OFL-EBGaramond.txt)
+  grotesque:
+    family: "Space Grotesk"
+    regular: fonts/SpaceGrotesk[wght].ttf
+    licence: SIL Open Font License 1.1 (fonts/OFL-SpaceGrotesk.txt)
+
+# The five. A post's `ink` column names one of these keys.
+inks:
+  iron:   "#191B20"     # near-black, the default voice
+  rust:   "#8A3A2A"     # collisions, conflict, the arrest posts
+  indigo: "#25384E"     # maps, routes, distance
+  olive:  "#4A5333"     # calendars, agriculture, land
+  bone:   "#C9C6C1"     # mourning only, on the dark ground
+
+grounds:
+  paper:  "#EFEAE1"     # default
+  sand:   "#E5DBCB"
+  chalk:  "#F4F2ED"
+  night:  "#14161A"     # mourning only
+
+# Post-level defaults. A post overrides `ink`; the rest hold.
+normal:
+  ground: paper
+  ornament: true
+
+mourning:
+  ground: "#14161A"
+  ink: "#C9C6C1"
+  cover: solid          # never an image
+  ornament: false
+  # Muharram 1 - Safar 30, plus the wafat dates, per Sistani's published
+  # calendar. tools/mourning.py holds the dates and the note about who
+  # supplies them.
+
+type:
+  # Sizes are px on the 1080x1350 canvas. The question slide is the largest
+  # thing in the system on purpose: it is the slide that makes somebody swipe.
+  running_head:
+    family: serif
+    style: italic
+    size: 30
+    tracking: 0.02em
+    opacity: 0.72
+  cover_title:
+    family: grotesque
+    size: 92
+    line_height: 1.02
+    weight: 500
+    transform: lowercase
+    align: justify
+  cover_subline:
+    family: serif
+    style: italic
+    size: 34
+  question:
+    family: serif
+    size: 84
+    line_height: 1.12
+  body:
+    family: serif
+    size: 46
+    line_height: 1.32
+  closing:
+    family: serif
+    size: 60
+    line_height: 1.22
+
+cover:
+  # The white box the grotesque title sits in.
+  box_inset: 72
+  box_padding: 56
+  box_colour: "#FFFFFF"
+  duotone:
+    # Shadow takes the ground, highlight takes the ink, so a cover reads as
+    # the same object as the slides behind it.
+    shadow: ink
+    highlight: ground
+    gamma: 1.05
+  halftone:
+    # The alternate pass. Same mapping, screened.
+    dot: 5
+    angle: 15

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{# 60 to 100 words, tight leading, solid ground. The workhorse. #}
+
+{% block style %}
+  .measure { align-items: flex-start; }
+  .body {
+    font-size: {{ tokens.type.body.size }}px;
+    line-height: {{ tokens.type.body.line_height }};
+    text-wrap: pretty;
+  }
+  .body p + p { margin-top: 0.7em; }
+{% endblock %}
+
+{% block slide %}
+  <div class="running-head">{{ post.running_head }}</div>
+  <div class="measure" id="measure">
+    <div class="body">{% for para in slide.body.split('\n\n') %}<p>{{ para }}</p>{% endfor %}</div>
+  </div>
+  <div class="position">{{ slide.position }}</div>
+{% endblock %}

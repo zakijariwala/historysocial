@@ -32,7 +32,7 @@ from bisect import bisect_right
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sourcelib import loose_pattern  # noqa: E402
+from sourcelib import fold_preserving, loose_pattern  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 TEXT = ROOT / "sources" / "text"
@@ -99,7 +99,11 @@ def scan_with_python(pattern: str, files: list[Path]):
     rx = re.compile(pattern, re.IGNORECASE)
     for f in files:
         body = f.read_text(encoding="utf-8", errors="replace")
-        for m in rx.finditer(body):
+        # Search a length-preserving fold of the text, report the original.
+        # Howard prints Mūsā and Hārūn; a query for Musa has to find them, and
+        # folding one character to one keeps every offset honest.
+        haystack = fold_preserving(body)
+        for m in rx.finditer(haystack):
             line_start = body.rfind("\n", 0, m.start()) + 1
             line_end = body.find("\n", m.end())
             line_end = len(body) if line_end == -1 else line_end
@@ -119,7 +123,10 @@ def run(query: str, source: str | None, exact: bool, context: int, limit: int) -
         return 1
 
     reg = registry()
-    binary = rg_binary()
+    # ripgrep is used only for an exact query. The expanded search has to fold
+    # diacritics in the text as well as the query, and ripgrep cannot fold the
+    # haystack, so that path stays in Python where the fold is possible.
+    binary = rg_binary() if exact else None
     hits = (scan_with_rg(binary, pattern, files) if binary
             else scan_with_python(pattern, files))
 

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#14161a">
+<title>carousels</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>carousels</h1>
+  <nav id="tabs">
+    <button data-screen="today" class="on">today</button>
+    <button data-screen="ready">ready</button>
+    <button data-screen="archive">archive</button>
+  </nav>
+</header>
+
+<main>
+  <section id="today" class="screen on"></section>
+  <section id="ready" class="screen"></section>
+  <section id="archive" class="screen"></section>
+
+  <section id="post" class="screen post">
+    <button id="back">back</button>
+    <h2 id="post-title"></h2>
+    <p id="post-meta"></p>
+
+    <div id="viewer">
+      <div id="track"></div>
+    </div>
+    <p id="counter"></p>
+
+    <div class="actions">
+      <a id="download" class="button" download>download all</a>
+      <!-- The caption is already in memory when this is tapped. See app.js. -->
+      <button id="copy" class="button">copy caption</button>
+    </div>
+    <pre id="caption"></pre>
+  </section>
+</main>
+
+<p id="empty" hidden>nothing rendered yet. push to main, or run the workflow by hand.</p>
+
+<script src="app.js"></script>
+</body>
+</html>

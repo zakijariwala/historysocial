@@ -4,11 +4,11 @@ Two jobs live here:
 
   norm()          one normal form for transliterated Arabic, so that a single
                   query finds Ja'far, Jafar and Jaʿfar.
-  variants()      the spelling family of a query term, used to build the
-                  ripgrep pattern in lookup.py.
+  loose_pattern() the spelling family of a query term, as a regex, used by
+                  lookup.py.
 
 No embeddings. No vector search. Character rules only, so a match is always
-explainable and always reproducible.
+explainable by reading the pattern, and always reproducible.
 """
 
 from __future__ import annotations
@@ -16,14 +16,12 @@ from __future__ import annotations
 import re
 import unicodedata
 
-REPO_KEYS = ("sources", "text", "pages")
-
 # Characters that carry no distinction once transliteration is normalised.
 # ayn and hamza appear as at least eight glyphs across the editions on hand.
-AYN_HAMZA = "\u02bf\u02be\u2018\u2019\u02bb\u02bc\u02c0\u02c1'`\u00b4\u201b"
+AYN_HAMZA = "ʿʾ‘’ʻʼˀˁ'`´‛"
 
 # Digraph and single-letter equivalences, applied after diacritic stripping.
-# Order matters: longest first.
+# Order matters: longest first. dh folds to z, so al-Kazim and al-Kadhim meet.
 FOLD = [
     ("dh", "z"), ("th", "t"), ("kh", "k"), ("gh", "g"),
     ("sh", "s"), ("ch", "s"), ("ph", "f"),
@@ -40,10 +38,28 @@ def strip_diacritics(s: str) -> str:
     for ch in s:
         if unicodedata.combining(ch):
             continue
-        if "\u064b" <= ch <= "\u0652":       # Arabic harakat
+        if "ً" <= ch <= "ْ":       # Arabic harakat
             continue
         out.append(ch)
     return unicodedata.normalize("NFKC", "".join(out))
+
+
+def fold_preserving(s: str) -> str:
+    """Strip diacritics WITHOUT changing the string's length.
+
+    Howard's Irshad prints Mūsā and Hārūn; a query for Musa has to reach them.
+    Ordinary NFKD stripping would shorten the text, and every offset computed
+    from it would point at the wrong page, so this folds one character to one
+    character and leaves anything that will not fold alone.
+    """
+    out = []
+    for ch in s:
+        if ch in AYN_HAMZA:
+            out.append("'")
+            continue
+        base = unicodedata.normalize("NFD", ch)[0]
+        out.append(base if base.isascii() and base.isalpha() else ch)
+    return "".join(out)
 
 
 def norm(s: str) -> str:
@@ -59,29 +75,34 @@ def norm(s: str) -> str:
 
 
 def loose_pattern(term: str) -> str:
-    """A regex that matches every plausible printed spelling of `term`.
+    """A regex matching every plausible printed spelling of `term`.
 
     Built letter by letter from the normalised form. Between every pair of
-    letters an optional apostrophe-class character and an optional vowel are
-    allowed, which is what separates Jafar from Ja'far from Jaʿfar. Consonants
-    that transliterate two ways (k/q, i/y, u/w, t/th) expand to a class.
+    letters an optional apostrophe-class character is allowed, which is what
+    separates Jafar from Ja'far from Jaʿfar. Consonants that transliterate two
+    ways (k/q, t/th, d/dh) expand to a class.
+
+    The pattern is anchored at both ends and does NOT insert optional vowels
+    between letters. An earlier version did, and a search for `Sindi` matched
+    `Sending`, which is how a claim ends up citing a page that says nothing of
+    the kind.
     """
     key = norm(term)
-    # Real characters, not \u escapes. The same pattern string is handed to
-    # Python's re and to ripgrep, and those two disagree about escape syntax.
-    sep = "[" + AYN_HAMZA + "\u2010\u2011\\-]?"
+    # Real characters, not escapes: the same pattern string is handed to
+    # Python's re and to ripgrep, and the two disagree about escape syntax.
+    sep = "[" + AYN_HAMZA + "‐‑-]?"
     expand = {
-        "k": "(?:k|q|kh|c)", "d": "(?:d|dh|z)", "t": "(?:t|th)",
-        "s": "(?:s|sh|th|c)", "g": "(?:g|gh)", "f": "(?:f|ph)",
-        "z": "(?:z|dh|d|th)", "i": "(?:i|y|ee|ie|e)", "u": "(?:u|w|oo|ou|o)",
-        "a": "(?:a|aa|e)",
+        "k": "(?:k|q|kh)", "d": "(?:d|dh)", "t": "(?:t|th)",
+        "s": "(?:s|sh|th)", "g": "(?:g|gh)", "f": "(?:f|ph)",
+        "z": "(?:z|dh|d)", "i": "(?:i|y|ee|ie)", "u": "(?:u|w|oo|ou|o)",
+        "a": "(?:a|aa)",
     }
     parts = []
     for ch in key:
         parts.append(expand.get(ch, re.escape(ch)))
-        parts.append(sep + "[aeiou]?")
+        parts.append(sep)
     # a final -h is optional: Kazimiyya and Kazimiyyah are one word
-    return "".join(parts[:-1]) + "h?"
+    return r"\b" + "".join(parts[:-1]) + r"h?\b"
 
 
 def slug(name: str) -> str:

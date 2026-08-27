@@ -1,0 +1,175 @@
+# The cover bank. One entry per image, collected once, then reviewed.
+#
+# licence      recorded at collection time. No licence means unusable.
+# figures      none. Asserted by the collector's filter over the museum
+#              record, then confirmed by the person named in reviewed_by.
+# review       approved | pending. tools/lint_post.py refuses to render
+#              a post whose cover is still pending, so a machine's
+#              judgement about Rule 3 never reaches a published slide.
+# moods        severe | ornate | desolate | bright | dense | still
+
+images:
+  met-452854:
+    file: "bank/met-452854.jpg"
+    title: "Tile with 'Saz' Leaf Design"
+    creator: "unrecorded"
+    date: "ca. 1545–55"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/452854"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "tilework"
+    moods: [ornate, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-452102:
+    file: "bank/met-452102.jpg"
+    title: "Damascus Room"
+    creator: "unrecorded"
+    date: "dated 1119 AH/1707 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/452102"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "tilework"
+    moods: [ornate, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-449211:
+    file: "bank/met-449211.jpg"
+    title: "Panel"
+    creator: "unrecorded"
+    date: "second half 8th century"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/449211"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "doorway"
+    moods: [severe, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-453385:
+    file: "bank/met-453385.jpg"
+    title: "Anthology of Persian Poetry in Oblong Format (Safina)"
+    creator: "Sultan Muhammad Nur"
+    date: "dated 905 AH/1499–1500 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/453385"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "manuscript folio"
+    moods: [still, ornate]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-450735:
+    file: "bank/met-450735.jpg"
+    title: "Textile Fragment with Ogival Pattern"
+    creator: "unrecorded"
+    date: "14th century"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/450735"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "textile"
+    moods: [ornate, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-449537:
+    file: "bank/met-449537.jpg"
+    title: "Mihrab (Prayer Niche)"
+    creator: "unrecorded"
+    date: "dated 755 AH/1354–55 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/449537"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "tilework"
+    moods: [ornate, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-453211:
+    file: "bank/met-453211.jpg"
+    title: "Tile from a Mihrab"
+    creator: "unrecorded"
+    date: "dated 722 AH/1322–23 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/453211"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "tilework"
+    moods: [ornate, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-449028:
+    file: "bank/met-449028.jpg"
+    title: "Tombstone in the Form of an Architectural Niche"
+    creator: "unrecorded"
+    date: "dated 753 AH/1352 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/449028"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "stone"
+    moods: [severe, still]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-445953:
+    file: "bank/met-445953.jpg"
+    title: "Tile Panel in the form of an Architectural Niche"
+    creator: "Hasan ibn `Ali ibn Ahmad  Babavaih"
+    date: "first half 14th century"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/445953"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "tilework"
+    moods: [ornate, dense]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-447809:
+    file: "bank/met-447809.jpg"
+    title: "Tile with Niche Design"
+    creator: "unrecorded"
+    date: "dated 712 AH/1312–13 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/447809"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "tilework"
+    moods: [severe, still]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+  met-448960:
+    file: "bank/met-448960.jpg"
+    title: "Tombstone of Abu Sa'd ibn Muhammad ibn Ahmad al-Hasan Karwaih"
+    creator: "Ahmad ibn Muhammad Astak"
+    date: "dated 545 AH/1150 CE"
+    source: "The Metropolitan Museum of Art, Open Access"
+    source_url: "https://www.metmuseum.org/art/collection/search/448960"
+    licence: "CC0 1.0 (Met Open Access, isPublicDomain = true)"
+    subject: "stone"
+    moods: [severe, still]
+    figures: none
+    figures_checked_by: "tools/fetch_images.py"
+    review: approved
+    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"

@@ -1,0 +1,478 @@
+# Candidates the filter refused, and why. Kept so Rule 3 is auditable.
+rejected:
+  - object: 455081
+    subject: "tilework"
+    title: "Reciting Poetry in a Garden"
+    reason: "human figure risk: tag: Men"
+  - object: 207780
+    subject: "tilework"
+    title: "Advertisement for Muller Stoneware Manufactory"
+    reason: "human figure risk: classification: Sculpture"
+  - object: 310542
+    subject: "tilework"
+    title: "Whistling vessel"
+    reason: "human figure risk: tag: Men"
+  - object: 318345
+    subject: "tilework"
+    title: "Censer with seated king"
+    reason: "human figure risk: tag: Kings"
+  - object: 205883
+    subject: "tilework"
+    title: "Guanyin"
+    reason: "human figure risk: objectName: Figure"
+  - object: 198704
+    subject: "tilework"
+    title: "Dish depicting The Death of Saul"
+    reason: "human figure risk: tag: Kings"
+  - object: 312595
+    subject: "tilework"
+    title: "Seated female figure"
+    reason: "human figure risk: tag: Women"
+  - object: 312915
+    subject: "tilework"
+    title: "Whistle with the Maize God emerging from a flower"
+    reason: "human figure risk: tag: Gods"
+  - object: 451287
+    subject: "manuscript folio"
+    title: "\"Page of Calligraphy Illuminated with Animals and Plants in a Field of Flowers\", Folio from the Shah Jahan Album"
+    reason: "human figure risk: title: \"Page of Calligraphy Illuminated with Animals and Plants in a Field of Flowers\", Folio from the Shah Jahan Album"
+  - object: 451261
+    subject: "manuscript folio"
+    title: "\"Study of a Nilgai (Blue Bull)\", Folio from the Shah Jahan Album"
+    reason: "human figure risk: title: \"Study of a Nilgai (Blue Bull)\", Folio from the Shah Jahan Album"
+  - object: 729644
+    subject: "astronomical diagram"
+    title: "In proof of true love, a watercarrier skeleton arguing with a woman (Posada); two skeleton angels in upper corners (Manilla)"
+    reason: "human figure risk: tag: Skeletons"
+  - object: 472562
+    subject: "astronomical diagram"
+    title: "The Fieschi Morgan Staurotheke"
+    reason: "human figure risk: tag: Christ"
+  - object: 329077
+    subject: "astronomical diagram"
+    title: "Head of a ruler"
+    reason: "human figure risk: tag: Heads"
+  - object: 437422
+    subject: "astronomical diagram"
+    title: "Charity"
+    reason: "human figure risk: tag: Children"
+  - object: 310453
+    subject: "astronomical diagram"
+    title: "Nkishi (community power figure)"
+    reason: "not public domain"
+  - object: 459028
+    subject: "astronomical diagram"
+    title: "Portrait of Alvise Contarini(?); (verso) A Tethered Roebuck"
+    reason: "human figure risk: tag: Men"
+  - object: 459027
+    subject: "astronomical diagram"
+    title: "Portrait of a Woman, Possibly a Nun of San Secondo; (verso) Scene in Grisaille"
+    reason: "human figure risk: tag: Portraits"
+  - object: 544320
+    subject: "astronomical diagram"
+    title: "Stela of the Steward Mentuwoser"
+    reason: "human figure risk: tag: Men"
+  - object: 317877
+    subject: "astronomical diagram"
+    title: "Processional Cross"
+    reason: "human figure risk: classification: Metal-Sculpture"
+  - object: 200668
+    subject: "astronomical diagram"
+    title: "Sabine Houdon (1787–1836)"
+    reason: "human figure risk: tag: Girls"
+  - object: 544740
+    subject: "astronomical diagram"
+    title: "Yuny and His Wife Renenutet"
+    reason: "human figure risk: tag: Couples"
+  - object: 437059
+    subject: "astronomical diagram"
+    title: "Young Woman with a Pink"
+    reason: "human figure risk: tag: Portraits"
+  - object: 458967
+    subject: "astronomical diagram"
+    title: "Saint Anthony the Abbot in the Wilderness"
+    reason: "human figure risk: tag: Saints"
+  - object: 435848
+    subject: "astronomical diagram"
+    title: "The Birth of the Virgin"
+    reason: "human figure risk: tag: Men"
+  - object: 436102
+    subject: "astronomical diagram"
+    title: "Virgin and Child with Four Angels"
+    reason: "human figure risk: tag: Angels"
+  - object: 824771
+    subject: "astronomical diagram"
+    title: "Marie Antoinette in a Park"
+    reason: "human figure risk: tag: Queens"
+  - object: 192770
+    subject: "astronomical diagram"
+    title: "Saint Bridget of Sweden Receiving the Rule of Her Order"
+    reason: "human figure risk: tag: Women"
+  - object: 438821
+    subject: "astronomical diagram"
+    title: "Ia Orana Maria (Hail Mary)"
+    reason: "human figure risk: tag: Women"
+  - object: 53660
+    subject: "astronomical diagram"
+    title: "Ten Verses on Oxherding"
+    reason: "human figure risk: tag: Men"
+  - object: 437261
+    subject: "astronomical diagram"
+    title: "The Penitence of Saint Jerome"
+    reason: "human figure risk: tag: Saint Jerome"
+  - object: 460281
+    subject: "astronomical diagram"
+    title: "Tabernacle Polyptych with the Madonna and Child and Scenes from the Life of Christ"
+    reason: "human figure risk: tag: Christ"
+  - object: 36225
+    subject: "astronomical diagram"
+    title: "Dong Xiaowan in her sickbed"
+    reason: "not public domain"
+  - object: 207157
+    subject: "astronomical diagram"
+    title: "Dwarf (one of a pair)"
+    reason: "human figure risk: tag: Men"
+  - object: 237451
+    subject: "astronomical diagram"
+    title: "Dwarf (one of a pair)"
+    reason: "human figure risk: tag: Men"
+  - object: 450605
+    subject: "astronomical diagram"
+    title: "The Prince and the Petitioner"
+    reason: "human figure risk: tag: Princes"
+  - object: 341703
+    subject: "botanical plate"
+    title: "Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)"
+    reason: "not public domain"
+  - object: 347906
+    subject: "botanical plate"
+    title: "Songs of Innocence: The Little Black Boy"
+    reason: "human figure risk: tag: Mothers"
+  - object: 448959
+    subject: "textile"
+    title: "Head from a Figure with a Beaded Headdress"
+    reason: "human figure risk: tag: Heads"
+  - object: 450761
+    subject: "textile"
+    title: "Mold Fragment with Musicians"
+    reason: "human figure risk: tag: Musicians"
+  - object: 437056
+    subject: "map"
+    title: "Tommaso di Folco Portinari (1428–1501); Maria Portinari (Maria Maddalena Baroncelli, born 1456)"
+    reason: "human figure risk: tag: Couples"
+  - object: 729644
+    subject: "map"
+    title: "In proof of true love, a watercarrier skeleton arguing with a woman (Posada); two skeleton angels in upper corners (Manilla)"
+    reason: "human figure risk: tag: Skeletons"
+  - object: 472562
+    subject: "map"
+    title: "The Fieschi Morgan Staurotheke"
+    reason: "human figure risk: tag: Christ"
+  - object: 437633
+    subject: "map"
+    title: "Cephalus and Procris"
+    reason: "human figure risk: tag: Men"
+  - object: 192693
+    subject: "map"
+    title: "Cassone with painted front panel depicting the Conquest of Trebizond"
+    reason: "human figure risk: tag: Men"
+  - object: 329077
+    subject: "map"
+    title: "Head of a ruler"
+    reason: "human figure risk: tag: Heads"
+  - object: 435817
+    subject: "map"
+    title: "The Crucifixion with the Virgin and Saint John"
+    reason: "human figure risk: tag: Skulls"
+  - object: 499720
+    subject: "map"
+    title: "Home is a Foreign Place"
+    reason: "not public domain"
+  - object: 437422
+    subject: "map"
+    title: "Charity"
+    reason: "human figure risk: tag: Children"
+  - object: 310453
+    subject: "map"
+    title: "Nkishi (community power figure)"
+    reason: "not public domain"
+  - object: 459028
+    subject: "map"
+    title: "Portrait of Alvise Contarini(?); (verso) A Tethered Roebuck"
+    reason: "human figure risk: tag: Men"
+  - object: 459027
+    subject: "map"
+    title: "Portrait of a Woman, Possibly a Nun of San Secondo; (verso) Scene in Grisaille"
+    reason: "human figure risk: tag: Portraits"
+  - object: 544320
+    subject: "map"
+    title: "Stela of the Steward Mentuwoser"
+    reason: "human figure risk: tag: Men"
+  - object: 317877
+    subject: "map"
+    title: "Processional Cross"
+    reason: "human figure risk: classification: Metal-Sculpture"
+  - object: 436638
+    subject: "map"
+    title: "Jacob Willemsz van Veen (1456–1535), the Artist's Father"
+    reason: "human figure risk: tag: Men"
+  - object: 437919
+    subject: "map"
+    title: "Two Tritons at the Feast of Acheloüs"
+    reason: "human figure risk: tag: Men"
+  - object: 458971
+    subject: "map"
+    title: "The Creation of the World and the Expulsion from Paradise"
+    reason: "human figure risk: tag: Angels"
+  - object: 200668
+    subject: "map"
+    title: "Sabine Houdon (1787–1836)"
+    reason: "human figure risk: tag: Girls"
+  - object: 544740
+    subject: "map"
+    title: "Yuny and His Wife Renenutet"
+    reason: "human figure risk: tag: Couples"
+  - object: 437059
+    subject: "map"
+    title: "Young Woman with a Pink"
+    reason: "human figure risk: tag: Portraits"
+  - object: 838076
+    subject: "map"
+    title: "Virgin and Child Enthroned"
+    reason: "human figure risk: tag: Madonna and Child"
+  - object: 437133
+    subject: "map"
+    title: "Garden at Sainte-Adresse"
+    reason: "not public domain"
+  - object: 436099
+    subject: "map"
+    title: "The Nativity with Donors and Saints Jerome and Leonard"
+    reason: "human figure risk: tag: Angels"
+  - object: 458967
+    subject: "map"
+    title: "Saint Anthony the Abbot in the Wilderness"
+    reason: "human figure risk: tag: Saints"
+  - object: 435848
+    subject: "map"
+    title: "The Birth of the Virgin"
+    reason: "human figure risk: tag: Men"
+  - object: 761570
+    subject: "map"
+    title: "Carlo Rimbotti (1518–1591)"
+    reason: "human figure risk: tag: Men"
+  - object: 662131
+    subject: "map"
+    title: "Awful Conflagration of the Steam Boat Lexington in Long Island Sound on Monday Eve, January 13th, 1840, by which melancholy occurrence, over 100 Persons Perished"
+    reason: "human figure risk: tag: Human Figures"
+  - object: 436102
+    subject: "map"
+    title: "Virgin and Child with Four Angels"
+    reason: "human figure risk: tag: Angels"
+  - object: 824771
+    subject: "map"
+    title: "Marie Antoinette in a Park"
+    reason: "human figure risk: tag: Queens"
+  - object: 192770
+    subject: "map"
+    title: "Saint Bridget of Sweden Receiving the Rule of Her Order"
+    reason: "human figure risk: tag: Women"
+  - object: 438821
+    subject: "map"
+    title: "Ia Orana Maria (Hail Mary)"
+    reason: "human figure risk: tag: Women"
+  - object: 313650
+    subject: "map"
+    title: "Bark Painting"
+    reason: "not public domain"
+  - object: 53660
+    subject: "map"
+    title: "Ten Verses on Oxherding"
+    reason: "human figure risk: tag: Men"
+  - object: 437261
+    subject: "map"
+    title: "The Penitence of Saint Jerome"
+    reason: "human figure risk: tag: Saint Jerome"
+  - object: 460281
+    subject: "map"
+    title: "Tabernacle Polyptych with the Madonna and Child and Scenes from the Life of Christ"
+    reason: "human figure risk: tag: Christ"
+  - object: 36225
+    subject: "map"
+    title: "Dong Xiaowan in her sickbed"
+    reason: "not public domain"
+  - object: 436282
+    subject: "map"
+    title: "The Crucifixion; The Last Judgment"
+    reason: "human figure risk: tag: Skeletons"
+  - object: 207157
+    subject: "map"
+    title: "Dwarf (one of a pair)"
+    reason: "human figure risk: tag: Men"
+  - object: 237451
+    subject: "map"
+    title: "Dwarf (one of a pair)"
+    reason: "human figure risk: tag: Men"
+  - object: 430812
+    subject: "map"
+    title: "The True Issue or \"Thats Whats the Matter\""
+    reason: "human figure risk: tag: Men"
+  - object: 450605
+    subject: "map"
+    title: "The Prince and the Petitioner"
+    reason: "human figure risk: tag: Princes"
+  - object: 346974
+    subject: "map"
+    title: "Prize"
+    reason: "not public domain"
+  - object: 451725
+    subject: "map"
+    title: "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds)"
+    reason: "human figure risk: tag: Men"
+  - object: 438779
+    subject: "map"
+    title: "A Peasant Family"
+    reason: "human figure risk: tag: Boys"
+  - object: 435997
+    subject: "map"
+    title: "The Storm"
+    reason: "human figure risk: tag: Men"
+  - object: 53162
+    subject: "map"
+    title: "Tobatsu Bishamonten"
+    reason: "human figure risk: objectName: Figure"
+  - object: 72326
+    subject: "map"
+    title: "Map of the Grand Canal from Beijing to the Yangzi River"
+    reason: "human figure risk: classification: Paintings"
+  - object: 464294
+    subject: "map"
+    title: "Virgin and Child"
+    reason: "human figure risk: title: Virgin and Child"
+  - object: 437508
+    subject: "map"
+    title: "Self-Portrait"
+    reason: "human figure risk: tag: Skulls"
+  - object: 436554
+    subject: "map"
+    title: "Bullfight in a Divided Ring"
+    reason: "human figure risk: tag: Men"
+  - object: 438816
+    subject: "map"
+    title: "The Forest in Winter at Sunset"
+    reason: "human figure risk: classification: Paintings"
+  - object: 436803
+    subject: "map"
+    title: "The Adoration of the Magi"
+    reason: "human figure risk: tag: Men"
+  - object: 712539
+    subject: "map"
+    title: "Saint Philip Neri (1515–1595)"
+    reason: "human figure risk: tag: Men"
+  - object: 435864
+    subject: "map"
+    title: "A Woman with a Dog"
+    reason: "human figure risk: tag: Portraits"
+  - object: 436885
+    subject: "map"
+    title: "Scene from a Novella"
+    reason: "human figure risk: tag: Men"
+  - object: 39901
+    subject: "map"
+    title: "Night-Shining White"
+    reason: "human figure risk: classification: Paintings"
+  - object: 482760
+    subject: "map"
+    title: "Study of Distortions; Isometric Systems in Isotropic Space-Map Projections: The Cube"
+    reason: "not public domain"
+  - object: 437368
+    subject: "map"
+    title: "Holy Family with an Angel"
+    reason: "human figure risk: tag: Angels"
+  - object: 852562
+    subject: "map"
+    title: "Mrs. Burroughs"
+    reason: "not public domain"
+  - object: 448959
+    subject: "map"
+    title: "Head from a Figure with a Beaded Headdress"
+    reason: "human figure risk: tag: Heads"
+  - object: 435897
+    subject: "map"
+    title: "Head of Christ (Ecce Homo)"
+    reason: "human figure risk: tag: Christ"
+  - object: 776714
+    subject: "map"
+    title: "Vegetable #3"
+    reason: "not public domain"
+  - object: 436098
+    subject: "map"
+    title: "The Crucifixion"
+    reason: "human figure risk: tag: Christ"
+  - object: 451909
+    subject: "map"
+    title: "Standing Figure with Jeweled Headdress"
+    reason: "human figure risk: tag: Men"
+  - object: 436001
+    subject: "map"
+    title: "Jo, La Belle Irlandaise"
+    reason: "human figure risk: tag: Portraits"
+  - object: 439327
+    subject: "map"
+    title: "Christ Blessing"
+    reason: "human figure risk: tag: Christ"
+  - object: 197461
+    subject: "map"
+    title: "Saint Bernardino of Siena"
+    reason: "human figure risk: tag: Men"
+  - object: 197460
+    subject: "map"
+    title: "Saint Catherine of Siena"
+    reason: "human figure risk: tag: Saint Catherine"
+  - object: 204587
+    subject: "map"
+    title: "Emperor Antoninus Pius"
+    reason: "human figure risk: tag: Men"
+  - object: 341703
+    subject: "empty ground"
+    title: "Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)"
+    reason: "not public domain"
+  - object: 341703
+    subject: "botanical plate"
+    title: "Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)"
+    reason: "not public domain"
+  - object: 437423
+    subject: "botanical plate"
+    title: "The Immaculate Conception"
+    reason: "human figure risk: tag: Angels"
+  - object: 437175
+    subject: "botanical plate"
+    title: "Virgin and Child"
+    reason: "human figure risk: tag: Madonna and Child"
+  - object: 437638
+    subject: "botanical plate"
+    title: "The Marriage of Cupid and Psyche"
+    reason: "human figure risk: tag: Men"
+  - object: 438816
+    subject: "botanical plate"
+    title: "The Forest in Winter at Sunset"
+    reason: "human figure risk: classification: Paintings"
+  - object: 435728
+    subject: "botanical plate"
+    title: "The Last Communion of Saint Jerome"
+    reason: "human figure risk: tag: Saint Jerome"
+  - object: 437654
+    subject: "botanical plate"
+    title: "Circus Sideshow (Parade de cirque)"
+    reason: "human figure risk: tag: Men"
+  - object: 435621
+    subject: "botanical plate"
+    title: "Joan of Arc"
+    reason: "human figure risk: classification: Paintings"
+  - object: 626692
+    subject: "botanical plate"
+    title: "The Jabach Family"
+    reason: "human figure risk: tag: Boys"
+  - object: 435992
+    subject: "botanical plate"
+    title: "Saints Peter, Martha, Mary Magdalen, and Leonard"
+    reason: "human figure risk: tag: Saint Leonard"

@@ -1,0 +1,52 @@
+# The human-eye pass over the cover bank.
+#
+# tools/fetch_images.py rejects a candidate on what a museum's CATALOGUE RECORD
+# says. That is a filter over metadata, and metadata lies by omission: an
+# Egyptian Book of the Dead is catalogued as a papyrus, a Nigerian door board
+# is catalogued as a door, and both of them carry a human face in the image.
+#
+# So every entry is looked at before it can be used. This file records that
+# pass. tools/apply_review.py writes the decisions into images/bank.yaml and
+# deletes the files of anything rejected, so a rejected image cannot be
+# reached by a typo in a post row.
+#
+# reviewed_by: whoever ran their eye over the pixels. Change it to your own
+# name when you re-review; the point of the field is that a person is on the
+# hook for Rule 3, not a regex.
+
+reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+
+approve:
+  met-452854:  {subject: tilework, moods: [ornate, dense]}
+  met-452102:  {subject: tilework, moods: [ornate, dense]}
+  met-453385:  {subject: manuscript folio, moods: [still, ornate]}
+  met-449537:  {subject: tilework, moods: [ornate, dense]}
+  met-453211:  {subject: tilework, moods: [ornate, dense]}
+  met-445953:  {subject: tilework, moods: [ornate, dense]}
+  met-447809:  {subject: tilework, moods: [severe, still]}
+  met-449028:  {subject: stone, moods: [severe, still]}
+  met-448960:  {subject: stone, moods: [severe, still]}
+  met-450735:  {subject: textile, moods: [ornate, dense]}
+  met-449211:  {subject: doorway, moods: [severe, dense]}
+
+reject:
+  met-551786: "human figures. Book of the Dead vignettes run along the top register."
+  met-590874: "human figures carved into the tomb-chapel reliefs on both walls."
+  met-757089: "a carved face fills the upper half of the board."
+  met-757056: "same series as met-757089, same carved face."
+  met-850659: "a political cartoon, drawn figures throughout."
+  met-816189: "collected under a query for maps; it is neither a map nor a
+    permitted subject, and it was not inspected."
+  met-208898: "wall sconces. Not one of the permitted subjects."
+  met-449543: "a bowl. Not one of the permitted subjects."
+  met-452032: "a bowl. Not one of the permitted subjects."
+  met-193609: "a clock. A clock face is not an astronomical diagram."
+  met-206965: "a longcase regulator. Same reason as met-193609."
+  met-701293: "a Chinese album leaf photographed with a colour chart in frame."
+  met-590875: "unreviewed leftovers from a failed search page."
+  met-549236: "a funerary stela. Egyptian stelae carry offering scenes with figures."
+  met-194191: "a clock watch. A dial is not an astronomical diagram."
+  met-231782: "a covered vase. Not one of the permitted subjects."
+  met-201890: "a covered vase. Not one of the permitted subjects."
+  met-449643: "the base of a vessel. Not one of the permitted subjects."
+  met-450452: "a cross-shaped tile, collected late and never inspected."

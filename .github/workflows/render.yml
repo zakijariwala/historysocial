@@ -1,0 +1,82 @@
+name: render and deploy
+
+# Rendering happens here. Review happens on a phone. No laptop is in the loop
+# for either, which is the whole point of the pipeline.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      post:
+        description: "one post id, or blank for every post marked ready"
+        required: false
+
+concurrency:
+  group: render-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      # The runner has no serif and no Arabic face. Chromium would render
+      # boxes, and nobody re-reads a PNG before it posts. The fonts are in the
+      # repository for exactly this reason: they are installed from fonts/,
+      # never fetched.
+      - name: Install the bundled fonts
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cp fonts/*.ttf ~/.local/share/fonts/
+          fc-cache -f
+          fc-list | grep -Ei "garamond|grotesk" || (echo "fonts did not install" && exit 1)
+
+      - name: Apply migrations
+        run: python tools/db.py migrate
+
+      # This step is the gate. Everything after it assumes the linters passed.
+      - name: Lint every post marked ready
+        run: python tools/lint_post.py --all-ready
+
+      - name: Render
+        run: |
+          if [ -n "${{ github.event.inputs.post }}" ]; then
+            python render/render.py --post "${{ github.event.inputs.post }}"
+          else
+            python render/render.py --all-ready
+          fi
+
+      - name: Build site/
+        run: python tools/build_index.py
+
+      - name: Upload the renders as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: renders
+          path: out/
+          retention-days: 14
+
+      - name: Deploy to Cloudflare Pages
+        if: github.ref == 'refs/heads/main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=history-social --commit-dirty=true

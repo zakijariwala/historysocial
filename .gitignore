@@ -7,8 +7,10 @@ sources/*
 out/
 site/posts/
 site/index.json
-*.png
 *.zip
+
+# Cover source images ARE committed: they are inputs, and the render job in
+# Actions must not depend on a museum API being up. Rendered slides are not.
 
 # Scratch database for cover-variant work. Not truth.
 scratch.db

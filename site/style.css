@@ -1,0 +1,82 @@
+/* Mobile first, and mobile only in practice: the only device that opens this
+   is the phone the carousels are posted from. */
+
+:root {
+  --ground: #efeae1;
+  --ink: #191b20;
+  --rule: rgba(25, 27, 32, 0.16);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.45 Georgia, "Times New Roman", serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+header { padding: 22px 20px 10px; }
+h1 { font-size: 22px; font-weight: 400; font-style: italic; letter-spacing: 0.02em; }
+
+nav { display: flex; gap: 8px; margin-top: 14px; }
+nav button {
+  flex: 1; padding: 11px 0; border: 1px solid var(--rule); background: none;
+  color: var(--ink); font: inherit; font-size: 15px; border-radius: 2px;
+}
+nav button.on { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+
+main { padding: 8px 20px 60px; }
+
+.screen { display: none; }
+.screen.on { display: block; }
+
+.card { border-top: 1px solid var(--rule); padding: 20px 0; }
+.card h3 { font-size: 21px; font-weight: 400; }
+.card.big h3 { font-size: 30px; line-height: 1.15; }
+.card .meta { font-size: 14px; opacity: 0.65; margin: 6px 0 14px; }
+.card.mourning { background: #14161a; color: #c9c6c1; padding: 20px 16px; }
+
+.button {
+  display: inline-block; padding: 12px 18px; border: 1px solid var(--rule);
+  background: none; color: inherit; font: inherit; font-size: 15px;
+  border-radius: 2px; text-decoration: none;
+}
+
+.none { opacity: 0.55; padding: 24px 0; }
+
+#back { background: none; border: 0; color: inherit; font: inherit; font-style: italic;
+        opacity: 0.7; padding: 6px 0 14px; }
+
+#post-title { font-size: 27px; font-weight: 400; line-height: 1.15; }
+#post-meta { font-size: 14px; opacity: 0.65; margin: 6px 0 16px; font-style: italic; }
+
+/* One slide per screen, snapped, sized for a phone. */
+#viewer { margin: 0 -20px; }
+#track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+#track::-webkit-scrollbar { display: none; }
+#track img {
+  flex: 0 0 100%; width: 100%; height: auto; scroll-snap-align: center;
+  display: block;
+}
+
+#counter { text-align: center; font-size: 14px; opacity: 0.6; padding: 10px 0 16px; }
+
+.actions { display: flex; gap: 10px; }
+.actions .button { flex: 1; text-align: center; }
+
+#caption {
+  margin-top: 18px; padding: 16px; border: 1px solid var(--rule);
+  white-space: pre-wrap; font: 15px/1.5 Georgia, serif; user-select: text;
+  -webkit-user-select: text;
+}
+
+#empty { padding: 30px 20px; opacity: 0.6; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --ground: #14161a; --ink: #d8d4cd; --rule: rgba(216, 212, 205, 0.2); }
+}

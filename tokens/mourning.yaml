@@ -1,0 +1,43 @@
+# The mourning calendar.
+#
+# The two-month window is fixed and needs nobody's confirmation:
+#
+#     Muharram 1 to Safar 30
+#
+# The wafat dates are NOT filled in here, and no tool will fill them. They come
+# from Sistani's published calendar, they are a religious determination, and a
+# machine guessing them would put an ornamented cover on a mourning morning.
+# Fill `hijri` as MONTH-DAY, where month is 1 to 12: Muharram 10 is "1-10".
+#
+# tools/mourning.py reports how many are still TODO every time it runs, so an
+# unfilled list can never be mistaken for an empty one.
+
+note: >
+  Filled by hand from Sistani's published calendar. Until then the mourning
+  check covers Muharram and Safar only.
+
+wafat:
+  - name: "TODO: wafat of the Prophet"
+    hijri: "TODO"
+  - name: "TODO: wafat of Fatima al-Zahra"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam 'Ali"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Hasan"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Sajjad"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Baqir"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Sadiq"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Kazim"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Rida"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Jawad"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-Hadi"
+    hijri: "TODO"
+  - name: "TODO: wafat of Imam al-'Askari"
+    hijri: "TODO"

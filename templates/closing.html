@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{# The line the essay was built for. Not a summary. Set larger than body and
+   given the whole slide, because it is the sentence a reader screenshots. #}
+
+{% block style %}
+  .measure { align-items: center; }
+  .closing {
+    font-size: {{ tokens.type.closing.size }}px;
+    line-height: {{ tokens.type.closing.line_height }};
+    text-wrap: pretty;
+  }
+{% endblock %}
+
+{% block slide %}
+  <div class="running-head">{{ post.running_head }}</div>
+  <div class="measure" id="measure"><div class="closing">{{ slide.body }}</div></div>
+  <div class="position">{{ slide.position }}</div>
+{% endblock %}

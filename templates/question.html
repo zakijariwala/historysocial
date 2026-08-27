@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{# Slide 2, always. The largest type in the system. It asks the question the
+   remaining slides answer, and it is what makes somebody swipe past a cover. #}
+
+{% block style %}
+  .measure { align-items: center; }
+  .question {
+    font-size: {{ tokens.type.question.size }}px;
+    line-height: {{ tokens.type.question.line_height }};
+    text-wrap: pretty;
+  }
+{% endblock %}
+
+{% block slide %}
+  <div class="running-head">{{ post.running_head }}</div>
+  <div class="measure" id="measure"><div class="question">{{ slide.body }}</div></div>
+  <div class="position">{{ slide.position }}</div>
+{% endblock %}

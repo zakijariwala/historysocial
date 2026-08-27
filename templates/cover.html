@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{# Cover: a duotoned image, or solid ground. A white box holds the title in
+   the grotesque, lowercase and justified. One fixed sub-line sits beneath it
+   in italic serif and never changes wording between posts, because a fixed
+   element is what a reader learns to recognise. #}
+
+{% block style %}
+  .art {
+    position: absolute;
+    inset: 0;
+    background-image: url("{{ cover_image_url }}");
+    background-size: cover;
+    background-position: center;
+  }
+  .solid { position: absolute; inset: 0; background: var(--ground); }
+
+  .box {
+    position: absolute;
+    left: {{ tokens.cover.box_inset }}px;
+    right: {{ tokens.cover.box_inset }}px;
+    bottom: {{ tokens.cover.box_inset }}px;
+    background: {{ tokens.cover.box_colour }};
+    padding: {{ tokens.cover.box_padding }}px;
+  }
+  .title {
+    font-family: "GrotesqueBundled", "Helvetica Neue", sans-serif;
+    font-weight: {{ tokens.type.cover_title.weight }};
+    font-size: {{ tokens.type.cover_title.size }}px;
+    line-height: {{ tokens.type.cover_title.line_height }};
+    text-transform: lowercase;
+    text-align: justify;
+    text-align-last: left;
+    color: {{ ink }};
+    hyphens: none;
+  }
+  .subline {
+    margin-top: 34px;
+    font-style: italic;
+    font-size: {{ tokens.type.cover_subline.size }}px;
+    color: {{ ink }};
+    opacity: 0.78;
+  }
+{% endblock %}
+
+{% block slide %}
+  {% if cover_image_url %}<div class="art"></div>{% else %}<div class="solid"></div>{% endif %}
+  <div class="box">
+    <div class="title" id="measure-title">{{ slide.body }}</div>
+    <div class="subline">{{ cover_subline }}</div>
+  </div>
+{% endblock %}
