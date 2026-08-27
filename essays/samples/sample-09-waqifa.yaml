@@ -1,0 +1,132 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# Cover uses the HALFTONE pass rather than the plain duotone.
+
+post:
+  id: sample-09-waqifa
+  pillar: collision
+  running_head: the men who stopped at the eighth name
+  cover_title: the ones who halted
+  cover_image: met-452854
+  ink: rust
+  caption: |
+    Al-Kulayni's chains carry a label: this transmitter belonged to the
+    Waqifa, the men who stopped at Musa b. Ja'far and refused the son. The
+    compiler kept the label and kept the report. That decision tells you what
+    a chain of transmission was for.
+
+claims:
+  - subject: the Waqifa
+    assertion: >-
+      transmitters are marked in al-Kafi as belonging to the Waqifa, among them
+      Marwan al-Qandi and al-Wasiti
+    source: SRC-KAF-001
+    page: "279"
+  - subject: the Waqifa
+    assertion: >-
+      one transmitter reports that he came to Khurasan while a member of the
+      Waqifa and left the sect
+    source: SRC-KAF-001
+    page: "325"
+  - subject: Musa b. Ja'far
+    assertion: >-
+      a group claimed during his life that he was the awaited Imam who would
+      hold the Imamate for the rest of time
+    source: SRC-IRS-003
+    page: "427"
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      Why does a compiler keep a report from a man he says belonged to the
+      wrong party?
+
+  - template: body
+    body: >-
+      Open al-Kafi at the chains. The label sits in the middle of them. Marwan
+      al-Qandi, from the Waqifa, who said the following. Al-Wasiti, a member of
+      the Waqifa, who said the following. Al-Kulayni neither drops these men
+      from his book nor hides what they were, and he had every reason to do one
+      or the other. He writes the party name into the chain, hands over the
+      report, and leaves the weighing to whoever is reading.
+
+  - template: body
+    body: >-
+      The label names a position rather than a personality. The Waqifa stopped
+      at Musa b. Ja'far. They held that the man who died in the prison of
+      al-Sindi b. Shahik had not died, or would return, and they refused the
+      succession of his son. [[NEEDS CLAIM: the earliest source that uses the
+      name Waqifa, and what it says the group held]].
+
+  - template: body
+    body: >-
+      Al-Mufid shows the position forming before the death rather than after it.
+      He writes that a group had claimed, while Musa b. Ja'far was alive, that
+      he was the awaited one who would hold the office for the rest of time. A
+      doctrine that predates the corpse cannot be explained as grief. It was a
+      reading of what the imamate was, and the death tested it in public.
+
+  - template: body
+    body: >-
+      The test happened on a bridge. Al-Sindi displayed the body and called
+      Baghdad to look at the face, and al-Mufid states that the group's claim is
+      why he did it. A movement that survives that is a movement with
+      an answer ready, and the answer had to be either that the body was not his
+      or that a return was still coming.
+
+  - template: body
+    body: >-
+      [[NEEDS CLAIM: what the Waqifa are reported to have said in reply to the
+      viewing]]. Without that, this essay can describe the state's move and not
+      the reply to it, which is half a controversy. The reply is the piece that
+      would show whether these men were a faction with a case or a group holding
+      a position that had already failed.
+
+  - template: body
+    body: >-
+      Money is the part of the story the sources do not hide. Agents collected
+      in the name of an imam, and men holding funds when he died had a decision
+      to make about whom to hand them to.
+      [[NEEDS CLAIM: what the sources say about funds held by agents at the
+      death of Musa b. Ja'far]]. A doctrine that keeps the previous imam alive
+      also keeps the accounts where they are.
+
+  - template: body
+    body: >-
+      That is an accusation later writers made, and it needs naming as an
+      accusation rather than as a finding.
+      [[NEEDS CLAIM: which source first attributes the Waqifa position to the
+      retention of funds]]. A charge of self-interest is easy to write and hard
+      to check, and this account does not repeat a charge whose earliest source
+      it has not read.
+
+  - template: body
+    body: >-
+      What can be checked is that men left. Al-Kulayni preserves a transmitter
+      saying that he came to Khurasan while he belonged to the Waqifa, which is
+      a sentence about a change of mind. Khurasan is where 'Ali b. Musa al-Rida
+      later stood at the centre of a much larger political story.
+      [[NEEDS CLAIM: the date of that report and the page in al-Kafi]].
+
+  - template: body
+    body: >-
+      Now the compiler's decision looks less like tolerance and more like
+      method. A chain exists so that a reader can weigh a report by the men who
+      carried it. Erasing the label would make the report look stronger than it
+      is. Keeping it lets a later reader discount the report, accept it, or
+      notice that a man who once denied the succession is the one carrying it.
+
+  - template: body
+    body: >-
+      The dispute outlived everyone who started it. Al-Kulayni compiled his book
+      generations after the death in the prison, and he still needed the word in
+      his chains. That means readers in his own day still met men who held the
+      position, or books that came out of it, or reports whose weight depended
+      on knowing where the transmitter had stood. [[NEEDS CLAIM: how long the
+      Waqifa persisted as a distinct group, and the source]].
+
+  - template: closing
+    body: >-
+      The party that stopped at the eighth name kept its place in the record as
+      a label attached to men whose reports the other side went on quoting.

@@ -22,6 +22,15 @@
     background: {{ tokens.cover.box_colour }};
     padding: {{ tokens.cover.box_padding }}px;
   }
+
+  /* A white box over a duotoned image is a hole cut in the picture. A white
+     box on a solid paper ground is invisible, so the solid cover inverts:
+     the box becomes the ink and the title becomes the ground. Same object,
+     opposite polarity, and both read as one account. */
+  .box.solid-cover { background: {{ ink }}; }
+  .box.solid-cover .title,
+  .box.solid-cover .subline { color: {{ ground }}; }
+
   .title {
     font-family: "GrotesqueBundled", "Helvetica Neue", sans-serif;
     font-weight: {{ tokens.type.cover_title.weight }};
@@ -44,7 +53,7 @@
 
 {% block slide %}
   {% if cover_image_url %}<div class="art"></div>{% else %}<div class="solid"></div>{% endif %}
-  <div class="box">
+  <div class="box{% if not cover_image_url %} solid-cover{% endif %}">
     <div class="title" id="measure-title">{{ slide.body }}</div>
     <div class="subline">{{ cover_subline }}</div>
   </div>

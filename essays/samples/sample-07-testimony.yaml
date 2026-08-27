@@ -1,0 +1,137 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-07-testimony
+  pillar: collision
+  running_head: the jurists who were asked to look
+  cover_title: no mark upon him
+  cover_image: met-445953
+  ink: rust
+  caption: |
+    Al-Sindi b. Shahik did not ask the jurists of Baghdad whether the prisoner
+    had been poisoned. He asked them whether they could see a wound. They
+    could not, and they said so, and he wrote it down. The question you are
+    asked decides the answer you can give.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      al-Sindi brought in the jurists and notable men of Baghdad, among them
+      al-Haytham b. 'Adi, who saw no wound and no mark of strangulation, and
+      testified that he had died a normal death
+    source: SRC-IRS-003
+    page: "427"
+  - subject: Harun al-Rashid
+    assertion: >-
+      Yahya b. Khalid summoned al-Sindi at Baghdad and gave him instructions
+      concerning Musa b. Ja'far
+    source: SRC-IRS-003
+    page: "427"
+    dispute: >-
+      al-Mufid gives the poisoning as a report ("it is said"), while the Arabic
+      al-Tabari records the death with no cause at all.
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      Which question did the jailer put to the men he called in to see the body?
+
+  - template: body
+    body: >-
+      Al-Mufid names the procedure. Al-Sindi b. Shahik brought the jurists of
+      Baghdad and its notable men into the prison, al-Haytham b. 'Adi among
+      them, and walked them past the body. They looked. They found no wound on
+      it and no mark of strangling. Al-Sindi then had them testify that the man
+      had died a normal death, and they gave that testimony, and the record of
+      it went into the account al-Mufid was reading two centuries later.
+
+  - template: body
+    body: >-
+      Read the finding and the testimony side by side, because they are not the
+      same statement. The finding is narrow: no wound, no ligature. The
+      testimony is wide: a normal death. Between those two sentences sits every
+      method of killing a man that leaves no mark, and the men who signed had no
+      way to rule any of them out by looking at a face.
+
+  - template: body
+    body: >-
+      That gap is not al-Mufid's invention. He reports the finding first and the
+      testimony second, in that order, which lets a careful reader see the join
+      between them. A compiler smoothing the story would have written that the
+      jurists of Baghdad confirmed a natural death, and stopped there, and no
+      reader a thousand years later would have known what the men had been shown
+      or what they were asked.
+      [[NEEDS CLAIM: whether al-Mufid names any jurist who declined to testify]].
+
+  - template: body
+    body: >-
+      Al-Haytham b. 'Adi is the one name he keeps out of the whole delegation.
+      [[NEEDS CLAIM: who al-Haytham b. 'Adi was, his dates and his standing as a
+      transmitter]]. A jailer collecting testimony picks witnesses whose word
+      carries weight in the city he has to convince, and the pick is part of the
+      procedure. Naming even one of them tells you what the exercise was for.
+      Testimony meant to sit in a file needs no famous signature. Testimony
+      meant to be quoted in an argument needs several.
+
+  - template: body
+    body: >-
+      The design shows in what he did next. Al-Sindi took the body out of the
+      prison, set it down on the bridge at Baghdad, and had an announcement
+      made: this man has died, come and look at him. Testimony from named
+      jurists reaches the men who read and who write. A body on a bridge reaches
+      everybody else in the city, including the illiterate and the hostile. He
+      ran both channels inside a day.
+
+  - template: body
+    body: >-
+      A jailer with something to hide does neither of those things. He buries at
+      night, says little, and lets the rumour run, because a rumour with no body
+      attached to it fades inside a season. Al-Sindi ran hard in the opposite
+      direction on both channels within a day. What he feared was not a charge
+      of murder, which no viewing could have answered. He feared a claim that
+      there was no corpse at all, and a viewing answers that.
+
+  - template: body
+    body: >-
+      Al-Mufid supports that reading in the same paragraph. He writes that a
+      group had claimed, during the life of Musa b. Ja'far, that he was the
+      awaited one who would hold the office for the rest of time. The viewing
+      answers that claim. It does not answer the question of poison, and nothing
+      al-Sindi arranged that day was built to answer it.
+
+  - template: body
+    body: >-
+      The poison enters the account through a different door. Al-Mufid reports
+      it as something said: that the instruction came through Yahya b. Khalid,
+      that the poison went into food, that dates carried it, that a fever held
+      three days. [[NEEDS CLAIM: the wording that introduces the three-day
+      fever, Irshad p. 427]]. He marks it. The Arabic chronicle of al-Tabari
+      carries no cause at all, and two accounts that differ this way have to be
+      named as two.
+
+  - template: body
+    body: >-
+      So the testimony proves less than it was collected to prove and more than
+      a sceptic allows. It does not establish a natural death. It establishes
+      that a body existed, that named men of Baghdad filed past it, and that the
+      state wanted their names attached to what they had seen with their own
+      eyes. For the argument running in the city that week, that was the whole
+      case, and the state won it.
+
+  - template: body
+    body: >-
+      [[NEEDS CLAIM: whether any source records what the Waqifa said about the
+      viewing on the bridge]]. That is the missing witness statement in this
+      case, and its absence shapes everything above. The men who denied the
+      death had to account for a corpse that a crowd walked past in daylight.
+      How they did it, and whether they tried, would settle what kind of
+      movement they were: a faction with a case, or a position that nobody could
+      withdraw from without losing everything.
+
+  - template: closing
+    body: >-
+      Al-Sindi asked a question that could be answered by looking, got his
+      answer in writing, and left the question that mattered to a reader
+      standing on the bridge with no way to check it.

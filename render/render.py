@@ -202,15 +202,26 @@ def shoot(pages, tokens, staging: Path) -> list[tuple[sqlite3.Row, str]]:
             page.wait_for_timeout(120)
             over = page.evaluate("""() => {
                 const out = [];
-                for (const el of document.querySelectorAll('#measure, #measure-title, .box')) {
-                    const dy = el.scrollHeight - el.clientHeight;
-                    const dx = el.scrollWidth - el.clientWidth;
-                    if (dy > 1 || dx > 1) out.push({el: el.id || el.className, dy, dx});
+                // Only #measure has a fixed box, so only #measure can overflow
+                // in the scroll sense. Two pixels of tolerance: a serif with a
+                // tight line-height reports one or two pixels of ink spill on
+                // any element, and that is not a layout failure.
+                const m = document.querySelector('#measure');
+                if (m) {
+                    const dy = m.scrollHeight - m.clientHeight;
+                    const dx = m.scrollWidth - m.clientWidth;
+                    if (dy > 2 || dx > 2) out.push({el: 'measure', dy, dx});
                 }
+                // The cover fails differently: a title too long for its box
+                // pushes the box off the top of the canvas.
                 const b = document.querySelector('.box');
                 if (b) {
                     const r = b.getBoundingClientRect();
-                    if (r.top < 0) out.push({el: 'box-top', dy: Math.round(-r.top), dx: 0});
+                    if (r.top < 0) out.push({el: 'cover-box', dy: Math.round(-r.top), dx: 0});
+                    if (r.bottom > window.innerHeight + 1) {
+                        out.push({el: 'cover-box-bottom',
+                                  dy: Math.round(r.bottom - window.innerHeight), dx: 0});
+                    }
                 }
                 return out;
             }""")

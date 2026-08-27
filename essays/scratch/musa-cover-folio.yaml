@@ -1,0 +1,26 @@
+# Cover variant 1 of 3, for judging the cover system only.
+#
+# This file lives in a SCRATCH database, never in claims.db. Its claim row is
+# a placeholder row that exists so the post resolves to something; it is not
+# evidence and it is not verified. The point of these three files is to look
+# at three covers side by side without the placeholder linter blocking the
+# view, which is the one case where --skip-lint is the right tool.
+
+post:
+  id: musa-cover-folio
+  pillar: collision
+  running_head: the imam who spent nineteen years in custody
+  cover_title: the bridge at baghdad
+  cover_image: met-453385        # a manuscript folio, duotoned
+  ink: iron
+  mourning: false
+  caption: "cover variant: manuscript folio, duotone"
+
+claims:
+  - subject: scratch
+    assertion: "placeholder row for a cover test. Not evidence."
+    source: SRC-IRS-003
+    page: "407"
+
+slides:
+  - template: cover

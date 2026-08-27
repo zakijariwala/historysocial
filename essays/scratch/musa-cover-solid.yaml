@@ -1,0 +1,19 @@
+# Cover variant for judging the cover system only. Scratch database.
+
+post:
+  id: musa-cover-solid
+  pillar: collision
+  running_head: the imam who spent nineteen years in custody
+  cover_title: the bridge at baghdad
+  ink: rust
+  mourning: false
+  caption: "cover variant:solid ground, no image"
+
+claims:
+  - subject: scratch
+    assertion: "placeholder row for a cover test. Not evidence."
+    source: SRC-IRS-003
+    page: "407"
+
+slides:
+  - template: cover

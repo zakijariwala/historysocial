@@ -82,7 +82,7 @@ type:
     line_height: 1.12
   body:
     family: serif
-    size: 46
+    size: 50
     line_height: 1.32
   closing:
     family: serif

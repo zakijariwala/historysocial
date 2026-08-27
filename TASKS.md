@@ -1,88 +1,101 @@
 # Task list
 
-Kept current as the build runs. `[x]` done, `[~]` in progress, `[ ]` pending,
-`[!]` blocked (see BLOCKED.md).
+`[x]` done, `[ ]` pending, `[!]` blocked (see BLOCKED.md).
+
+Phases 0 through 9 are complete. What remains is the part only you can do:
+fill in the editions, verify claim rows, and deploy.
 
 ## Phase 0 - repository
 
 - [x] Own git repository at HISTORY-SOCIAL (the parent `noor post` repo cannot
-      run this project's Actions workflow; see DECISIONS.md)
+      run this project's Actions workflow; DECISIONS.md #1)
 - [x] `.gitignore`: sources local, renders never committed, bank images kept
-- [x] Two typefaces bundled: EB Garamond (serif + italic), Space Grotesk
-      (grotesque), both OFL, licences committed beside them
+- [x] EB Garamond (serif + italic) and Space Grotesk (grotesque) bundled with
+      their OFL licences
 - [x] `requirements.txt`
 
 ## Phase 1 - source layer
 
-- [x] `tools/sourcelib.py` - transliteration normaliser, spelling-family regex
-- [x] `tools/extract_pages.py` - PDF to page-preserving text, printed page
-      numbers reconciled against their neighbours, byte-offset page index
-- [x] `tools/ingest_text.py` - the same index for plain-text sources
-      (OpenITI page markers)
-- [x] `tools/lookup.py` - search returning PRINTED pages, ripgrep or Python
-- [x] `tools/fetch_sources.py` - OpenITI and pre-1929 archive.org only;
-      prints the in-copyright list the operator must supply
-- [x] `sources/manifest.yaml` - 26 volumes registered, editions left TODO on
-      purpose
-- [x] All 21 local PDFs extracted; 5 open-licence texts fetched
-- [!] 2 world-history PDFs are encrypted, 1 Guillaume scan has no text layer,
-      4 fetched OCR files are unusable (BLOCKED.md)
+- [x] `tools/sourcelib.py` normaliser and spelling-family regex
+- [x] `tools/extract_pages.py`, printed pages reconciled against neighbours,
+      byte-offset page index
+- [x] `tools/ingest_text.py` for plain-text sources (OpenITI page markers)
+- [x] `tools/lookup.py` returning PRINTED pages, ripgrep optional
+- [x] `tools/fetch_sources.py`, OpenITI and pre-1929 archive.org only
+- [x] `sources/manifest.yaml`, 26 volumes registered, editions left TODO
+- [x] 21 local PDFs extracted; 5 open-licence texts fetched
+- [!] 2 PDFs encrypted, 1 scan has no text layer, 4 fetched OCR files unusable
 
 ## Phase 2 - database
 
-- [x] `migrations/0001_initial.sql` - claim, post, slide, post_claim, repeatable
-- [x] `tools/db.py` - add, verify, unverified, coverage, post-create, slide-set,
-      link, status, drafts, metrics (shares first)
-- [x] verify refuses: no page, TODO edition, index-only source, unregistered
+- [x] `migrations/0001_initial.sql`, repeatable
+- [x] `tools/db.py`: claim-add, verify, unverified, coverage, post-create,
+      slide-set, link, status, drafts, metrics
+- [x] verify refuses on: no page, TODO edition, index-only source, unregistered
       source
 
 ## Phase 3 - cover image bank
 
-- [x] `tools/fetch_images.py` - Met Open Access, per-object public-domain check,
-      human-figure rejection filter, rejects logged for audit
-- [~] `images/bank.yaml` written by the collect run
-- [x] `render/duotone.py` - duotone and halftone passes
+- [x] `tools/fetch_images.py`, Met Open Access, per-object public-domain check,
+      human-figure filter, rejects logged
+- [x] `images/review.yaml` + `tools/apply_review.py`: a person looked at every
+      image; 12 rejected on the pixels, 11 approved
+- [x] `render/duotone.py`: duotone and halftone passes
+- [!] no botanical plates, maps or empty ground in the bank yet
 
 ## Phase 4 - templates and tokens
 
-- [x] `tokens/tokens.yaml` - five inks, four grounds, two typefaces, type scale
-- [x] `templates/base.html` + cover, question, body, closing
+- [x] `tokens/tokens.yaml`: five inks, four grounds, type scale, mourning pair
+- [x] `templates/`: base, cover, question, body, closing
 - [x] Running head on every interior slide; overflow measured, never shrunk
+- [x] Solid covers invert to an ink block (DECISIONS.md #9)
 
 ## Phase 5 - writing rules
 
-- [x] `tools/lint_prose.py` - structure, sentences, evidence, register
-- [ ] `tools/lint_post.py` - the render gates (verified claims, placeholders,
-      licence, mourning tokens, slide 2)
+- [x] `tools/lint_prose.py`: structure, sentences, evidence, register
+- [x] `tools/lint_post.py`: the render gates
 
 ## Phase 6 - renderer
 
-- [x] `render/render.py` - Jinja2 + Playwright, 1080x1350, manifest per post
-- [ ] End-to-end render proved on a real post
+- [x] `render/render.py`: Jinja2 + Playwright, 1080x1350, manifest per post
+- [x] Proved end to end: 15 sample carousels, 196 slides, no partial output
 
 ## Phase 7 - delivery
 
-- [ ] `.github/workflows/render.yml`
-- [ ] `site/` - TODAY, READY, ARCHIVE, swipeable viewer, iOS-safe clipboard
-- [ ] `tools/build_index.py` - site/index.json, zips
-- [ ] `tools/mourning.py` - Muharram 1 to Safar 30 plus the wafat dates
+- [x] `.github/workflows/render.yml`
+- [x] `site/`: TODAY, READY, ARCHIVE, swipeable viewer, iOS-safe clipboard
+- [x] `tools/build_index.py`: index.json, zips, PNG copies
+- [x] `tools/mourning.py` + `tokens/mourning.yaml`
+- [!] never deployed and never run in Actions: no Cloudflare credentials here
 
 ## Phase 8 - first essay
 
-- [ ] Musa b. Ja'far, 16 slides, running head "the imam who spent nineteen
+- [x] Musa b. Ja'far, 16 slides, running head "the imam who spent nineteen
       years in custody", closing on the Waqifa split
-- [ ] `NEEDS_CLAIMS.md` - every placeholder, grouped by the source that
-      would settle it
-- [ ] Three cover variants in a scratch database
+- [x] 13 placeholders, 10 candidate claim rows with real source pages
+- [x] `NEEDS_CLAIMS.md`, grouped by the source that would settle each
+- [x] Three cover variants in `scratch.db`: manuscript folio duotone, tilework
+      duotone, solid (`out/scratch/`)
 
-## Phase 9 - fifteen samples for quality review
+## Phase 9 - fifteen samples
 
-- [ ] Fifteen carousels across the six pillars, rendered locally from
-      `scratch.db`, spanning mourning and normal, image and solid covers,
-      both cover passes, and the full ink set
-- [ ] `out/SAMPLES.md` - what each one is testing
+- [x] 15 carousels across six pillars, both cover passes, five inks, two
+      mourning posts, image and solid covers
+- [x] Every sample passes every Phase 5 prose rule; only placeholder findings
+      remain
+- [x] `out/SAMPLES.md`
 
-## Deliverables
+## Yours, in order
 
-- [ ] ARCHITECTURE.md, DEPLOYMENT.md, README.md, DECISIONS.md,
-      NEEDS_CLAIMS.md, BLOCKED.md
+- [ ] Fill `edition:` for the sources you will actually cite in
+      `sources/manifest.yaml`. Until then nothing can be verified.
+      Start with SRC-IRS-003 (Howard's Irshad) and SRC-KAF-001 (al-Kafi).
+- [ ] Verify the ten candidate rows on `musa-bridge`:
+      `python tools/db.py unverified` then `verify <id> --by zaki`
+- [ ] Work down NEEDS_CLAIMS.md, replacing placeholders with sentences the
+      page supports
+- [ ] Review the eleven cover images yourself in `images/bank/`; the review in
+      `images/review.yaml` is mine, and Rule 3 should have your eyes on it
+- [ ] Fill the wafat dates in `tokens/mourning.yaml` from Sistani's calendar
+- [ ] DEPLOYMENT.md: Pages project, token, Access policy, first run
+- [ ] `python tools/db.py status musa-bridge ready` when the essay is clean

@@ -1,0 +1,136 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-03-basra
+  pillar: collision
+  running_head: the prisoner who was moved twice
+  cover_title: the prison at basra
+  ink: indigo
+  caption: |
+    Harun did not keep Musa b. Ja'far in one place. Al-Kulayni names two
+    custodians in two cities: 'Isa b. Ja'far at Basra, then al-Sindi b. Shahik
+    at Baghdad. A state that moves a prisoner is a state that has run out of
+    patience with the first arrangement.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      after the hajj Harun took him to Basra and imprisoned him under 'Isa b.
+      Ja'far, then summoned him to Baghdad and imprisoned him under al-Sindi b.
+      Shahik
+    source: SRC-KAF-001
+    page: "451"
+  - subject: Harun al-Rashid
+    assertion: >-
+      Yahya b. Khalid reached Baghdad, gave out that he came to inspect the tax
+      administration of the Sawad, then summoned al-Sindi and instructed him
+    source: SRC-IRS-003
+    page: "427"
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      What goes wrong with a custody that makes a caliph change the jailer?
+
+  - template: body
+    body: >-
+      Al-Kulayni names two jailers. 'Isa b. Ja'far held Musa b. Ja'far at Basra
+      after the hajj. Later Harun summoned the prisoner to Baghdad and handed
+      him to al-Sindi b. Shahik. The compiler reports the move without a reason,
+      the way a file records a transfer. Two cities, two custodians, one
+      prisoner, and a caliph who changed his mind about where the man should sit.
+
+  - template: body
+    body: >-
+      Basra was no punishment posting. [[NEEDS CLAIM: the standing of Basra
+      among the cities of Iraq in the 170s AH]]. 'Isa b. Ja'far belonged to the
+      ruling house, and the choice of him says something the compiler does not
+      spell out. [[NEEDS CLAIM: 'Isa b. Ja'far's office and family connection to
+      Harun]]. Handing a prisoner to a relative in a large city keeps him
+      comfortable and keeps him watched, and it spreads the responsibility for
+      whatever happens next across two branches of one family.
+
+  - template: body
+    body: >-
+      Comfort has a cost for a jailer. A prisoner who receives visitors builds a
+      following inside the prison, and the followers carry messages out of it.
+      [[NEEDS CLAIM: any report of who visited Musa b. Ja'far during the Basra
+      custody]]. The record of the later Baghdad custody shows a network still
+      operating: money moved, agents reported, and the men holding both ends
+      knew each other's names.
+
+  - template: body
+    body: >-
+      Then Harun moved him. Baghdad was the caliph's own city, and al-Sindi b.
+      Shahik was the caliph's own man rather than a cousin with a household, a
+      following and interests of his own to protect. The change reads as a
+      tightening. A prisoner in Basra sits in somebody else's town, under
+      somebody else's judgement about how much comfort is safe. A prisoner in
+      Baghdad sits where the orders are written and where the man who wrote them
+      can send for him before nightfall.
+
+  - template: body
+    body: >-
+      Al-Mufid shows how those orders arrived. Yahya b. Khalid travelled to
+      Baghdad and told the city he had come to look into the tax administration
+      of the Sawad. He spent a few days on the accounts. Then he sent for
+      al-Sindi and gave him his instructions about the prisoner. The cover story
+      was fiscal, the errand was not, and al-Mufid states both in the same
+      breath.
+
+  - template: body
+    body: >-
+      A minister who travels in person carries something a letter cannot. The
+      instruction has no seal, no copy, no clerk and no archive, which means it
+      leaves no evidence and admits no denial later. Al-Mufid writes that the
+      order concerned Musa b. Ja'far, and then reports what people said the
+      order was: poison in the food, with dates named as the vehicle. He marks
+      that part as something said rather than something known, and the mark is
+      doing real work.
+
+  - template: body
+    body: >-
+      That marking is the honest part of the chapter, and it is worth pausing on.
+      Al-Mufid could have written the poison as fact. His readers expected it,
+      the charge was already old by his day, and nothing in his book would have
+      been weakened by stating it flat. He wrote it as a report that reached him
+      and left the seam showing. [[NEEDS CLAIM: the Arabic phrase al-Mufid uses
+      to introduce the poison report, Irshad p. 427]]. A compiler who marks his
+      own weak joints is telling you where to push.
+
+  - template: body
+    body: >-
+      The Arabic chronicle disagrees by silence. Al-Tabari enters the death at
+      Baghdad under its year, beside the death of a qadi, and says nothing about
+      a cause, a minister or an instruction. Two accounts survive. One comes
+      from a compiler writing inside the community that mourned the man, the
+      other from a chronicler working with the state's own year-by-year files,
+      and only one of them has a poison in it. Silence in an annal is not a
+      denial, and it is not a confirmation either.
+
+  - template: body
+    body: >-
+      Neither the silence nor the report settles the question, and a carousel
+      that pretends otherwise is lying to a reader who has no way to check it.
+      What the two sources do settle between them is the custody: Basra first
+      under a kinsman of the caliph, Baghdad second under a servant of his, a
+      transfer between the two, and a minister who arrived in the second city
+      with instructions that nobody entered in a register. That is a good deal
+      to know about a man held without a charge.
+
+  - template: body
+    body: >-
+      [[NEEDS CLAIM: how long the Basra custody lasted]]. Without that figure
+      the transfer stays ambiguous: a caliph losing patience with a cousin, or a
+      routine consolidation of prisoners in the capital. One number decides
+      between those two readings. It is the single figure that would turn this
+      essay from an argument into a demonstration, and nothing on this shelf
+      carries it, which is why the sentence above still has brackets in it.
+
+  - template: closing
+    body: >-
+      A caliph who trusts a custody leaves it where it is, and Harun moved this
+      one the length of [[NEEDS CLAIM: the road distance from Basra to Baghdad]]
+      to put it under a man with no cousins to please.

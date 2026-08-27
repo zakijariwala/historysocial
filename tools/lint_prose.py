@@ -37,8 +37,12 @@ EM_DASH = re.compile(r"[—–]|(?<=\s)--(?=\s)")
 # -ly words that are not adverbs. Everything else ending in -ly is flagged.
 NOT_ADVERBS = {
     "only", "early", "holy", "family", "reply", "supply", "apply", "italy",
-    "july", "ally", "rely", "ugly", "assembly", "monopoly", "july", "belly",
+    "july", "ally", "rely", "ugly", "assembly", "monopoly", "belly",
     "melancholy", "anomaly", "wholly",
+    # Verbs and nouns that end in -ly and are not adverbs at all.
+    "imply", "implies", "comply", "multiply", "reply", "supply", "apply",
+    "assembly", "homily", "family", "italy", "jelly", "rally", "tally",
+    "ply", "fly", "sly", "lily",
 }
 
 PASSIVE = re.compile(

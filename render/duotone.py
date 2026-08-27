@@ -68,11 +68,19 @@ def halftone(src: Path | str, dst: Path | str, shadow: str, highlight: str,
     """
     grey = _prepare(src, gamma, size)
     w, h = grey.size
+    # Rotating in place and back leaves four bare corners where the frame
+    # swept past the image. Pad first by more than the diagonal needs, screen
+    # the padded image, then crop the middle back out.
+    pad = int(max(w, h) * 0.25)
+    padded = ImageOps.expand(grey, border=pad, fill=int(sum(
+        grey.resize((1, 1), Image.LANCZOS).getdata())))
+    pw, ph = padded.size
     scale = 3
-    canvas = Image.new("L", (w * scale, h * scale), 255)
+    canvas = Image.new("L", (pw * scale, ph * scale), 255)
     draw = ImageDraw.Draw(canvas)
-    rotated = grey.rotate(angle, resample=Image.BICUBIC, fillcolor=255)
+    rotated = padded.rotate(angle, resample=Image.BICUBIC, fillcolor=255)
     pixels = rotated.load()
+    w, h = pw, ph
     step = max(dot, 2)
     for y in range(0, h, step):
         for x in range(0, w, step):
@@ -83,8 +91,9 @@ def halftone(src: Path | str, dst: Path | str, shadow: str, highlight: str,
             cx, cy = (x + step / 2) * scale, (y + step / 2) * scale
             r = radius * scale
             draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=0)
-    screened = canvas.resize((w, h), Image.LANCZOS).rotate(
+    screened = canvas.resize((pw, ph), Image.LANCZOS).rotate(
         -angle, resample=Image.BICUBIC, fillcolor=255)
+    screened = screened.crop((pad, pad, pw - pad, ph - pad))
     out = screened.convert("RGB").point(_ramp(shadow, highlight))
     dst = Path(dst)
     dst.parent.mkdir(parents=True, exist_ok=True)

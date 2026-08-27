@@ -30,8 +30,19 @@ POSTS = SITE / "posts"
 
 
 def main() -> int:
+    global OUT
     sys.stdout.reconfigure(encoding="utf-8")
-    conn = sqlite3.connect(str(ROOT / "claims.db"))
+    # The defaults are the real pipeline. The two flags exist so the sample set
+    # can be viewed in the same app without touching claims.db or out/.
+    import argparse
+
+    ap = argparse.ArgumentParser(description="assemble site/ from the database")
+    ap.add_argument("--db", default=str(ROOT / "claims.db"))
+    ap.add_argument("--renders", default=str(OUT),
+                    help="directory holding <post_id>/manifest.json")
+    a = ap.parse_args()
+    OUT = Path(a.renders)
+    conn = sqlite3.connect(a.db)
     conn.row_factory = sqlite3.Row
 
     if POSTS.exists():

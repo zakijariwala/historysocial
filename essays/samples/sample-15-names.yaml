@@ -1,0 +1,102 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# Cover uses the HALFTONE pass.
+
+post:
+  id: sample-15-names
+  pillar: fact_panel
+  running_head: a man with five names in one paragraph
+  cover_title: the restrained one
+  cover_image: met-453211
+  ink: olive
+  caption: 'Abu Ibrahim. Abu al-Hasan. Abu ''Ali. Al-''Abd al-Salih. Al-Kazim. Al-Mufid
+
+    lists them in a single paragraph, and each one comes from a different set
+
+    of people with a different reason for using it.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: his kunyas were Abu Ibrahim, Abu al-Hasan and Abu 'Ali; he is known
+    as al-'Abd al-Salih and described as al-Kazim
+  source: SRC-IRS-003
+  page: '407'
+- subject: Musa b. Ja'far
+  assertion: in the designation reports he is called Abu Ibrahim and al-'Abd al-Salih
+    by the transmitters
+  source: SRC-IRS-003
+  page: '408'
+slides:
+- template: cover
+- template: question
+  body: Why does one man need five names inside a single paragraph?
+- template: body
+  body: Al-Mufid sets the names out without explaining any of them. The kunyas were
+    Abu Ibrahim, Abu al-Hasan and Abu 'Ali. He is known as al-'Abd al-Salih, the
+    worshipper who serves. He is described as al-Kazim, the restrained. Five ways
+    of naming one man, offered in the same paragraph as his age and the length of
+    his Imamate, as though the count of names were one more biographical measurement
+    alongside the years.
+- template: body
+  body: 'In one sense it is. A kunya names a man by a son, so three kunyas point
+    at three sons and at three moments in a household''s life. [[NEEDS CLAIM: which
+    sons the kunyas Abu Ibrahim, Abu al-Hasan and Abu ''Ali refer to]]. A man addressed
+    by different kunyas in different reports is a man whose reports come from different
+    decades and different circles.'
+- template: body
+  body: Watch the designation reports and you can see that happening on the page.
+    Al-Mufaddal calls him Abu Ibrahim when he walks into the room as a boy. Mu'adh
+    b. Kathir's report has the father indicating al-'Abd al-Salih, asleep. Each
+    transmitter uses the name his own circle used, and al-Mufid keeps their usage
+    rather than standardising the lot of them into a single label for the convenience
+    of his readers.
+- template: body
+  body: 'That decision costs a compiler something real. A clean text would call
+    the man one thing throughout and would read better for it, and no reader would
+    have complained. Al-Mufid takes the rougher option. The roughness is itself
+    evidence: it shows the seams between the reports he is stitching together, and
+    the seams are what a reader checking his work needs to see before deciding whether
+    to trust him.'
+- template: body
+  body: 'Two of the five names are not kunyas at all. Al-''Abd al-Salih is a description
+    of practice. Al-Kazim is a description of temperament, and it is the one that
+    stuck hard enough to name a city. [[NEEDS CLAIM: when the name al-Kazim first
+    appears in a source, and in which]]. A description that becomes a name is a
+    small piece of social history moving in slow motion.'
+- template: body
+  body: 'A name of that kind also makes a claim about conduct. Restraint under provocation
+    is a virtue with a politics attached: it says the man did not rise, did not
+    raise a following in arms, did not answer the state on the state''s own terms,
+    and that all of this was a choice rather than a weakness. [[NEEDS CLAIM: whether
+    any source connects the name al-Kazim to a specific episode]]. A name can carry
+    an argument for centuries without ever making it.'
+- template: body
+  body: Hold the name against the file. A man summoned out of Medina inside the
+    caliph's own pilgrimage caravan, held at Basra under a kinsman of the caliph,
+    moved on to Baghdad under al-Sindi b. Shahik, and dead in that prison in 183.
+    The name and the custody describe the same behaviour from two directions, one
+    admiring and one administrative. Neither of them proves the other, and a slide
+    that treats them as one proof is cheating.
+- template: body
+  body: 'Names travel by a different route from facts. A date needs a source, and
+    a source can be checked and found wanting. A name needs only people willing
+    to go on using it. The ones that survive are the ones a community found useful,
+    which makes the surviving name a piece of evidence about the community rather
+    than about the man. [[NEEDS CLAIM: which of the five names dominates in al-Kafi''s
+    chains]].'
+- template: body
+  body: 'One more name in the file belongs to the other side, and al-Mufid does
+    not list it on page 407. The group who refused the death called him al-Muntazar,
+    the awaited one, and they were calling him that while he was alive. [[NEEDS
+    CLAIM: the earliest attestation of al-Muntazar applied to Musa b. Ja''far]].
+    A sixth name, held by the party that lost the argument and kept using it anyway.'
+- template: body
+  body: So a panel of names is not decoration. Each of these five words records
+    somebody's habit of speech, and the sixth records a doctrine that split a community.
+    Al-Mufid hands you the five without comment on page 407. He hands you the sixth
+    twenty pages later, in the middle of the account of the viewing on the bridge,
+    where it explains why a jailer needed a crowd to look at a dead man's face.
+- template: closing
+  body: The name that survived means the restrained one, and the men who chose it
+    were describing a man the state had kept in a cell for the last four years of
+    his life.

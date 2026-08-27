@@ -1,0 +1,126 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# A MOURNING post: solid cover, greyscale tokens, no ornament.
+
+post:
+  id: sample-06-rajab
+  pillar: calendar
+  running_head: a date in the middle of a quiet month
+  cover_title: six rajab
+  ink: bone
+  mourning: true
+  caption: |
+    Al-Mufid gives the death of Musa b. Ja'far a day: the sixth of Rajab, 183.
+    Rajab is one of the months in which fighting was forbidden. The date sits
+    in the calendar's quietest quarter, and the prison it names was in the
+    capital.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      died on 6 Rajab 183 in the prison of al-Sindi b. Shahik at Baghdad, aged
+      fifty-five
+    hijri: 183
+    source: SRC-IRS-003
+    page: "407"
+  - subject: Musa b. Ja'far
+    assertion: >-
+      the period of his Imamate after his father was thirty-five years
+    source: SRC-IRS-003
+    page: "407"
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      What does a community do with a death that has a date but no ceremony?
+
+  - template: body
+    body: >-
+      Al-Mufid fixes the death to a day. The sixth of Rajab, in the year 183,
+      inside the prison of al-Sindi b. Shahik at Baghdad. He gives the age as
+      fifty-five and the length of the Imamate as thirty-five years. Four
+      figures in two sentences. A compiler who wanted a legend would have
+      written a scene; this one wrote a register entry, and the entry is what
+      the calendar has been built on ever since.
+
+  - template: body
+    body: >-
+      A day in the calendar does work that a year cannot. A year is history. A
+      day comes round again. Once the sixth of Rajab has a name attached, every
+      Rajab afterwards carries an appointment, and the community that keeps it
+      does not need a shrine, a state or a permission to keep it. It needs a
+      date and a memory of what the date holds.
+
+  - template: body
+    body: >-
+      That is why this account runs a mourning setting at all. From Muharram 1
+      to Safar 30 the covers go solid, the ground goes dark, the ornament comes
+      off, and the ink drops to bone on near black. The wafat dates do the same
+      thing for a single day. [[NEEDS CLAIM: the wafat dates as published in
+      Sistani's calendar, month and day]]. Those dates are a religious
+      determination, so a machine does not get to guess them.
+
+  - template: body
+    body: >-
+      The tooling in this repository holds that line. It converts a Gregorian
+      date to a Hijri date by arithmetic, reports the answer, and says out loud
+      that a sighted calendar can differ from the tabular one by a day. Near a
+      boundary it refuses to decide and tells the operator to check the
+      published calendar. A pipeline that flipped a design token on its own
+      would put ornament on a mourning morning inside a year.
+
+  - template: body
+    body: >-
+      Rajab itself carries a rule older than the dispute in this story.
+      [[NEEDS CLAIM: the four months in which fighting was forbidden, and the
+      source that lists them]]. A death in a prison during such a month has a
+      shape that a death in any other month does not, and the sources that
+      report it were writing for readers who felt that shape without being told.
+
+  - template: body
+    body: >-
+      A modern reader does not feel it, which is a problem this account has to
+      solve on the slide rather than in a footnote. Name the month. Say what the
+      month meant. Give the reader the calendar the way you would give a
+      stranger a map, and do not assume that the word Rajab is doing any work in
+      their head before you put it there.
+
+  - template: body
+    body: >-
+      The other half of the calendar problem is the burial. Al-Kulayni names the
+      graveyard of Quraysh at Baghdad and stops.
+      [[NEEDS CLAIM: whether any early source gives the day of the burial rather
+      than the day of the death]]. A death has a date in this record. A funeral
+      does not, and the men who ran the funeral were the men who ran the prison.
+
+  - template: body
+    body: >-
+      Consider what that means for a family in Medina. News travelled the road
+      the prisoner had travelled, at the speed of a caravan.
+      [[NEEDS CLAIM: how long a message took from Baghdad to Medina in this
+      period]]. By the time the household heard the date, the sixth of Rajab was
+      weeks behind them, and the first mourning any of them kept was already an
+      anniversary rather than a funeral.
+
+  - template: body
+    body: >-
+      That gap between the death and the news is where the dispute got its air.
+      Al-Mufid reports that the jailer put the body on the bridge at Baghdad and
+      called the city to look at the face. Baghdad saw. Medina heard, later, from
+      travellers. A community which learns of a death by report rather than by
+      sight is a community in which a denial of the death costs nothing to hold.
+
+  - template: body
+    body: >-
+      So the calendar carries two things at once. It carries a date fixed to the
+      day by a compiler working from Imami material, and it carries the memory of
+      an argument about whether the day happened. Both survive in the same
+      chapter of the same book. Keeping the second one visible is the difference
+      between a commemoration and an account.
+
+  - template: closing
+    body: >-
+      A community that could not attend the funeral kept the date instead, and
+      the date has outlasted the prison, the bridge and the men who arranged
+      the viewing.

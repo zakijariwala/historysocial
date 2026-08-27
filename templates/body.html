@@ -2,7 +2,9 @@
 {# 60 to 100 words, tight leading, solid ground. The workhorse. #}
 
 {% block style %}
-  .measure { align-items: flex-start; }
+  /* Centred in the measure. Top-aligned body text left a third of the
+     slide empty at the foot, which reads as an unfinished slide. */
+  .measure { align-items: center; }
   .body {
     font-size: {{ tokens.type.body.size }}px;
     line-height: {{ tokens.type.body.line_height }};

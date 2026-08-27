@@ -1,0 +1,105 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-12-receipts
+  pillar: collision
+  running_head: what a caliph learns from a receipt
+  cover_title: the money from khurasan
+  cover_image: met-452102
+  ink: olive
+  caption: 'A man carried property from Khurasan to the family at Medina and asked
+
+    each recipient for a receipt. Al-Kulayni keeps the story because of what
+
+    happened when he reached Ja''far b. Muhammad, who refused, and told him
+
+    what he had been sent to do.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: al-Kulayni reports a messenger sent with property, told to say that
+    the Shi'a of Khurasan had sent it, and told to take a signed receipt from each
+    recipient
+  source: SRC-KAF-001
+  page: '450'
+- subject: Musa b. Ja'far
+  assertion: every recipient signed except Ja'far b. Muhammad, who warned the messenger
+    not to deceive the family of the Prophet and repeated back to him what had passed
+    between him and the man who sent him
+  source: SRC-KAF-001
+  page: '450'
+slides:
+- template: cover
+- template: question
+  body: What is a government buying when it hands out money and asks for a signature?
+- template: body
+  body: 'Al-Kulayni tells the receipt story from the messenger''s side, which is
+    the side that knows what the errand was. The man is given property and a script:
+    tell them your Shi''a in Khurasan sent this to be delivered to you. Hand it
+    over on the stated conditions. Then, as a messenger does, ask each recipient
+    for a receipt naming the amount and the kind of property received. He goes to
+    Medina, works through the list, and comes back with the paper.'
+- template: body
+  body: Read the receipt as an instrument rather than as a courtesy. A signed acknowledgement
+    that a man took money sent by the followers of his house is a document with
+    two uses. It proves he has followers who send money. It proves he accepted it.
+    Either fact, produced later in front of a caliph, answers a question that the
+    man himself would rather leave open.
+- template: body
+  body: 'Running a trap like that is cheap, which is the third thing to notice about
+    the receipt. It costs the treasury a sum nobody will miss. [[NEEDS CLAIM: the
+    amount of property described in the report, al-Kafi p. 450]]. It buys a file
+    of signatures from the leading men of a family the state already watches, and
+    it buys them without an arrest, a raid, or a single accusation that anybody
+    would afterwards have to prove in front of a judge.'
+- template: body
+  body: 'One man refused. Al-Kulayni has the messenger say that everyone on the
+    list gave him a receipt in his own hand except Ja''far b. Muhammad. He found
+    him praying in the mosque of the Messenger, sat down behind him to wait, and
+    got a warning before he could deliver his line: fear God, and do not deceive
+    the family of Muhammad.'
+- template: body
+  body: 'Then comes the detail the report is built for. The messenger says that
+    the man brought his head close and told him everything that had passed between
+    him and the caliph, as though he had been a third person in the room. [[NEEDS
+    CLAIM: the identity of the ruler called abu al-Dawaniq in this report]]. A modern
+    reader will take that as a claim about knowledge. Take it first as a claim about
+    what the family already understood.'
+- template: body
+  body: Because the refusal makes sense with no special knowledge at all. A household
+    under surveillance learns to read an offer. Property arriving from a distant
+    province, with a script attached, carried by a man who wants the transaction
+    in writing, is not charity. It is an invitation to sign something. The other
+    recipients on the list signed, took the goods and thought no more about it.
+    One man did not, and al-Kulayni's report keeps the difference between them.
+- template: body
+  body: Set the story beside the custody of the next generation and the shape repeats.
+    Al-Kulayni reports Harun summoning Musa b. Ja'far out of Medina on the twentieth
+    of Shawwal in 179, taking him to Basra, then on to Baghdad and the prison of
+    al-Sindi b. Shahik. Paper first, then a prison. The state tried to document
+    a network before it tried to hold the man at the centre of it, and both attempts
+    leave the same kind of trace.
+- template: body
+  body: 'A network is the right word for what the state was after here. [[NEEDS
+    CLAIM: what the sources say about agents collecting funds for the family in
+    this period, and where they operated]]. Money moving from Khurasan to Medina
+    implies people at both ends, a route between them, an understanding about rates
+    and conditions, and a habit old enough and regular enough to be worth imitating
+    in a forgery. Forgeries copy what already exists.'
+- template: body
+  body: That last point matters for the essay about the Waqifa. A movement that
+    later refused to accept a death was a movement with funds in its hands and agents
+    in several provinces, and it did not build that apparatus in a month. This report
+    shows the same machinery working two generations earlier. It also shows a caliph
+    who knew the machinery existed and wanted its paperwork rather than its money.
+- template: body
+  body: '[[NEEDS CLAIM: whether any source outside al-Kafi carries the Khurasan
+    receipt story]]. Without a second witness this remains one community''s account
+    of its own founder outwitting a caliph, and that is a genre with a strong motive
+    and a long history. What keeps it interesting is the administrative furniture:
+    the script, the stated conditions, the signature, the file taken back to a ruler
+    who asked what was left behind.'
+- template: closing
+  body: The state wanted a signature more than it wanted the money back, and the
+    one man who understood that is the reason the story was worth keeping.

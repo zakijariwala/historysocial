@@ -1,0 +1,104 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# A second MOURNING post: solid cover, greyscale tokens.
+
+post:
+  id: sample-14-silence
+  pillar: collision
+  running_head: an annal has room for one line
+  cover_title: what the chronicle leaves out
+  ink: bone
+  mourning: true
+  caption: 'The Arabic al-Tabari records the death of Musa b. Ja''far at Baghdad
+    in its
+
+    year, beside the death of a qadi. No prison. No poison. No minister. The
+
+    silence is not a cover-up; it is what an annal is.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: the Arabic chronicle enters the death at Baghdad in the same year notice
+    as the death of Muhammad b. al-Sammak the qadi
+  source: SRC-TAB-AR
+  page: 8:271
+- subject: Musa b. Ja'far
+  assertion: al-Mufid reports the instruction through Yahya b. Khalid and the poison
+    as a report, and gives the death in the prison of al-Sindi b. Shahik
+  source: SRC-IRS-003
+  page: '427'
+  dispute: One source names a jailer and a reported poison; the other names neither.
+    Both must be named on the slide.
+slides:
+- template: cover
+- template: question
+  body: What does it mean when the biggest chronicle in the language gives a death
+    one line?
+- template: body
+  body: 'The Arabic text of al-Tabari enters the death under its year. Musa b. Ja''far
+    b. Muhammad died at Baghdad, and Muhammad b. al-Sammak the qadi died, and the
+    year moves on. That is the whole notice on the page as this pipeline found it.
+    [[NEEDS CLAIM: the full sentence and its immediate context at 8:271]]. One line,
+    two men, no cause given for either.'
+- template: body
+  body: Al-Mufid, working inside the community that kept the memory, gives the same
+    death a chapter of its own. The prison of al-Sindi b. Shahik. The instruction
+    carried to Baghdad by Yahya b. Khalid under cover of a tax inspection of the
+    Sawad. The poison reported rather than asserted. The jurists of the city walked
+    past the body and asked what they could see. The announcement on the bridge.
+    The shroud the prisoner refused.
+- template: body
+  body: 'Two accounts of one death, and the temptation is to treat the shorter one
+    as suppression. Resist it. An annal arranged by year is a form with fixed slots:
+    campaigns, appointments, deaths, prices, the pilgrimage leader. A man who died
+    in a prison gets the same line as a qadi who died in his bed, because the form
+    does not have a field for how.'
+- template: body
+  body: 'The form also decides who gets in at all. Being entered in that year''s
+    deaths means the chronicler''s sources treated this man as a person of note
+    in Baghdad. [[NEEDS CLAIM: which other deaths al-Tabari lists in the same year
+    notice]]. The company a name keeps in an annal is a rough measure of how the
+    capital ranked him at the time.'
+- template: body
+  body: Where the two sources can be compared, they do not contradict each other.
+    Both put the death at Baghdad. Both put it in the same year. Neither says the
+    man returned home, escaped his escort, or vanished out of a locked room. On
+    the one fact that the Waqifa denied, an Imami compiler and a chronicler working
+    from state material agree, and they agree while sharing no obvious source between
+    them.
+- template: body
+  body: That agreement is the strongest evidence in this whole file, and it arrives
+    from the source with the least to gain by giving it. A chronicler compiling
+    year by year in Baghdad had no stake in whether a Medinan claimant died in custody
+    or lived on in hiding. The line cost him nothing, served no faction, and settled
+    nothing he cared about. He wrote it, and it says died at Baghdad.
+- template: body
+  body: Now the harder half of the comparison. On the cause of death the two sources
+    part company, and no amount of rereading will close the gap between them. Al-Mufid
+    reports a poison and marks the report as something said rather than something
+    known. Al-Tabari offers nothing at all. A slide that tells a reader the man
+    was poisoned has chosen one source over the other and hidden the choice.
+- template: body
+  body: 'This account names both instead. Al-Mufid reports the poison as something
+    said. The Arabic chronicle records the death with no cause attached. [[NEEDS
+    CLAIM: whether the SUNY translation of the relevant volume carries any additional
+    notice, once a copy is registered]]. Naming both is slower to read, it fits
+    a slide with less grace, and it is the only version a stranger has any reason
+    to trust.'
+- template: body
+  body: 'The annal has a reason to stay thin here beyond the shape of its genre.
+    [[NEEDS CLAIM: what al-Tabari''s own sources were for the years around 183]].
+    A chronicler compiling from official material inherits the state''s silences
+    along with the state''s dates. The office that produced those records had already
+    staged a public viewing, and a viewing is what a government does when it intends
+    to be asked nothing further.'
+- template: body
+  body: So the silence has a shape, and the shape is worth describing. It is not
+    the absence of a record, and it is not a page torn out. It is a record produced
+    by an administration which had already answered, in public, on a bridge, in
+    front of named witnesses, the only question it meant to answer. Everything else
+    about that death was somebody else's business to write down.
+- template: closing
+  body: The chronicle gives this death one line and gives a judge the same line,
+    and reading that as concealment says more about us than about the man who wrote
+    it.
