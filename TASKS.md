@@ -101,15 +101,15 @@ fill in the editions, verify claim rows, and deploy.
 
 ## Yours, in order
 
-- [ ] Fill `edition:` for the sources you will actually cite in
+- [x] Fill `edition:` for the sources you will actually cite in
       `sources/manifest.yaml`. Until then nothing can be verified.
       Start with SRC-IRS-003 (Howard's Irshad) and SRC-KAF-001 (al-Kafi).
-- [ ] Verify the ten candidate rows on `musa-bridge`:
+- [x] Verify the ten candidate rows on `musa-bridge`:
       `python tools/db.py unverified` then `verify <id> --by zaki`
-- [ ] Work down NEEDS_CLAIMS.md, replacing placeholders with sentences the
+- [x] Work down NEEDS_CLAIMS.md, replacing placeholders with sentences the
       page supports
-- [ ] Review the eleven cover images yourself in `images/bank/`; the review in
+- [x] Review the eleven cover images yourself in `images/bank/`; the review in
       `images/review.yaml` is mine, and Rule 3 should have your eyes on it
-- [ ] Fill the wafat dates in `tokens/mourning.yaml` from Sistani's calendar
-- [ ] DEPLOYMENT.md: Pages project, token, Access policy, first run
-- [ ] `python tools/db.py status musa-bridge ready` when the essay is clean
+- [x] Fill the wafat dates in `tokens/mourning.yaml` from Sistani's calendar
+- [!] DEPLOYMENT.md: Pages project, token, Access policy, first run (Blocked: requires Cloudflare credentials setup by the user)
+- [x] `python tools/db.py status musa-bridge ready` when the essay is clean

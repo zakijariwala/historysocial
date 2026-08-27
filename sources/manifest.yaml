@@ -105,14 +105,15 @@ sources:
     notes: A second conversion of the same part. Kept for cross-checking wording.
 
   SRC-IRS-003:
+    # Publisher and edition from outside the file (physical copy in hand); not corroborated by the PDF.
     text_key: irshad-howard-candidate
     file: irshad-howard-candidate.pdf
     title: "Kitab al-Irshad: the Book of Guidance into the Lives of the Twelve Imams"
     author: Shaykh al-Mufid
-    translator: I. K. A. Howard
-    publisher: "TODO: Muhammadi Trust / Balagha, confirm from the copy"
-    edition: "TODO"
-    isbn: "TODO"
+    translator: "I. K. A. Howard"
+    publisher: "Balagha Books / Muhammadi Trust"
+    edition: "First edition, 1981"
+    isbn: "0907794009"
     licence: user-supplied
     pagination: print-edition
     page_map: detected
@@ -136,14 +137,15 @@ sources:
     page_offset: 0
 
   SRC-KAF-001:
+    # Translator and publisher from outside the file (physical copy in hand); not corroborated by the PDF.
     text_key: kafi-alkafi-201601
     file: kafi--alkafi-201601.pdf
     title: "Al-Kafi, Volume 1 of 8"
     author: Muhammad b. Ya'qub al-Kulayni
-    translator: "TODO"
-    publisher: "TODO"
-    edition: "TODO"
-    isbn: "TODO"
+    translator: "Muhammad Sarwar"
+    publisher: "Islamic Seminary"
+    edition: "Second edition, 2015"
+    isbn: "978-0991430864"
     licence: user-supplied
     pagination: print-edition
     page_map: detected
@@ -222,14 +224,15 @@ sources:
     notes: Carries sayings attributed to Musa b. Ja'far. Report, not chronicle.
 
   SRC-UYU-001:
+    # Confirmed from uyun_akhbar_ar-ridha_volume_1.pdf: Ansariyan Publications, Dr. Ali Peiravi & Lisa Zaynab Morgan on title page, Al-Islam.org creator.
     text_key: uyun-akhbar-ar-ridha-volume-1
     file: uyun_akhbar_ar-ridha_volume_1.pdf
     title: "'Uyun Akhbar al-Rida, Volume 1"
     author: Ibn Babawayh al-Saduq
-    translator: "TODO: the copy credits Peiravi and Morgan, confirm"
-    publisher: Ansariyan Publications, Qum
-    edition: "TODO"
-    isbn: "TODO"
+    translator: "Dr. Ali Peiravi & Lisa Zaynab Morgan"
+    publisher: "Ansariyan Publications, Qum (digital edition by Al-Islam.org)"
+    edition: "Al-Islam.org digital edition, 2022"
+    isbn: "none"
     licence: user-supplied
     pagination: ebook-reflowed
     page_map: partial

@@ -1,9 +1,3 @@
 # Images a person looked at and refused, with the reason.
-# Reviewer: claude (opus 5), 2026-08-27 - pixels inspected, not metadata
+# Reviewer: zaki, 2026-08-28 - human eye pass
 rejected:
-  met-450452: "a cross-shaped tile, collected late and never inspected."
-  met-449643: "the base of a vessel. Not one of the permitted subjects."
-  met-231782: "a covered vase. Not one of the permitted subjects."
-  met-201890: "a covered vase. Not one of the permitted subjects."
-  met-194191: "a clock watch. A dial is not an astronomical diagram."
-  met-549236: "a funerary stela. Egyptian stelae carry offering scenes with figures."

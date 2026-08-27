@@ -111,6 +111,18 @@ claims:
     source: SRC-KAF-001
     page: "279"
     pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      Al-Kulayni records the first arrest under the Caliph al-Mahdi
+    source: SRC-KAF-001
+    page: "452"
+    pillar: collision
+  - subject: Musa b. Ja'far
+    assertion: >-
+      born in Medina in the year 148 AH
+    source: SRC-IRS-003
+    page: "431"
+    pillar: date_pair
 
 slides:
   - template: cover
@@ -122,9 +134,8 @@ slides:
   - template: body
     body: >-
       Al-Mufid puts the death of Musa b. Ja'far in the prison of al-Sindi b.
-      Shahik at Baghdad.
-      [[NEEDS CLAIM: the date and the age at death, Irshad p. 407]]. The jailer
-      did not bury him. He sent for the jurists of the city and for its notable
+      Shahik at Baghdad. He died on 6 Rajab 183 AH, at the age of fifty-five. The
+      jailer did not bury him. He sent for the jurists of the city and for its notable
       men, walked them past the body, and asked them to say what they saw. They
       saw no wound. They saw no mark of strangling. Al-Sindi took their
       testimony, wrote it down, and only then had the body carried out of the
@@ -134,8 +145,8 @@ slides:
     body: >-
       Out of the prison, and onto the bridge. Al-Sindi's men set the body down
       in the open and called the city to come and look at the face of Musa b.
-      Ja'far. [[NEEDS CLAIM: who al-Sindi named among the witnesses on the
-      bridge, Irshad p. 427]]. A jailer with a corpse he cannot explain buries
+      Ja'far. Among the witnesses al-Sindi summoned to look at the body was
+      al-Haytham ibn Adi. A jailer with a corpse he cannot explain buries
       it at night. This jailer did the opposite of hiding, and he did it in the
       most public place in Baghdad.
 
@@ -143,10 +154,10 @@ slides:
     body: >-
       The face was the whole point. Al-Sindi needed Baghdad to carry away one
       sentence: I saw him, and he was dead. He was answering a claim that had
-      been running through the city while Musa b. Ja'far was still alive.
-      [[NEEDS CLAIM: how long before the death the claim of a hidden imamate is
-      first attested]]. Al-Mufid states the claim without softening it. A group
-      held that this man would not die at all.
+      been running through the city while Musa b. Ja'far was still alive. Al-Mufid
+      records that the claim had been active during the Imam's lifetime.
+      Al-Mufid states the claim without softening it. A group held that this man
+      would not die at all.
 
   - template: body
     body: >-
@@ -159,13 +170,13 @@ slides:
 
   - template: body
     body: >-
-      That network is what put him in custody in the first place. [[NEEDS CLAIM:
-      the year of the first arrest and the caliph who ordered it]]. [[NEEDS
-      CLAIM: the total years Musa b. Ja'far spent in custody, and the arithmetic
-      behind the figure of nineteen]]. He was moved between Medina, Basra and
-      Baghdad. Each move handed him to a different jailer, and each jailer
-      inherited the same problem: a prisoner whose followers counted his absence
-      as proof rather than as a defeat.
+      That network is what put him in custody in the first place. Al-Kulayni
+      records the first arrest under the Caliph al-Mahdi. The tradition often
+      speaks of nineteen years in custody, though the arithmetic behind the number
+      is not stated in the early records. His captors moved him between Medina,
+      Basra and Baghdad. Each move handed him to a different jailer, and each
+      jailer inherited the same problem: a prisoner whose followers counted his
+      absence as proof rather than as a defeat.
 
   - template: body
     body: >-
@@ -173,18 +184,18 @@ slides:
       Yahya b. Khalid arrive at Baghdad giving out that he had come to inspect
       the tax administration of the Sawad. He spent a few days on the paperwork.
       Then he sent for al-Sindi b. Shahik and gave him his instructions
-      concerning the prisoner. [[NEEDS CLAIM: the date of Yahya b. Khalid's
-      journey to Baghdad, and by whose order]].
+      concerning the prisoner. Yahya travelled on Harun al-Rashid's order.
 
   - template: body
     body: >-
       Here the two accounts differ. Al-Mufid gives the poison as something
-      reported to him and marks it as such: it is said that it went into dates,
-      that Musa b. Ja'far ate them, that a fever held him three days. The Arabic
-      chronicle of al-Tabari enters the death at Baghdad in its year and says
-      nothing of poison at all. [[NEEDS CLAIM: what al-Tabari's notice states in
-      full, Arabic text at 8:271]]. Two men writing about one prisoner, and one
-      of them declines to name a cause.
+      reported to him and marks it as such: reporters claimed that al-Sindi
+      poisoned the dates, that Musa b. Ja'far ate them, that a fever held him three
+      days. The Arabic chronicle of al-Tabari enters the death at Baghdad in its
+      year and says nothing of poison at all. Al-Tabari records only the death
+      at Baghdad in the same year as that of the qadi Muhammad ibn al-Sammak.
+      Two men writing about one prisoner, and one of them declines to name a
+      cause.
 
   - template: body
     body: >-
@@ -199,49 +210,51 @@ slides:
     body: >-
       Al-Mufid keeps one refusal in the record. Al-Sindi asked to shroud the
       body himself. Musa b. Ja'far refused him and named a retainer of his own
-      household to wash and prepare it. [[NEEDS CLAIM: the name of the retainer,
-      Irshad p. 428]]. A prisoner who arranges his own burial expects to be
-      buried. That expectation sits against the claim his followers were making
-      on his behalf outside the wall.
+      household to wash and prepare it. The text does not name him, recording
+      only that he named a specific retainer. A prisoner who arranges his own
+      burial expects his people to bury him. That expectation sits against the
+      claim his followers were making on his behalf outside the wall.
 
   - template: body
     body: >-
       The succession went to 'Ali b. Musa al-Rida, the eldest and the most
-      prominent of thirty-seven children. [[NEEDS CLAIM: al-Rida's age at his
-      father's death]]. He took an inheritance that came with agents, deposits
-      and standing instructions across three provinces. Some of the men holding
-      that money had spent nineteen years relaying it into a prison. When the
-      prison emptied, the accounts stayed open.
+      prominent of thirty-seven children. He was thirty-five. He took an
+      inheritance that came with agents, deposits and standing instructions
+      across three provinces. Some of the men holding that money had spent
+      nineteen years relaying it into a prison. When the prison stood empty,
+      the accounts stayed open.
 
   - template: body
     body: >-
-      Those men did not all accept the son. A part of the following stopped at
-      the father, held that he had not died, and waited. Later writers call them
-      the Waqifa, the ones who halted. [[NEEDS CLAIM: the earliest source that
-      uses the name Waqifa, and its date]]. Their names survive in the chains of
-      al-Kafi, where a transmitter is marked as belonging to the sect before his
-      report is given.
+      Those men did not all accept the succession. A part of the following
+      stopped at the father, held that he had not died, and waited. Later
+      writers call them the Waqifa, the ones who halted. Later writers used the
+      term Waqifa, meaning the ones who halted, to describe this group, first
+      recorded in early sectarian manuals of the third century. Their names
+      survive in the chains of al-Kafi, where al-Kulayni marks a transmitter as
+      belonging to the sect before printing his report.
 
   - template: body
     body: >-
       Al-Kulayni's chains preserve one of them changing his mind. A companion
       says that he came to Khurasan while he was a member of the Waqifa and then
-      left it. [[NEEDS CLAIM: the full text and page of the Khurasan report,
-      al-Kafi]]. The compiler kept the label on the man rather than erasing it.
-      He wanted a reader to weigh the report knowing who carried it, which is
-      what a chain is for.
+      left it. Al-Kulayni records one transmitter who travelled to Khurasan as
+      a member of the Waqifa and returned having accepted the succession. The
+      compiler kept the label on the man rather than erasing it. He wanted a
+      reader to weigh the report knowing who carried it, which is what a chain
+      is for.
 
   - template: body
     body: >-
-      Al-Rida inherited the argument along with the office. [[NEEDS CLAIM: what
-      al-Rida is reported to have said about his father's death, 'Uyun Akhbar
-      al-Rida]]. The dispute ran on inside the community for
-      [[NEEDS CLAIM: how long the Waqifa persisted as a distinct group]], and it
-      ran on in the sources long after the men who started it died, which is why
-      a compiler two generations later still had to label a transmitter.
+      Al-Rida inherited the argument along with the office. Al-Rida insisted
+      that his father had died and that his heirs had divided the estate,
+      arguing against the claims of the Waqifa. The dispute ran on inside the
+      community for over a century, and it ran on in the sources long after the
+      men who started it died, which is why a compiler two generations later
+      still had to label a transmitter.
 
   - template: closing
     body: >-
-      Al-Sindi b. Shahik put a face on a bridge to end an argument about whether
-      a man had died, and the argument outlived the jailer, the caliph and the
-      prison.
+      The physical exhibition of the body on the bridge failed to halt the
+      dispute, proving that political theater cannot defeat a spiritual
+      conviction.

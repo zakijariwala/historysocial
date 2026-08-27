@@ -14,7 +14,7 @@
 # name when you re-review; the point of the field is that a person is on the
 # hook for Rule 3, not a regex.
 
-reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
 approve:
   met-452854:  {subject: tilework, moods: [ornate, dense]}

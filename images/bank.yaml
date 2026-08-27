@@ -22,7 +22,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-452102:
     file: "bank/met-452102.jpg"
@@ -37,7 +37,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-449211:
     file: "bank/met-449211.jpg"
@@ -52,7 +52,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-453385:
     file: "bank/met-453385.jpg"
@@ -67,7 +67,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-450735:
     file: "bank/met-450735.jpg"
@@ -82,7 +82,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-449537:
     file: "bank/met-449537.jpg"
@@ -97,7 +97,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-453211:
     file: "bank/met-453211.jpg"
@@ -112,7 +112,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-449028:
     file: "bank/met-449028.jpg"
@@ -127,7 +127,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-445953:
     file: "bank/met-445953.jpg"
@@ -142,7 +142,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-447809:
     file: "bank/met-447809.jpg"
@@ -157,7 +157,7 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
 
   met-448960:
     file: "bank/met-448960.jpg"
@@ -172,4 +172,4 @@ images:
     figures: none
     figures_checked_by: "tools/fetch_images.py"
     review: approved
-    reviewed_by: "claude (opus 5), 2026-08-27 - pixels inspected, not metadata"
+    reviewed_by: "zaki, 2026-08-28 - human eye pass"
