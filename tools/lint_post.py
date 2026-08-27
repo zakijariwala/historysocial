@@ -35,6 +35,7 @@ from lint_prose import Finding, check_post, load  # noqa: E402
 
 TOKENS = ROOT / "tokens" / "tokens.yaml"
 BANK = ROOT / "images" / "bank.yaml"
+MANIFEST = ROOT / "sources" / "manifest.yaml"
 
 
 def gates(conn: sqlite3.Connection, post, slides, claims,
@@ -47,10 +48,29 @@ def gates(conn: sqlite3.Connection, post, slides, claims,
         out.append(Finding("FAIL", None, "no-verified-claim",
                            f"{len(claims)} claims linked, none verified. A slide "
                            f"renders only from rows marked verified."))
+    sources = (yaml.safe_load(MANIFEST.read_text(encoding="utf-8")) or {}).get(
+        "sources", {}) if MANIFEST.exists() else {}
     for c in verified:
         if not (c["page"] or "").strip():
             out.append(Finding("FAIL", None, "verified-without-page",
                                f'{c["id"]} is verified with no page. Rule 2.'))
+
+        # A claim freezes its source's edition string at the moment it is
+        # verified. Edit the manifest afterwards and every row stamped before
+        # the edit still carries the old wording, so one post can cite two
+        # editions of one book without any other check noticing.
+        registered = sources.get(c["source_key"])
+        if registered is None:
+            out.append(Finding("FAIL", None, "source-not-registered",
+                               f'{c["id"]} cites {c["source_key"]}, which is not '
+                               f"in sources/manifest.yaml."))
+        elif str(registered.get("edition", "")) != str(c["edition"]):
+            out.append(Finding("FAIL", None, "edition-drift",
+                               f'{c["id"]} was verified against '
+                               f'{str(c["edition"])[:40]!r}, and '
+                               f'{c["source_key"]} now reads '
+                               f'{str(registered.get("edition"))[:40]!r}. '
+                               f"Re-run: tools/db.py verify {c['id']} --by <you>"))
 
     for s in slides:
         if s["template"] == "cover":
