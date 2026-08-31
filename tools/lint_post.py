@@ -51,9 +51,10 @@ def gates(conn: sqlite3.Connection, post, slides, claims,
     sources = (yaml.safe_load(MANIFEST.read_text(encoding="utf-8")) or {}).get(
         "sources", {}) if MANIFEST.exists() else {}
     for c in verified:
-        if not (c["page"] or "").strip():
-            out.append(Finding("FAIL", None, "verified-without-page",
-                               f'{c["id"]} is verified with no page. Rule 2.'))
+        if not (c["locator"] or "").strip():
+            out.append(Finding("FAIL", None, "verified-without-locator",
+                               f'{c["id"]} is verified with nothing to look it '
+                               f"up by. Rule 2."))
 
         # A claim freezes its source's edition string at the moment it is
         # verified. Edit the manifest afterwards and every row stamped before

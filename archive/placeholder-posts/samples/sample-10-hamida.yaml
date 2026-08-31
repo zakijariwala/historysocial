@@ -1,0 +1,102 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-10-hamida
+  pillar: fact_panel
+  running_head: the household behind the office
+  cover_title: a slave-wife called hamida
+  cover_image: met-450735
+  ink: olive
+  caption: 'Al-Mufid names the mother of Musa b. Ja''far in the same sentence as
+    the
+
+    date of his birth: a slave-wife, Hamida al-Barbariyya. Al-Kulayni names
+
+    her too, and carries a report about how she entered the household. The
+
+    sources are franker about this than their later readers are.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: his mother was a slave-wife named Hamida al-Barbariyya; he was born
+    at al-Abwa' in 128 AH
+  hijri: 128
+  source: SRC-IRS-003
+  locator: "p. 407"
+- subject: Musa b. Ja'far
+  assertion: al-Kulayni's notice names his mother as Umm Walad, called Hamida
+  source: SRC-KAF-001
+  locator: "p. 451"
+- subject: Musa b. Ja'far
+  assertion: al-Kulayni carries a report in which Ja'far b. Muhammad is told to
+    take her, and a saying that Hamida is clean of uncleanness like purified gold
+  source: SRC-KAF-001
+  locator: "p. 452"
+slides:
+- template: cover
+- template: question
+  body: Who was in the room when the succession that mattered was arranged?
+- template: body
+  body: Al-Mufid writes the birth and the mother in one breath. Musa b. Ja'far was
+    born at al-Abwa' in the year 128, and his mother was a slave-wife named Hamida
+    al-Barbariyya. Al-Kulayni gives the same fact in his own notice, with the term
+    umm walad, and adds the name Hamida. Two independent compilers, two vocabularies,
+    one woman, and neither of them treats her status as something to be managed.
+- template: body
+  body: 'The nisba attached to her name points somewhere, and the sources do not
+    say where. [[NEEDS CLAIM: what al-Barbariyya indicates about Hamida''s origin,
+    and the earliest source for it]]. A household at Medina in the 120s drew people
+    out of slave markets that reached from the Atlantic coast of Africa to the Oxus.
+    Her name preserves a trace of that traffic and withholds the road she came by,
+    the price paid, and the age she was when somebody paid it.'
+- template: body
+  body: 'Al-Kulayni goes further than the label. He carries a report in which Ja''far
+    b. Muhammad is told to take her, and a saying that Hamida is clean of uncleanness
+    in the way purified gold is clean. [[NEEDS CLAIM: the full text and page of
+    the Hamida report in al-Kafi]]. That is a defence, and the presence of a defence
+    tells you that somebody had made an attack.'
+- template: body
+  body: 'The attack is easy to reconstruct in outline and impossible to source from
+    this shelf. An office passing from father to son runs into a question about
+    the mothers of the sons the moment a rival wants one asked. Standing, in that
+    world, came down through women as well as men. [[NEEDS CLAIM: whether any source
+    records an objection to Musa b. Ja''far''s succession on the grounds of his
+    mother''s status]]. Until such a row is found, the defence in al-Kafi is the
+    only evidence that an attack existed.'
+- template: body
+  body: Al-Mufid answers the question a different way, by not raising it. He states
+    the status in the biographical opening, moves to the designation reports, and
+    lets seven named companions of the father carry the case for the son. A compiler
+    who thought the mother's status was a weakness would not have put it in the
+    second paragraph of the chapter.
+- template: body
+  body: 'Read the list of thirty-seven children and the pattern repeats. Al-Mufid
+    marks group after group of them with the same phrase: their mothers were slave-wives.
+    He is describing the ordinary arrangement of a large household in that society,
+    and he expects no reader to be surprised. A modern reader is surprised, and
+    the surprise is a fact about the reader.'
+- template: body
+  body: 'This account does not soften that and does not celebrate it. The women
+    in these households were unfree. Their sons inherited standing, property and
+    in one case an office that a community still argues about. [[NEEDS CLAIM: what
+    legal status an umm walad held in this period, and the source that sets it out]].
+    Both things are true at once and the slide has room for both.'
+- template: body
+  body: That structure is worth naming for anybody reading a biographical notice
+    for the first time. It is a form rather than a narrative, and the form decides
+    what survives the centuries. A woman who bore an imam gets a name and a phrase.
+    A jailer gets a name and a city. A brother gets a line about an estate. Everything
+    a modern reader wants to know about any of them falls outside the fields the
+    form allows, and no amount of rereading will put it back.
+- template: body
+  body: 'So the honest fact panel here is short. A woman called Hamida, of a status
+    the sources name without euphemism, mother of a man born at al-Abwa'' in 128
+    who died in a Baghdad prison in 183. Around that stand two reports defending
+    her against something the sources never quote, and a household of thirty-seven
+    children whose mothers are marked the same way. [[NEEDS CLAIM: whether Hamida
+    outlived her son]]. That last question has an answer somewhere, and this account
+    does not have it.'
+- template: closing
+  body: The chapter that argues hardest for a man's authority opens by telling you
+    his mother was owned, and the compiler saw no tension there at all.

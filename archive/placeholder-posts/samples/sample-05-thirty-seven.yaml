@@ -1,0 +1,134 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-05-thirty-seven
+  pillar: number
+  running_head: the arithmetic of a succession
+  cover_title: thirty-seven names
+  ink: olive
+  caption: |
+    Al-Mufid lists the children of Musa b. Ja'far by name: thirty-seven, sons
+    and daughters, with the mothers marked. A household that size is not a
+    family detail. It is the size of the problem the succession had to solve.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      al-Mufid names thirty-seven children, male and female, and marks their
+      mothers as slave-wives
+    source: SRC-IRS-003
+    locator: "p. 428"
+  - subject: Musa b. Ja'far
+    assertion: >-
+      the most prominent of the children was 'Ali b. Musa al-Rida
+    source: SRC-IRS-003
+    locator: "p. 429"
+  - subject: Musa b. Ja'far
+    assertion: >-
+      Ahmad b. Musa received the estate known as al-Yasira, and is said to have
+      freed a thousand slaves
+    source: SRC-IRS-003
+    locator: "p. 429"
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      What happens to a claim of authority when the man who holds it leaves
+      thirty-seven heirs?
+
+  - template: body
+    body: >-
+      Al-Mufid does not summarise the household. He lists it. Thirty-seven
+      children of Musa b. Ja'far, sons and daughters, set out by name with the
+      mothers marked beside them. The list runs from 'Ali b. Musa al-Rida at the
+      head down through Umm Kulthum at the foot. A compiler who wanted a
+      symbolic number would not have written out thirty-seven of them.
+
+  - template: body
+    body: >-
+      Count the arithmetic the list forces.
+      [[NEEDS CLAIM: the split between sons and daughters in al-Mufid's list,
+      Irshad pp. 428-429]]. Every son in it is a possible claimant, a possible
+      rallying point and a standing expense. The succession did not have to beat
+      one rival. It had to settle a room, and the room was large enough that the
+      compiler needed two pages to name everyone in it.
+
+  - template: body
+    body: >-
+      Al-Mufid resolves it in a sentence. The most outstanding of the children,
+      he writes, the greatest in rank and the most learned, was 'Ali b. Musa
+      al-Rida. That is a judgement rather than a document, and he offers it
+      where a list would otherwise leave a reader to choose. The compiler is
+      steering, and he does it in the open.
+
+  - template: body
+    body: >-
+      Ahmad b. Musa gets the next paragraph, and it is a paragraph about
+      property. His father gave him the estate known as al-Yasira. He is said to
+      have freed a thousand slaves. A man who can free a thousand slaves is a
+      man with an income, and the report attaches that income to a brother who
+      did not inherit the office.
+
+  - template: body
+    body: >-
+      A thousand is the kind of number that grows in the telling, and al-Mufid
+      hands it over with the words it is said. [[NEEDS CLAIM: any second source
+      for the thousand freed slaves, or for the estate of al-Yasira]]. Take the
+      figure as a claim about scale rather than as a count, and the point still
+      stands: the household held land, and the land produced enough to matter.
+
+  - template: body
+    body: >-
+      Land, brothers, and a following spread across Iraq and the Hijaz give you
+      the shape of the inheritance dispute. The office went one way. The money
+      did not have to follow it, and in a community where agents collected in
+      the name of an imam, the two could come apart without anyone announcing a
+      split. [[NEEDS CLAIM: what the sources say about the property of Musa b.
+      Ja'far at the time of his death]]. Property is the part of a succession
+      that leaves receipts.
+
+  - template: body
+    body: >-
+      This is where the number stops being trivia. A group among the followers
+      held that Musa b. Ja'far had not died at all, and men in that group had
+      custody of funds collected in his name across Iraq and the Hijaz.
+      Thirty-seven heirs and an undivided treasury make a standing argument on
+      their own. Add a doctrine which says the owner is alive and will return,
+      and the argument acquires a reason never to close.
+
+  - template: body
+    body: >-
+      Al-Mufid writes the list before he writes the dispute, and that order is a
+      choice. His reader meets the household first, counts how many people the
+      estate had to satisfy, and only then hears that part of the following
+      refused the successor. Put the dispute first and it reads as doctrine. Put
+      the household first and it reads as an inheritance case with doctrine
+      attached. The compiler is making an argument with his table of contents.
+
+  - template: body
+    body: >-
+      Set the numbers side by side and the essay has its shape. 37 children, 1
+      designated successor, and a life that runs 128 AH to 183 AH, which is 55
+      years by the count al-Mufid gives on his own page 407. Set 37 against 55
+      and the household stops looking like a footnote to the biography and
+      starts looking like the institution the biography is about.
+      [[NEEDS CLAIM: how many of the thirty-seven are
+      reported to have made a claim of their own, and in which sources]]. Even
+      one such claim changes what the community argued about after Rajab 183.
+
+  - template: body
+    body: >-
+      The list also fixes the social record. Al-Mufid marks the mothers of these
+      children as slave-wives, without apology and without embellishment, in the
+      middle of a book written to establish authority. He expected no reader to
+      flinch. A reader in 2026 flinches, and the honest move is to report what
+      the page says, name the gap between his century and this one, and let the
+      difference stand where the reader can see it.
+
+  - template: closing
+    body: >-
+      A succession that has to be argued for is a succession with competition in
+      the house, and al-Mufid gave the competition names, thirty-seven of them,
+      before he told you who won.

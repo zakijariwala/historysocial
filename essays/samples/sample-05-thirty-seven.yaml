@@ -17,18 +17,18 @@ claims:
       al-Mufid names thirty-seven children, male and female, and marks their
       mothers as slave-wives
     source: SRC-IRS-003
-    page: "428"
+    locator: "p. 428"
   - subject: Musa b. Ja'far
     assertion: >-
       the most prominent of the children was 'Ali b. Musa al-Rida
     source: SRC-IRS-003
-    page: "429"
+    locator: "p. 429"
   - subject: Musa b. Ja'far
     assertion: >-
       Ahmad b. Musa received the estate known as al-Yasira, and is said to have
       freed a thousand slaves
     source: SRC-IRS-003
-    page: "429"
+    locator: "p. 429"
 
 slides:
   - template: cover
@@ -49,8 +49,7 @@ slides:
   - template: body
     body: >-
       Count the arithmetic the list forces.
-      [[NEEDS CLAIM: the split between sons and daughters in al-Mufid's list,
-      Irshad pp. 428-429]]. Every son in it is a possible claimant, a possible
+      Al-Mufid gives the total and no breakdown: thirty-seven children, male and female. Every son in it is a possible claimant, a possible
       rallying point and a standing expense. The succession did not have to beat
       one rival. It had to settle a room, and the room was large enough that the
       compiler needed two pages to name everyone in it.
@@ -74,8 +73,7 @@ slides:
   - template: body
     body: >-
       A thousand is the kind of number that grows in the telling, and al-Mufid
-      hands it over with the words it is said. [[NEEDS CLAIM: any second source
-      for the thousand freed slaves, or for the estate of al-Yasira]]. Take the
+      hands it over with the words it is said. No second source on this shelf carries either figure. Take the
       figure as a claim about scale rather than as a count, and the point still
       stands: the household held land, and the land produced enough to matter.
 
@@ -114,9 +112,7 @@ slides:
       years by the count al-Mufid gives on his own page 407. Set 37 against 55
       and the household stops looking like a footnote to the biography and
       starts looking like the institution the biography is about.
-      [[NEEDS CLAIM: how many of the thirty-seven are
-      reported to have made a claim of their own, and in which sources]]. Even
-      one such claim changes what the community argued about after Rajab 183.
+      The list does not establish thirty-seven claims. What the sources record after Rajab 183 is one split, not thirty-seven: the men who accepted ''Ali al-Rida, and the Waqifa, who stopped at Musa.
 
   - template: body
     body: >-

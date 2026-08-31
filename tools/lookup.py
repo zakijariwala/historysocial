@@ -16,8 +16,9 @@ Every hit prints as:
 
     SRC-IRS-003  p. 212   (pdf 216)  ...the matching line...
 
-`p. ?` means the page carries no printed number. A hit there can be read, but
-it can never become a verified claim: Rule 2 requires a printed page.
+`p. ?` means the page carries no printed number. A hit there is still citable
+since decision 21, but not as a page: give the row some other locator the
+reader can follow - a chapter, a hadith number, a sermon.
 """
 
 from __future__ import annotations

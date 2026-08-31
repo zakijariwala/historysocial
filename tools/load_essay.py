@@ -9,7 +9,7 @@ idempotent, so editing prose and re-loading is the working loop.
 
 Candidate claims arrive with verified = 0 and they stay there. This tool has
 no flag that verifies anything. A claim becomes verified when a person opens
-the book at the page and runs tools/db.py verify, and never before.
+the book at the passage and runs tools/db.py verify, and never before.
 """
 
 from __future__ import annotations
@@ -59,18 +59,18 @@ def load_file(conn: sqlite3.Connection, path: Path) -> str:
         claim_id = claim.get("id") or f"{post_id}-c{j:02d}"
         conn.execute(
             """INSERT INTO claim (id, subject, assertion, hijri_date, ce_date,
-                                  source_key, edition, page, pillar, dispute_note)
+                                  source_key, edition, locator, pillar, dispute_note)
                VALUES (?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET
                  subject=excluded.subject, assertion=excluded.assertion,
                  hijri_date=excluded.hijri_date, ce_date=excluded.ce_date,
-                 source_key=excluded.source_key, page=excluded.page,
+                 source_key=excluded.source_key, locator=excluded.locator,
                  pillar=excluded.pillar, dispute_note=excluded.dispute_note""",
             (claim_id, claim["subject"], claim["assertion"],
              str(claim.get("hijri") or "") or None,
              str(claim.get("ce") or "") or None,
              claim["source"], claim.get("edition", "TODO"),
-             str(claim.get("page") or "") or None,
+             str(claim.get("locator") or claim.get("page") or "") or None,
              claim.get("pillar", post["pillar"]), claim.get("dispute")))
         conn.execute("INSERT OR IGNORE INTO post_claim VALUES (?,?)",
                      (post_id, claim_id))

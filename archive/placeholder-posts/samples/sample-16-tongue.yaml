@@ -1,0 +1,101 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: shortest legal cover title (two words), solid cover, 12 slides (min).
+
+post:
+  id: sample-16-tongue
+  pillar: fact_panel
+  running_head: a list of obligations written as a list
+  cover_title: the tongue
+  ink: indigo
+  caption: 'The Risalat al-Huquq works downward: God, then the self, then the tongue,
+
+    the hearing, the sight, the hand, the leg, the stomach. Each one gets a
+
+    right against you. The document is built like an inventory, and the
+
+    inventory is the argument.
+
+    '
+claims:
+- subject: '''Ali Zayn al-''Abidin'
+  assertion: the Risalat al-Huquq states that God has given your tongue a right
+    against you, your hearing a right, your sight a right, your hand, your leg,
+    your stomach
+  source: SRC-HUQ-001
+  locator: "p. 4"
+- subject: '''Ali Zayn al-''Abidin'
+  assertion: the right of the tongue is that you consider it too noble for obscenity,
+    accustom it to good, refrain from meddling with nothing to be gained, express
+    kindness to people and speak well of them
+  source: SRC-HUQ-001
+  locator: "p. 7"
+slides:
+- template: cover
+- template: question
+  body: What kind of document lists your own tongue among the parties with a claim
+    on you?
+- template: body
+  body: The Risalat al-Huquq opens with God and then turns to the body. The text
+    says that God has given your tongue a right against you, your hearing a right,
+    your sight a right, your hand, your leg, your stomach. Each organ is a creditor.
+    The form is an inventory of debts, and a reader working down it meets the same
+    construction eight times before the subject changes at all.
+- template: body
+  body: 'Repetition of that kind does work on a listener. The Arabic runs wa-amma
+    haqq, and then, and then, and then. A man reciting it aloud sets a rhythm his
+    audience can follow without a text in front of them. [[NEEDS CLAIM: whether
+    the Risalat al-Huquq was transmitted as a written letter or as an oral recitation]].
+    The shape of the sentence tells you something about the room it was made for.'
+- template: body
+  body: Take the entry for the tongue on its own. The right of the tongue, the text
+    says, is that you hold it above obscenity, accustom it to good, refrain from
+    meddling in what gains nothing, express kindness to people, and speak well of
+    them. Five clauses in one sentence. Two of them forbid something and three install
+    a habit, and a habit takes years to install where a prohibition takes a decision.
+    The proportion tells you which of the two the writer thought was the hard part.
+- template: body
+  body: Set that beside the entry for the self, which arrives one line earlier.
+    The right of your self against you, the text says, is that you employ it in
+    obeying God, and then deliver to the tongue its right, to the hearing its right,
+    to the sight its right, and on down the body. The self is not one item among
+    eight. It is the item that owes all the others, and the sentence makes that
+    point by its grammar rather than by asserting it.
+- template: body
+  body: That ordering is the closest thing to a theory the document offers. It does
+    not argue for a hierarchy. It does not defend one against a rival. It builds
+    one out of the sequence in which the obligations arrive and leaves the reader
+    to notice what has been built. A text that persuades by arrangement rather than
+    by argument is a text expecting to be memorised, recited, and carried around
+    in somebody's head where footnotes cannot follow it.
+- template: body
+  body: 'The manuscript history decides how much weight any of this carries. [[NEEDS
+    CLAIM: the earliest source that transmits the Risalat al-Huquq, and its date]].
+    The Ansariyan edition on this shelf prints an English translation beside the
+    Arabic with no critical apparatus at all. A reader checking a phrase has the
+    translator''s word, the Arabic facing it, and nothing in between: no variants,
+    no manuscript sigla, no note explaining what the editor did where his copies
+    disagreed.'
+- template: body
+  body: 'That limit applies to almost everything in this corpus, and it is worth
+    stating once in plain terms. A page number in a devotional edition tells you
+    where a sentence sits in that printing. It tells you nothing about which manuscripts
+    the editor used, how old they were, or what he did when they disagreed with
+    each other. [[NEEDS CLAIM: whether a critical edition of the Risalat al-Huquq
+    exists]]. A citation is a location, and a location is not a guarantee.'
+- template: body
+  body: What survives the limit is the structure, because structure is the part
+    of a text that copying preserves best. Individual words drift between manuscripts.
+    Whole clauses drop out and come back. The order of eight organs, each introduced
+    by the same formula, does not drift, and two copies that disagreed about that
+    order would be different documents rather than variant readings of one. Shape
+    is the most durable evidence a text of this kind carries.
+- template: body
+  body: 'Compare that to how the same tradition handles a chronicle. Al-Kulayni''s
+    chains name the men who carried a report, so a reader can weigh it by them.
+    The Risalat al-Huquq has no chain inside it at all: it is a text attributed
+    to one man, standing on its own shape. [[NEEDS CLAIM: what chain al-Saduq or
+    al-Harrani gives for the Risala]].'
+- template: closing
+  body: A document that assigns your own hearing a claim against you has stopped
+    teaching ethics and started teaching accounting, and every line of it is built
+    on that difference.

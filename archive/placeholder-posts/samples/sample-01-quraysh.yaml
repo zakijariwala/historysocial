@@ -1,0 +1,131 @@
+# SAMPLE. Lives in scratch.db, never in claims.db.
+#
+# The claim rows below are CANDIDATES: each names a source and a printed page
+# that a search of the local corpus actually returned. None is verified, so
+# this post could not render out of claims.db. It renders here because the
+# sample runner passes --skip-lint, which exists for judging design and voice
+# and for nothing else.
+
+post:
+  id: sample-01-quraysh
+  pillar: collision
+  running_head: the imam who spent nineteen years in custody
+  cover_title: the graveyard of quraysh
+  cover_image: met-449028
+  ink: rust
+  caption: |
+    Al-Kulayni ends his notice on Musa b. Ja'far with an address: buried at
+    Baghdad, in the graveyard of Quraysh. A grave is a fact you can walk to.
+    That is why the men who held him wanted one, and why the men who denied
+    the death could not use one.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      al-Kulayni's notice: Harun summoned him from Medina on 20 Shawwal 179,
+      took him to Basra and imprisoned him under 'Isa b. Ja'far, then summoned
+      him to Baghdad and imprisoned him under al-Sindi b. Shahik, where he died
+      and was buried in the graveyard of Quraysh
+    hijri: 179
+    source: SRC-KAF-001
+    locator: "p. 451"
+  - subject: Musa b. Ja'far
+    assertion: >-
+      al-Mufid: the body was displayed on the bridge at Baghdad and the people
+      were called to look at his face
+    source: SRC-IRS-003
+    locator: "p. 427"
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      What does a government gain by naming the exact ground a prisoner is
+      buried in?
+
+  - template: body
+    body: >-
+      Al-Kulayni closes his notice on Musa b. Ja'far with an address. The man
+      died in the prison of al-Sindi b. Shahik, and the government buried him in
+      the graveyard of Quraysh at Baghdad. That is a place with a gate and a keeper, and
+      anyone who doubted the death could walk to it in an afternoon. The
+      compiler gives no eulogy at that point. He gives a location, and the
+      location is the argument.
+
+  - template: body
+    body: >-
+      Location mattered because the alternative to a grave was a rumour.
+      Al-Mufid records that a group had held, while Musa b. Ja'far was alive,
+      that he would not die at all. A man with no grave suits that claim. A man
+      with a marked plot in the Quraysh cemetery at Baghdad does not. The
+      jailer, the caliph and the men who denied the death were all arguing about
+      the same square of ground.
+
+  - template: body
+    body: >-
+      Al-Sindi understood the problem before the burial. Al-Mufid describes what
+      he did with the body first: he brought in the jurists of Baghdad and its
+      notable men, walked them past it, and asked what they saw. They reported
+      no wound. They reported no mark of strangling. He wrote their testimony
+      down. Only then did the body go out of the prison and onto the bridge.
+
+  - template: body
+    body: >-
+      The bridge came before the graveyard, and the order of those two things
+      tells you the sequence of the worry. A viewing answers the question of
+      whether the man is dead. A grave answers the question of where he is now.
+      Al-Sindi needed both answers on the record within a day, because a body
+      that stays inside a prison wall settles nothing for the people outside it.
+
+  - template: body
+    body: >-
+      Al-Kulayni also fixes the beginning. He gives the summons out of Medina on
+      the twentieth of Shawwal in the year 179, then Basra, then Baghdad. The
+      notice reads like a transfer file: dates, custodians, a destination. He
+      names 'Isa b. Ja'far as the first jailer and al-Sindi b. Shahik as the
+      last. Two men held one prisoner, and the record keeps both names.
+
+  - template: body
+    body: >-
+      [[NEEDS CLAIM: how many months separated the Basra custody from the
+      Baghdad custody, al-Kafi p. 451]]. The gap matters to the arithmetic
+      behind the figure of nineteen years, and the figure is what the running
+      head of this essay rests on. Al-Kulayni gives one date with a day in it.
+      Everything else in the sequence needs a second source before it can carry
+      a number.
+
+  - template: body
+    body: >-
+      The graveyard of Quraysh outlived every man in the story. The quarter
+      around it took the name of the man buried there.
+      [[NEEDS CLAIM: when the cemetery ground became known by the name
+      al-Kazimiyya, and on whose authority]]. Al-Kulayni, writing generations
+      later, still names the place as a cemetery rather than as a shrine, which
+      is a small fact about the date of his source and a large one about the
+      city.
+
+  - template: body
+    body: >-
+      Al-Mufid and al-Kulayni agree on the custody and on the grave, and they
+      differ in what they carry. Al-Kulayni gives the itinerary and stops. From
+      al-Mufid you get the viewing, the testimony of the jurists of Baghdad, the
+      announcement, and the crowd that came to the bridge to look at a dead
+      man's face. Neither is patching the other. They answer two questions that
+      one death raised a century apart.
+
+  - template: body
+    body: >-
+      Hold both. The itinerary explains how a man summoned out of Medina came to
+      die inside a Baghdad prison after two custodians and one journey by way of
+      Basra. The viewing explains why his jailer handled a corpse the way a
+      registrar handles a document. [[NEEDS CLAIM: whether any early source
+      names the men who washed and buried him at the Quraysh cemetery]]. Between
+      the two accounts sits the grave, and the grave is where the argument
+      landed.
+
+  - template: closing
+    body: >-
+      The cemetery was the only part of the case that could not be argued with,
+      which is why the state produced it and why the men who had staked
+      everything on a living imam had to walk past it.

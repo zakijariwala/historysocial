@@ -1,0 +1,140 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-04-zabala
+  pillar: map
+  running_head: the road from medina to iraq
+  cover_title: the halt at zabala
+  cover_image: met-448960
+  ink: indigo
+  caption: |
+    A man on the Kufa road remembered the night the escort stopped at his
+    town. Al-Kulayni kept his name and his mood: 'Ali b. Khalid al-Zabali,
+    depressed, watching a prisoner being taken north to al-Mahdi.
+
+    Stages on a pilgrim road are how an empire moves people. The report is a
+    map with one stage on it.
+
+claims:
+  - subject: Musa b. Ja'far
+    assertion: >-
+      'Ali b. Khalid al-Zabali reports that when Musa b. Ja'far was brought
+      before al-Mahdi the first time, he was accommodated at Zabala, and the
+      two men spoke there
+    source: SRC-KAF-001
+    locator: "p. 452"
+  - subject: Musa b. Ja'far
+    assertion: >-
+      Harun summoned him from Medina on 20 Shawwal 179 and took him by way of
+      Basra to Baghdad
+    hijri: 179
+    source: SRC-KAF-001
+    locator: "p. 451"
+
+slides:
+  - template: cover
+
+  - template: question
+    body: >-
+      How many towns does a prisoner pass through before the record loses him?
+
+  - template: body
+    body: >-
+      Al-Kulayni keeps one witness at one stage of the road. 'Ali b. Khalid
+      al-Zabali says that when the escort brought Musa b. Ja'far before al-Mahdi
+      the first time, they put the prisoner up at Zabala for the night. The two
+      men talked. Al-Zabali admits that he was low, says so to the prisoner's
+      face, and gets a question back: why do I see you depressed? The whole
+      report turns on that exchange, and the town in it is a real town with a
+      name a traveller would recognise.
+
+  - template: body
+    body: >-
+      Notice what that exchange assumes. A local man could reach a prisoner in
+      state custody, sit with him and hold a conversation about his own mood.
+      This is not a dungeon. It is a stage on a road, with a lodging, a guard
+      detail and a town that knows who has arrived.
+      [[NEEDS CLAIM: where Zabala lay on the Kufa road, and its distance from
+      Kufa]].
+
+  - template: body
+    body: >-
+      Roads in this account are not scenery. Al-Kulayni's other notice moves the
+      same man from Medina to Basra to Baghdad, and the movement is the story:
+      each stage hands him to different men. A prisoner who travels is a
+      prisoner whose supporters know where he is on a given week.
+      [[NEEDS CLAIM: the stages named between Medina and Basra in any source on
+      this shelf]].
+
+  - template: body
+    body: >-
+      Al-Zabali's report belongs to an earlier arrest rather than to the last
+      one. He names al-Mahdi, not Harun. That puts the halt at Zabala at least
+      one caliph before the death in the prison of al-Sindi b. Shahik, and it
+      means the road carried this prisoner more than once.
+      [[NEEDS CLAIM: the year of the summons under al-Mahdi]]. Two summonses,
+      two escorts, two sets of guards paid out of the treasury, and one
+      direction of travel.
+
+  - template: body
+    body: >-
+      Direction is the argument. Medina held the family, the property and the
+      followers who arrived every year with the pilgrimage. Iraq held the
+      caliph, the army and the treasury. Every summons in this record runs the
+      same way, out of the Hijaz and into Iraq, and no source on this shelf
+      reports a caliph making the journey in reverse to hold the conversation in
+      Medina. Power did not travel. The prisoner did.
+
+  - template: body
+    body: >-
+      A pilgrim road already had the infrastructure that a prisoner transfer
+      needs. Wells, staging posts and towns that fed travellers.
+      [[NEEDS CLAIM: who built and maintained the stages on the Kufa road, and
+      when]]. The state did not build a special apparatus to move this man. It
+      used the one the pilgrimage had paid for, which is why a local man at
+      Zabala could walk up and talk to him.
+
+  - template: body
+    body: >-
+      That is also why an escort leaks. Al-Zabali remembered a night and a
+      conversation. Somebody wrote his account down, it passed through a chain
+      of transmitters whose names al-Kulayni keeps, and it landed in a chapter
+      about authority two centuries later. A closed prison produces silence. A
+      road produces witnesses, and witnesses on a road are most of what the
+      later compilers had to work from.
+
+  - template: body
+    body: >-
+      Geography also decides what a following can do. A network with agents in
+      Kufa and in Baghdad sits on the same road the escort used, drinks at the
+      same wells and pays the same guides.
+      [[NEEDS CLAIM: the towns where Musa b. Ja'far's agents are named in
+      al-Kafi]]. Money and messages moved along the route the prisoner moved
+      along, in both directions, which is why a transfer that looks like
+      isolation on a map was nothing of the kind on the ground.
+
+  - template: body
+    body: >-
+      The last journey ran through Basra and ended in Baghdad.
+      [[NEEDS CLAIM: whether any source describes the route from Basra to
+      Baghdad taken with the prisoner]]. Al-Kulayni gives cities and custodians
+      for that leg and no stages at all. Compare the two passages and you can
+      see two kinds of source: a man who was standing in Zabala that night, and
+      a clerk's note listing where a prisoner was held. Both are worth having,
+      and only one of them has weather in it.
+
+  - template: body
+    body: >-
+      A map post is only as good as its stages, and this route has one halt on
+      it that a source will support, no more than that. Zabala. One night, one
+      conversation, one local man who was sorry to see the escort arrive.
+      Everything else here is a line drawn between two city names, and a line
+      drawn between two city names is a guess holding a ruler. Say that on the
+      slide. The alternative is a map that claims more than the sources gave
+      you, which is the standard way this format lies.
+
+  - template: closing
+    body: >-
+      The empire moved its most awkward prisoner along the road it had built for
+      pilgrims, and that is why we know the name of a man in Zabala who was
+      sorry to see him pass.

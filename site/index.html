@@ -2,50 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#14161a">
-<title>carousels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>history-social review</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div id="review-banner" class="banner hidden"></div>
+
 <header>
-  <h1>carousels</h1>
-  <nav id="tabs">
-    <button data-screen="today" class="on">today</button>
-    <button data-screen="ready">ready</button>
-    <button data-screen="drafts">drafts</button>
-    <button data-screen="archive">archive</button>
+  <h1>history-social</h1>
+  <nav>
+    <button class="tab active" data-tab="unposted">NOT POSTED <span class="count" id="count-unposted"></span></button>
+    <button class="tab" data-tab="posted">POSTED <span class="count" id="count-posted"></span></button>
   </nav>
 </header>
 
-<main>
-  <section id="today" class="screen on"></section>
-  <section id="ready" class="screen"></section>
-  <section id="drafts" class="screen"></section>
-  <section id="archive" class="screen"></section>
+<main id="unposted" class="panel active"></main>
+<main id="posted" class="panel"></main>
 
-  <section id="post" class="screen post">
-    <button id="back">back</button>
-    <h2 id="post-title"></h2>
-    <p id="post-meta"></p>
-
-    <div id="viewer">
-      <div id="track"></div>
+<div id="post-view" class="post-view hidden">
+  <button id="close-post" aria-label="Close">&times;</button>
+  <div class="viewer-row">
+    <div class="viewer">
+      <img id="viewer-img" alt="">
+      <div class="viewer-count" id="viewer-count"></div>
+      <button id="prev-slide" class="nav-arrow left" aria-label="Previous slide">&#8249;</button>
+      <button id="next-slide" class="nav-arrow right" aria-label="Next slide">&#8250;</button>
     </div>
-    <p id="counter"></p>
-
-    <div class="actions">
-      <a id="download" class="button" download>download all</a>
-      <!-- The caption is already in memory when this is tapped. See app.js. -->
-      <button id="copy" class="button">copy caption</button>
-    </div>
-    <pre id="caption"></pre>
-  </section>
-</main>
-
-<p id="empty" hidden>nothing rendered yet. push to main, or run the workflow by hand.</p>
+    <aside class="caption-panel">
+      <h2>Caption</h2>
+      <pre id="caption-text"></pre>
+    </aside>
+  </div>
+  <div class="kbd-hint">&larr; &rarr; slides &nbsp;&middot;&nbsp; &uarr; &darr; posts &nbsp;&middot;&nbsp; Esc close</div>
+  <div class="post-actions">
+    <a id="download-all" download>DOWNLOAD ALL</a>
+    <button id="copy-caption">COPY CAPTION</button>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>

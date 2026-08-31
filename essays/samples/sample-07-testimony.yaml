@@ -20,13 +20,13 @@ claims:
       al-Haytham b. 'Adi, who saw no wound and no mark of strangulation, and
       testified that he had died a normal death
     source: SRC-IRS-003
-    page: "427"
+    locator: "p. 427"
   - subject: Harun al-Rashid
     assertion: >-
       Yahya b. Khalid summoned al-Sindi at Baghdad and gave him instructions
       concerning Musa b. Ja'far
     source: SRC-IRS-003
-    page: "427"
+    locator: "p. 427"
     dispute: >-
       al-Mufid gives the poisoning as a report ("it is said"), while the Arabic
       al-Tabari records the death with no cause at all.
@@ -63,13 +63,12 @@ slides:
       jurists of Baghdad confirmed a natural death, and stopped there, and no
       reader a thousand years later would have known what the men had been shown
       or what they were asked.
-      [[NEEDS CLAIM: whether al-Mufid names any jurist who declined to testify]].
+      He names the men who came and testified, and he names nobody who declined.
 
   - template: body
     body: >-
       Al-Haytham b. 'Adi is the one name he keeps out of the whole delegation.
-      [[NEEDS CLAIM: who al-Haytham b. 'Adi was, his dates and his standing as a
-      transmitter]]. A jailer collecting testimony picks witnesses whose word
+      The shelf here names him and stops: no registered source gives his dates, his city, or his standing as a transmitter. A jailer collecting testimony picks witnesses whose word
       carries weight in the city he has to convince, and the pick is part of the
       procedure. Naming even one of them tells you what the exercise was for.
       Testimony meant to sit in a file needs no famous signature. Testimony
@@ -106,8 +105,7 @@ slides:
       The poison enters the account through a different door. Al-Mufid reports
       it as something said: that the instruction came through Yahya b. Khalid,
       that the poison went into food, that dates carried it, that a fever held
-      three days. [[NEEDS CLAIM: the wording that introduces the three-day
-      fever, Irshad p. 427]]. He marks it. The Arabic chronicle of al-Tabari
+      three days. Al-Mufid sets the sentence in parentheses and hangs a note on it: he remained three days in a fever from it and died on the third day. He marks it. The Arabic chronicle of al-Tabari
       carries no cause at all, and two accounts that differ this way have to be
       named as two.
 
@@ -122,8 +120,7 @@ slides:
 
   - template: body
     body: >-
-      [[NEEDS CLAIM: whether any source records what the Waqifa said about the
-      viewing on the bridge]]. That is the missing witness statement in this
+      Al-Mufid records that a group had claimed during his life that Musa was the awaited Imam, but he does not report what they said about the viewing, and he does not call them Waqifa in this passage. That is the missing witness statement in this
       case, and its absence shapes everything above. The men who denied the
       death had to account for a corpse that a crowd walked past in daylight.
       How they did it, and whether they tried, would settle what kind of

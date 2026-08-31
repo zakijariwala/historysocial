@@ -22,13 +22,13 @@ claims:
     the Shi'a of Khurasan had sent it, and told to take a signed receipt from each
     recipient
   source: SRC-KAF-001
-  page: '450'
+  locator: "p. 450"
 - subject: Musa b. Ja'far
   assertion: every recipient signed except Ja'far b. Muhammad, who warned the messenger
     not to deceive the family of the Prophet and repeated back to him what had passed
     between him and the man who sent him
   source: SRC-KAF-001
-  page: '450'
+  locator: "p. 450"
 slides:
 - template: cover
 - template: question
@@ -62,8 +62,7 @@ slides:
 - template: body
   body: 'Then comes the detail the report is built for. The messenger says that
     the man brought his head close and told him everything that had passed between
-    him and the caliph, as though he had been a third person in the room. [[NEEDS
-    CLAIM: the identity of the ruler called abu al-Dawaniq in this report]]. A modern
+    him and the caliph, as though he had been a third person in the room. Abu al-Dawaniq is Abu Ja''far al-Mansur, and al-Kafi uses both names of him in the same report. A modern
     reader will take that as a claim about knowledge. Take it first as a claim about
     what the family already understood.'
 - template: body
@@ -94,8 +93,7 @@ slides:
     shows the same machinery working two generations earlier. It also shows a caliph
     who knew the machinery existed and wanted its paperwork rather than its money.
 - template: body
-  body: '[[NEEDS CLAIM: whether any source outside al-Kafi carries the Khurasan
-    receipt story]]. Without a second witness this remains one community''s account
+  body: 'No source on this shelf carries the story outside al-Kafi. Without a second witness this remains one community''s account
     of its own founder outwitting a caliph, and that is a genre with a strong motive
     and a long history. What keeps it interesting is the administrative furniture:
     the script, the stated conditions, the signature, the file taken back to a ruler
