@@ -1,0 +1,131 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 16 slides, rust, duotone cover, a first-century subject.
+
+post:
+  id: sample-21-hunayf
+  pillar: collision
+  running_head: two days between an agreement and a night attack
+  cover_title: the governor at basra
+  cover_image: met-452854
+  ink: rust
+  caption: 'The commentary in this Nahj al-Balagha edition says the arriving army
+
+    agreed that ''Uthman b. Hunayf would stay at his post until Ali reached
+
+    Basra. Two days later they attacked him at night and killed forty people.
+
+
+    An agreement with a two-day life is a fact about the agreement.
+
+    '
+claims:
+- subject: '''Uthman b. Hunayf'
+  assertion: the governor of Basra came forward to stop the arriving army, and it
+    was settled that the existing administration should continue until the arrival
+    of Amir al-mu'minin
+  source: SRC-NHB-001
+  locator: "p. 10"
+- subject: '''Uthman b. Hunayf'
+  assertion: two days later they made a nightly attack on him and killed forty innocent
+    persons
+  source: SRC-NHB-001
+  locator: "p. 10"
+- subject: '''A''isha'
+  assertion: on reaching Mecca she began rousing people to avenge 'Uthman's blood,
+    and the first to respond was 'Abdullah b. 'Amir al-Hadrami, former governor
+    of Mecca, with Marwan b. al-Hakam and Sa'id b. al-'As
+  source: SRC-NHB-001
+  locator: "p. 10"
+slides:
+- template: cover
+- template: question
+  body: How long did the agreement at Basra hold before somebody broke it?
+- template: body
+  body: 'The commentary attached to this edition gives a number that does the whole
+    argument. When the army reached Basra, the governor ''Uthman b. Hunayf came
+    out to stop them, and terms were reached: the existing administration would
+    continue until Ali arrived. Two days later they made a night attack on him and
+    killed forty people. Not a season. Not a month. Two days, and the settlement
+    was over.'
+- template: body
+  body: A truce that dies in two days tells you what it was for. Nobody arriving
+    with an army needs forty-eight hours to change their mind about a political
+    arrangement they have just accepted. They need forty-eight hours to get inside
+    a city, find the guard posts, count the men the governor can call on before
+    dawn, and learn which gate stays open. The agreement bought reconnaissance,
+    and it was paid for in words.
+- template: body
+  body: 'That is a reading rather than a report, and the difference has to stay
+    visible on the slide. What the page states is a sequence: agreement, two days,
+    a night attack, forty dead. What a reader adds is a motive. Motives are cheap.
+    [[NEEDS CLAIM: whether any early source gives a reason for the two-day delay
+    at Basra]]. Until that row exists, the sequence is the claim and everything
+    built on top of it is a suggestion wearing a confident tone.'
+- template: body
+  body: 'The commentary is also a source with a position, and this account says
+    so rather than hiding it. It is printed inside a Shia edition of Nahj al-Balagha,
+    arranged to explain the setting of a letter by Ali. [[NEEDS CLAIM: the name
+    of the commentator and translator of this edition, from the title page]]. The
+    manifest lists both as TODO.'
+- template: body
+  body: 'Position does not settle whether a report is true, and it does decide which
+    questions get asked. A commentary written to introduce Ali''s letter will count
+    the dead at Basra and will not spend a paragraph on what the other side thought
+    it had agreed to. [[NEEDS CLAIM: what al-Tabari''s volumes on the year 36 say
+    about the Basra agreement]]. Those volumes are not on this shelf.'
+- template: body
+  body: The people in the paragraph before it are named, which helps a reader test
+    any of it. On reaching Mecca, the commentary says, 'A'isha began rousing people
+    to avenge 'Uthman's blood by circulating stories of his having been victimised.
+    The first to respond was 'Abdullah b. 'Amir al-Hadrami, who had been governor
+    of Mecca in 'Uthman's own reign. With him came Marwan b. al-Hakam and Sa'id
+    b. al-'As.
+- template: body
+  body: Read that list as a roster rather than as a narrative. Al-Hadrami, a former
+    governor. Marwan b. al-Hakam and Sa'id b. al-'As, both Umayyads. Ya'la b. Munabbih,
+    former governor of Yemen. 'Abdullah b. 'Amir b. Kurayz, former governor of Basra.
+    Four of the first movers had held office under the killed caliph, and two of
+    them had held the two cities the war was about to be fought in.
+- template: body
+  body: 'Men who have run a province know its treasury, its garrison and its grain
+    stores. A coalition of former governors arrives with logistics already inside
+    it. [[NEEDS CLAIM: what the sources say about the funds and troops these men
+    brought to Basra]]. One figure would turn a list of names into an account of
+    how the campaign was paid for, and paying for a campaign is the part of a civil
+    war that nobody writes a sermon about.'
+- template: body
+  body: 'The same paragraph reports that Talha and al-Zubayr reached Mecca from
+    Medina. Both had stood at the centre of the succession weeks earlier. Their
+    arrival changes the character of the gathering from a protest about a killing
+    into a claim on the office, and the commentary records the journey without remarking
+    on the change. [[NEEDS CLAIM: the dates of Talha and al-Zubayr''s departure
+    from Medina]]. A month either way rewrites the sequence.'
+- template: body
+  body: 'Now come back to the forty dead. The commentary calls them innocent persons,
+    and that adjective is the commentator''s, not the record''s. [[NEEDS CLAIM:
+    whether any source names the men killed in the night attack at Basra, or their
+    standing]]. A number with an adjective attached is doing two jobs, and a slide
+    should carry the number and leave the adjective to the reader.'
+- template: body
+  body: 'This account will print forty, attributed to the commentary, and will leave
+    innocent off the slide. The men may well have been bystanders. The reason for
+    the omission is procedural: the count and the characterisation come from the
+    same page, and one of the two can be checked against another book while the
+    other cannot. Print what a stranger could go and verify, and leave the adjective
+    to whoever verifies it.'
+- template: body
+  body: 'Checking is the part this shelf cannot do yet. [[NEEDS CLAIM: which SUNY
+    volume covers the year 36 and the events at Basra]]. Volume VIII stops at the
+    Medina years, volume XL is an index with no narrative in it, and the Arabic
+    OpenITI text carries the whole chronicle but needs somebody who reads Arabic
+    to work the relevant year. Three volumes on the shelf, and none of them answers
+    the question without help.'
+- template: body
+  body: 'The Arabic is the shortest route and it is sitting in the corpus already.
+    A search of SRC-TAB-AR for the year 36 would produce the annalistic entry in
+    a few minutes. [[NEEDS CLAIM: what the Arabic al-Tabari enters under the year
+    36 about ''Uthman b. Hunayf]]. That is one afternoon between this draft and
+    a carousel that stands on two independent sources.'
+- template: closing
+  body: A governor kept his post for two days on the strength of an agreement, and
+    the men who signed it came for him in the dark.

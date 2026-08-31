@@ -1,7 +1,7 @@
 # history-social
 
 A deterministic pipeline for long-form essay carousels: 12 to 20 slides, one
-anchor a week plus two singles, openly Shia, sourced to the printed page.
+anchor a week plus two singles, openly Shia, sourced to a named edition.
 
 Claims live in SQLite. Slides render to 1080x1350 PNGs in GitHub Actions.
 Review happens on a phone, behind Cloudflare Access. No laptop in the loop.
@@ -11,7 +11,7 @@ Review happens on a phone, behind Cloudflare Access. No laptop in the loop.
 ## The rule the whole thing exists to enforce
 
 **A slide renders only from claim rows marked verified, and a row cannot be
-marked verified without a printed page number.**
+marked verified without a named edition and a locator inside it.**
 
 Everything else is machinery around that. Where an essay needs a fact with no
 verified row behind it, the sentence carries a visible placeholder:
@@ -109,7 +109,7 @@ ground, bone ink, no ornament.
 ## Rules that have no override flag
 
 1. A slide renders only from verified claim rows.
-2. Every verified claim carries source, edition and printed page.
+2. Every verified claim carries source, edition and locator.
 3. **No human figures in any image, ever.** Enforced twice: a filter over the
    museum record, then a person looking at the pixels. `images/review.yaml`
    records who looked.

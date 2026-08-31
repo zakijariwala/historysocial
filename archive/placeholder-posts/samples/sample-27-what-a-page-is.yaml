@@ -1,0 +1,104 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: number pillar, solid cover, 12 slides, subject is the corpus itself.
+
+post:
+  id: sample-27-what-a-page-is
+  pillar: number
+  running_head: what a citation actually points at
+  cover_title: six thousand four hundred pages
+  ink: indigo
+  caption: 'The Arabic al-Tabari in this corpus carries 6,438 page markers. The
+
+    English volume beside it carries none of them. A page number means a
+
+    different thing in each, and a citation that does not say which is
+
+    pointing at nothing.
+
+    '
+claims:
+- subject: the corpus
+  assertion: the OpenITI text of al-Tabari's Ta'rikh in this corpus carries 6,438
+    page markers of the form PageV__P___, giving volume and printed page
+  source: SRC-TAB-AR
+  locator: "8:271"
+- subject: the corpus
+  assertion: de Goeje's Leiden edition of 1879 and Wustenfeld's Leipzig Yaqut of
+    1866 were fetched as public-domain scans and returned unreadable OCR
+  source: SRC-DEG-001
+  locator: "p. 1"
+slides:
+- template: cover
+- template: question
+  body: When a slide says page 407, which book is a reader supposed to open?
+- template: body
+  body: Start with the number that is easy to state. The Arabic al-Tabari in this
+    corpus carries 6,438 page markers, each of the form PageV08P271, meaning volume
+    8, page 271. Those markers came from the edition the file names in its own header.
+    A search returns the volume and the page together, so a citation to that text
+    points at a place two other readers could both find, in the same printing, without
+    help.
+- template: body
+  body: Now the harder number. The English volume of al-Tabari on the same shelf
+    carries page numbers of its own, set by its own typesetter, which agree with
+    nothing else in the world. Page 15 of Fishbein is page 15 of that printing.
+    A reader with the Arabic cannot use it, and a reader with a different English
+    printing cannot use it either.
+- template: body
+  body: Both are page numbers and only one of them is an address. The difference
+    is whether anybody else prints the same numbers. De Goeje's Leiden pagination
+    became an address because translators printed it in their margins for a century.
+    A devotional ebook conversion has numbers because software had to break the
+    text somewhere. Agreement between printings is the only thing that turns a number
+    into a place, and nobody has ever agreed about an ebook conversion.
+- template: body
+  body: This corpus holds all three kinds at once, which is why the manifest records
+    the kind of each volume. Print edition, meaning a typeset book whose numbers
+    a second copy would share. Ebook reflowed, meaning numbers that exist only in
+    this file. Scan, meaning page images with no reliable text. Twenty-six volumes,
+    three categories, and the category decides what a citation is worth.
+- template: body
+  body: 'The extraction figures make the split visible. Of the volumes that opened
+    at all, some came out with a printed number readable on almost every page, and
+    others with fewer than half. [[NEEDS CLAIM: the exact count of volumes in each
+    pagination category, from sources/manifest.yaml]]. That distribution is the
+    real map of what this account can cite with confidence. Which volumes fall into
+    which category is the real map of what this account can cite without hedging,
+    and the manifest is where that map lives.'
+- template: body
+  body: Where a number could not be read, the tool did not invent one. It looked
+    at the pages on either side, took the offset they agreed on, and marked the
+    result derived rather than read. Where even that failed it wrote nothing and
+    the search prints a question mark. A page marked with a question mark cannot
+    carry a verified claim, by rule.
+- template: body
+  body: 'That rule has an arithmetic behind it worth stating on a number card. Every
+    claim needs one source, one edition and one printed page: three fields, and
+    a row missing any of the three is refused. There is no fourth field for confidence,
+    no partial credit, and no flag anywhere in the tooling that turns the refusal
+    off. A busy evening is when a system with partial credit in it starts producing
+    citations nobody can follow.'
+- template: body
+  body: Two dates bound this whole problem, and both sit in the fetch tool. 1929
+    is the cutoff below which an archive.org imprint counts as public domain here.
+    1879 is the year of the de Goeje volume this pipeline downloaded, which is 50
+    years the safe side of it. Two dates, one subtraction, and a rule that needs
+    no lawyer to apply.
+- template: body
+  body: The download succeeded and the text failed. De Goeje's Arabic came back
+    as Latin noise, and so did Wustenfeld's Yaqut of 1866. Both are registered with
+    usable set to false and a note explaining why. A corpus that records its own
+    failures is a corpus a second person can work in without repeating them. Recording
+    a failure costs one line in a manifest and saves the next person the afternoon
+    it took to find it.
+- template: body
+  body: 'So the honest count for this account is smaller than the shelf suggests.
+    Twenty-six registered volumes, several unusable, several more with pagination
+    that means nothing outside their own file, and one Arabic chronicle with 6,438
+    real page markers that almost nothing else here can cross-check. [[NEEDS CLAIM:
+    how many of the registered volumes have a filled edition statement]]. Today
+    the answer is one.'
+- template: closing
+  body: A page number is a promise that two people holding different copies will
+    land on the same sentence, and most of the numbers in this corpus cannot keep
+    it.

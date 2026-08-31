@@ -1,0 +1,112 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+
+post:
+  id: sample-11-designation
+  pillar: fact_panel
+  running_head: seven men who said they were told
+  cover_title: the boy asleep in the room
+  cover_image: met-449211
+  ink: iron
+  caption: 'Al-Mufid lists the men who reported that Ja''far b. Muhammad designated
+    his
+
+    son Musa: al-Mufaddal b. ''Umar, Mu''adh b. Kathir, ''Abd al-Rahman b.
+
+    al-Hajjaj, al-Fayd b. al-Mukhtar, Ya''qub al-Sarraj, Sulayman b. Khalid,
+
+    Safwan al-Jammal. Names, not atmosphere.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: al-Mufid names al-Mufaddal b. 'Umar al-Ju'fi, Mu'adh b. Kathir, 'Abd
+    al-Rahman b. al-Hajjaj, al-Fayd b. al-Mukhtar, Ya'qub al-Sarraj, Sulayman b.
+    Khalid and Safwan al-Jammal as reporting the designation
+  source: SRC-IRS-003
+  locator: "p. 407"
+- subject: Musa b. Ja'far
+  assertion: the designation is also reported by his two brothers, Ishaq and 'Ali,
+    sons of Ja'far
+  source: SRC-IRS-003
+  locator: "p. 407"
+- subject: Musa b. Ja'far
+  assertion: in Mu'adh b. Kathir's report, Ja'far indicates a sleeping boy; in 'Abd
+    al-Rahman b. al-Hajjaj's, he says that Musa has put on the armour and it fitted
+    him
+  source: SRC-IRS-003
+  locator: "p. 408"
+slides:
+- template: cover
+- template: question
+  body: How do you prove a private conversation happened sixty years after everyone
+    in it died?
+- template: body
+  body: 'Al-Mufid answers the private conversation problem by naming names. He lists
+    the shaykhs of the father''s circle who reported the designation of the son:
+    al-Mufaddal b. ''Umar al-Ju''fi, Mu''adh b. Kathir, ''Abd al-Rahman b. al-Hajjaj,
+    al-Fayd b. al-Mukhtar, Ya''qub al-Sarraj, Sulayman b. Khalid, Safwan al-Jammal.
+    Then he adds that two of the son''s own brothers, Ishaq and ''Ali, reported
+    it as well, and says the full list would make the book too long.'
+- template: body
+  body: 'Count what that list is doing. It is not a chain of transmission from one
+    man. It is a claim of independent multiple attestation, made in the vocabulary
+    a tenth-century reader would test it in. [[NEEDS CLAIM: whether these seven
+    appear in the standard biographical dictionaries, and how they are graded there]].
+    Al-Mufid is inviting the check, which is a strong move to make if the names
+    cannot survive it.'
+- template: body
+  body: The reports behind those names are small domestic scenes rather than ceremonies.
+    Al-Mufaddal is sitting with the father when the boy comes in, and the father
+    tells him to indicate to the companions he trusts that authority belongs to
+    this child. Mu'adh b. Kathir asks for a successor and gets a hand pointing at
+    a sleeping boy. Nothing in either scene happens in public, and nothing in either
+    would leave a document behind.
+- template: body
+  body: 'That privacy is the whole problem and the whole point. A designation made
+    in front of a crowd would have been contested by the crowd and by every faction
+    standing in it. A designation made to trusted men, one at a time, in a room,
+    produces the record in front of us: al-Mufaddal, Mu''adh and the rest, each
+    saying he was told, with no paper of any kind behind them. A compiler two centuries
+    later counts the men because he has no document to count.'
+- template: body
+  body: '''Abd al-Rahman b. al-Hajjaj, third on that list of men, gives the line
+    that stays with a reader. He asks the father who the master of the affair will
+    be, and the father tells him that Musa has put on the armour and it fitted him.
+    [[NEEDS CLAIM: the Arabic of that phrase and its idiomatic force]]. The metaphor
+    says fit rather than blood. It claims the son suits the office, which is a different
+    argument from saying he is next in line.'
+- template: body
+  body: 'Al-Fayd b. al-Mukhtar asks in the bluntest terms in the set. Take my hand
+    away from the fire, he says, who is the imam for us after you? The boy walks
+    in and the father tells him: this is your leader, keep close to him. A follower
+    asking about salvation gets an answer about a specific child in a specific room.'
+- template: body
+  body: 'Al-Mufid footnotes the lot of them to al-Kafi and says that al-Kulayni''s
+    chains have been shortened. [[NEEDS CLAIM: the al-Kafi volume, page and tradition
+    numbers al-Mufid cites for these reports]]. A compiler who shortens a chain
+    and tells you he has shortened it is handing you the means to go behind him,
+    which is the opposite of what a fabricator does.'
+- template: body
+  body: Against all of that sits an awkward fact. This evidence convinced part of
+    the following and not the rest. The Waqifa refused the son and stopped at the
+    father, which means seven named men and two brothers failed to settle the question
+    for everybody who heard them. Evidence is not agreement. This account will not
+    pretend the list closed an argument that ran on for generations after the men
+    in it were dead.
+- template: body
+  body: '[[NEEDS CLAIM: whether any early source records a rival designation report
+    naming a different son]]. That check matters more than any other in this file,
+    and it bears on the refusal described on the slide before this one. A succession
+    dispute in which both sides hold designation reports looks nothing like a dispute
+    in which one side has reports and the other has a doctrine about a man who cannot
+    die. The difference decides how the whole essay should be written.'
+- template: body
+  body: 'One more thing about the list is worth a slide. Safwan al-Jammal carries
+    a cameleer''s trade name and Ya''qub al-Sarraj a saddler''s. [[NEEDS CLAIM:
+    what the trade names of these transmitters indicate about their occupations]].
+    The men who carried the claim were not courtiers or judges. They were tradesmen
+    who moved between Kufa and Medina with the caravans, and the claim travelled
+    the way they did, at the speed of a camel, in the same season as the pilgrimage.'
+- template: closing
+  body: A private word in a room in Medina had to be carried by saddlers and cameleers,
+    and it reached us because al-Mufid wrote down which of them said what.

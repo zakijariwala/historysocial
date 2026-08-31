@@ -45,7 +45,7 @@ TEMPLATES = ROOT / "templates"
 BANK = ROOT / "images" / "bank.yaml"
 OUT = ROOT / "out"
 
-COVER_SUBLINE = "sourced to the printed page"
+COVER_SUBLINE = "sourced to the edition cited"
 
 
 def load_yaml(path: Path) -> dict:

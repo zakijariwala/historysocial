@@ -5,7 +5,7 @@
 # defect in it: a placeholder is output, an invented date is a build failure.
 # tools/lint_post.py refuses to render a single slide while a placeholder
 # remains, so this essay lives in the database and never reaches a PNG until
-# the rows below are checked against the printed page.
+# the rows below are checked against the edition cited.
 #
 # The `claims` block holds CANDIDATE rows. Each names a source and a printed
 # page that a search of the local corpus actually returned, so verifying one
@@ -39,7 +39,7 @@ claims:
       aged fifty-five
     hijri: 183
     source: SRC-IRS-003
-    page: "407"
+    locator: "p. 407"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
@@ -47,7 +47,7 @@ claims:
       years after his father
     hijri: 128
     source: SRC-IRS-003
-    page: "407"
+    locator: "p. 407"
     pillar: date_pair
   - subject: Musa b. Ja'far
     assertion: >-
@@ -55,21 +55,21 @@ claims:
       including al-Haytham b. 'Adi, and had them testify that there was no
       wound and no mark of strangulation
     source: SRC-IRS-003
-    page: "427"
+    locator: "p. 427"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
       the body was put on the bridge at Baghdad and an announcement called the
       people to come and look at him
     source: SRC-IRS-003
-    page: "427"
+    locator: "p. 427"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
       a group had claimed during his life that he was the awaited Imam who
       would hold the Imamate for the rest of time
     source: SRC-IRS-003
-    page: "427"
+    locator: "p. 427"
     pillar: collision
   - subject: Harun al-Rashid
     assertion: >-
@@ -77,7 +77,7 @@ claims:
       the tax administration of the Sawad, then summoned al-Sindi b. Shahik and
       gave him his instructions concerning Musa
     source: SRC-IRS-003
-    page: "427"
+    locator: "p. 427"
     pillar: collision
     dispute: >-
       al-Mufid reports the poisoning as a report he received ("it is said that
@@ -88,40 +88,40 @@ claims:
       the Arabic chronicle records the death at Baghdad in the same year as
       that of Muhammad b. al-Sammak the qadi
     source: SRC-TAB-AR
-    page: "8:271"
+    locator: "8:271"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
       he refused al-Sindi's offer to shroud him and named a retainer of his own
       household to wash and prepare the body
     source: SRC-IRS-003
-    page: "428"
+    locator: "p. 428"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
       the eldest and most prominent of his thirty-seven children was 'Ali b.
       Musa al-Rida
     source: SRC-IRS-003
-    page: "429"
+    locator: "p. 429"
     pillar: fact_panel
   - subject: the Waqifa
     assertion: >-
       men of the Waqifa are named in the chains of al-Kafi, among them Marwan
       al-Qandi and a companion who says he left the sect in Khurasan
     source: SRC-KAF-001
-    page: "279"
+    locator: "p. 279"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
       Al-Kulayni records the first arrest under the Caliph al-Mahdi
     source: SRC-KAF-001
-    page: "452"
+    locator: "p. 452"
     pillar: collision
   - subject: Musa b. Ja'far
     assertion: >-
       born in Medina in the year 148 AH
     source: SRC-IRS-003
-    page: "431"
+    locator: "p. 431"
     pillar: date_pair
 
 slides:

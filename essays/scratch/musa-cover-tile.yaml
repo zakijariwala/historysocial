@@ -14,7 +14,7 @@ claims:
   - subject: scratch
     assertion: "placeholder row for a cover test. Not evidence."
     source: SRC-IRS-003
-    page: "407"
+    locator: "p. 407"
 
 slides:
   - template: cover

@@ -3,7 +3,8 @@
     python tools/db.py migrate
     python tools/db.py claim-add --subject "Musa b. Ja'far" \
         --assertion "died in Baghdad in the custody of al-Sindi b. Shahik" \
-        --hijri 183 --ce 799 --source SRC-IRS-003 --page 441 --pillar collision
+        --hijri 183 --ce 799 --source SRC-IRS-003 \
+        --locator "bk. 2, ch. 4" --pillar collision
     python tools/db.py verify CLM-0001 --by zaki
     python tools/db.py unverified [--pillar collision]
     python tools/db.py coverage
@@ -13,17 +14,27 @@
 
 WHAT THIS TOOL REFUSES TO DO
 
-  verify without a page          Rule 2. A page number is what makes a claim
-                                 checkable by somebody who does not trust you.
+  verify without a locator       Rule 2. Something has to address the passage,
+                                 or the claim is not checkable by somebody who
+                                 does not trust you. A chapter, a book and
+                                 hadith number, a sermon, a folio, a Leiden
+                                 margin number, or a printed page: whichever
+                                 unit the edition in hand actually carries.
   verify against a TODO edition  sources/manifest.yaml still has no edition
-                                 statement for that source, so "p. 441" names
-                                 no particular book.
+                                 statement for that source, so the locator
+                                 names no particular book.
   verify against an index        SRC-TAB-040 is an index volume. It can point
-                                 at a page; it cannot be the source of one.
+                                 at a passage; it cannot be the source of one.
   verify a claim whose source is not registered in the manifest at all.
 
-Nothing here writes an assertion, a date, or a page on its own. Every value
-comes from the command line, which means from a human who read the page.
+A locator is not a page number, and that is deliberate. Fourteen of the
+registered sources are ebook conversions whose pagination is the conversion's
+own, and the same translation reflows differently at Ansariyan, alhassanain
+and al-islam.org. A chapter or a hadith number survives the reprint; a page
+number does not. See DECISIONS.md #21.
+
+Nothing here writes an assertion, a date, or a locator on its own. Every value
+comes from the command line, which means from a human who read the passage.
 """
 
 from __future__ import annotations
@@ -59,11 +70,12 @@ def migrate(conn: sqlite3.Connection) -> list[str]:
     done = {r["filename"] for r in conn.execute("SELECT filename FROM schema_migration")}
     applied = []
     for path in sorted(MIGRATIONS.glob("*.sql")):
+        if path.name in done:
+            continue
         conn.executescript(path.read_text(encoding="utf-8"))
-        if path.name not in done:
-            conn.execute("INSERT INTO schema_migration VALUES (?, ?)",
-                         (path.name, dt.date.today().isoformat()))
-            applied.append(path.name)
+        conn.execute("INSERT INTO schema_migration VALUES (?, ?)",
+                     (path.name, dt.date.today().isoformat()))
+        applied.append(path.name)
     conn.commit()
     return applied
 
@@ -79,10 +91,12 @@ def manifest_sources() -> dict[str, dict]:
     return doc.get("sources") or {}
 
 
-def verification_block(source_key: str, page: str | None) -> str | None:
+def verification_block(source_key: str, locator: str | None) -> str | None:
     """Why this claim may NOT be verified, or None when it may."""
-    if not page or not str(page).strip():
-        return "no page. Rule 2: no page number means it cannot be verified."
+    if not locator or not str(locator).strip():
+        return ("no locator. Rule 2: a claim nobody can look up cannot be "
+                "verified. Give a chapter, book and number, sermon, folio or "
+                "page - whatever addresses the passage in the edition cited.")
     sources = manifest_sources()
     if not sources:
         return "sources/manifest.yaml is missing or unreadable."
@@ -94,8 +108,8 @@ def verification_block(source_key: str, page: str | None) -> str | None:
         return (f"{source_key} still has no edition statement in the manifest. "
                 f'Fill `edition:` from the copy in hand, then verify again.')
     if rec.get("role") == "index-only":
-        return (f"{source_key} is an index volume. It can tell you which page "
-                f"holds a thing; it cannot itself be the source of a claim.")
+        return (f"{source_key} is an index volume. It can tell you where a "
+                f"thing sits; it cannot itself be the source of a claim.")
     if rec.get("usable") is False:
         return f"{source_key} is marked unusable in the manifest."
     return None
@@ -129,12 +143,12 @@ def cmd_claim_add(conn, a):
     edition = a.edition or (sources.get(a.source, {}) or {}).get("edition") or "TODO"
     conn.execute(
         """INSERT INTO claim (id, subject, assertion, hijri_date, ce_date,
-                              source_key, edition, page, pillar, dispute_note)
+                              source_key, edition, locator, pillar, dispute_note)
            VALUES (?,?,?,?,?,?,?,?,?,?)""",
         (cid, a.subject, a.assertion, a.hijri, a.ce, a.source, edition,
-         a.page, a.pillar, a.dispute))
+         a.locator, a.pillar, a.dispute))
     conn.commit()
-    print(f"{cid}  unverified  {a.source} p. {a.page or '-'}")
+    print(f"{cid}  unverified  {a.source} {a.locator or '-'}")
     return 0
 
 
@@ -143,19 +157,19 @@ def cmd_verify(conn, a):
     if row is None:
         print(f"no claim {a.id}", file=sys.stderr)
         return 2
-    page = a.page if a.page is not None else row["page"]
-    block = verification_block(row["source_key"], page)
+    locator = a.locator if a.locator is not None else row["locator"]
+    block = verification_block(row["source_key"], locator)
     if block:
         print(f"REFUSED {a.id}: {block}", file=sys.stderr)
         return 1
     conn.execute("""UPDATE claim SET verified = 1, verified_by = ?, verified_on = ?,
-                                     page = ?, edition = ?
+                                     locator = ?, edition = ?
                     WHERE id = ?""",
-                 (a.by, dt.date.today().isoformat(), page,
+                 (a.by, dt.date.today().isoformat(), locator,
                   a.edition or manifest_sources()[row["source_key"]]["edition"],
                   a.id))
     conn.commit()
-    print(f"{a.id}  VERIFIED  {row['source_key']} p. {page}  by {a.by}")
+    print(f"{a.id}  VERIFIED  {row['source_key']} {locator}  by {a.by}")
     return 0
 
 
@@ -167,8 +181,8 @@ def cmd_unverified(conn, a):
         args.append(a.pillar)
     rows = conn.execute(sql + " ORDER BY id", args).fetchall()
     for r in rows:
-        page = r["page"] or "NO PAGE"
-        print(f'{r["id"]}  {r["pillar"]:<10} {r["source_key"]:<12} p. {page:<8} '
+        locator = r["locator"] or "NO LOCATOR"
+        print(f'{r["id"]}  {r["pillar"]:<10} {r["source_key"]:<12} {locator:<16} '
               f'{r["assertion"][:70]}')
     print(f"\n{len(rows)} unverified")
     return 0
@@ -290,7 +304,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--ce")
     p.add_argument("--source", required=True, help="a key in sources/manifest.yaml")
     p.add_argument("--edition")
-    p.add_argument("--page", help="the PRINTED page number")
+    p.add_argument("--locator", help="what addresses the passage in the edition "
+                                     "cited: 'bk. 2, ch. 4, hadith 12', "
+                                     "'sermon 27', 'Leiden 8:271', 'p. 407'")
     p.add_argument("--pillar", required=True, choices=PILLARS)
     p.add_argument("--dispute", help="where the chronicles disagree, name both")
     p.set_defaults(fn=cmd_claim_add)
@@ -298,7 +314,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("verify")
     p.add_argument("id")
     p.add_argument("--by", required=True)
-    p.add_argument("--page")
+    p.add_argument("--locator")
     p.add_argument("--edition")
     p.set_defaults(fn=cmd_verify)
 

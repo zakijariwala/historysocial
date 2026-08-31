@@ -1,0 +1,140 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 17 slides, halftone cover, a report whose content is a refusal.
+
+post:
+  id: sample-29-refusal
+  pillar: collision
+  running_head: the question he declined to take
+  cover_title: you never ask such questions
+  cover_image: met-453211
+  ink: rust
+  caption: 'Abu Ahmad al-Khurasani asks Musa b. Ja''far whether atheism came before
+
+    polytheism. The answer is not an answer: you have not been accustomed to
+
+    ask such questions, and I do not know that you go in for theological
+
+    argument.
+
+
+    Al-Harrani kept the refusal, which is stranger than keeping a reply.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: asked by Abu Ahmad al-Khurasani whether atheism preceded polytheism
+    or the reverse, he answered that the questioner had not been accustomed to ask
+    such questions and that he did not know him to enter theological discussions
+  source: SRC-TUH-001
+  locator: "p. 126"
+- subject: Musa b. Ja'far
+  assertion: the report continues with the questioner confessing something in reply
+  source: SRC-TUH-001
+  locator: "p. 126"
+slides:
+- template: cover
+- template: question
+  body: Why would a collection of teachings preserve a teacher refusing to teach?
+- template: body
+  body: 'Abu Ahmad al-Khurasani puts a clean theological question: did atheism come
+    before polytheism, or the other way round. It is the kind of question that has
+    a structure and a literature behind it, and a man who asks it is signalling
+    that he has read something. The reply does not touch the content at all. You
+    have not been accustomed to ask such questions, Musa b. Ja''far says. Content
+    was never the subject.'
+- template: body
+  body: Then a second clause, sharper than the first. I do not know that you intrude
+    yourself into theological discussions. That is a statement about the questioner
+    rather than about the question, and it is delivered in front of whoever else
+    was standing there. The subject has been changed from cosmology to the man asking,
+    and the change is the whole event.
+- template: body
+  body: 'Al-Harrani prints this in a collection of maxims and wisdom, where every
+    other entry hands the reader something to carry away. [[NEEDS CLAIM: how many
+    entries in this section end without a teaching, Tuhaf p. 126]]. A compiler assembling
+    useful sayings had no obvious reason to keep a rebuff, which is why keeping
+    it is worth a carousel. Every other entry in the section hands a reader something
+    to carry away, and this one hands them a closed door.'
+- template: body
+  body: One reading is that the rebuff is the teaching. A man asks a question above
+    his usual level and is told to attend to the level he is at. Read that way,
+    the report is about the danger of speculative argument for somebody without
+    the training to hold it, and it earns its place in a wisdom collection on the
+    same terms as any other entry.
+- template: body
+  body: 'A second reading is political and needs care. Theological disputation in
+    those decades ran alongside real factional lines, and the wrong position argued
+    in the wrong room had consequences for a household already under surveillance.
+    [[NEEDS CLAIM: what the sources say about the risks of kalam disputation under
+    Harun al-Rashid]]. On that reading the refusal is prudence rather than pedagogy.'
+- template: body
+  body: 'A third reading is simplest and hardest to check: the man asked in bad
+    faith. Somebody arriving with a set question, from a province, to a man whose
+    visitors were watched, might be collecting a position rather than seeking one.
+    [[NEEDS CLAIM: who Abu Ahmad al-Khurasani was, and whether he appears elsewhere
+    in the corpus]]. Nothing on this shelf decides between the three, and a slide
+    that picks one has stopped reporting.'
+- template: body
+  body: This account cannot choose between those three readings from the material
+    on the shelf, and it will not pretend otherwise. What it can do is set them
+    out, name what each would need to be confirmed, and leave a reader holding three
+    live options instead of one confident sentence. That is a slower carousel and
+    an honest one. The half we have is the refusal; the half we lack is the reply
+    to it.
+- template: body
+  body: 'The report does not end at the refusal. Abu Ahmad confesses something in
+    reply, and the confession is where the passage on this shelf breaks off in the
+    extraction. [[NEEDS CLAIM: what Abu Ahmad al-Khurasani confesses, Tuhaf p. 126
+    continuing]]. A missing second half is a real limit and naming it is cheaper
+    than working around it. A page break is a property of a typesetter, and an extraction
+    inherits every one of them.'
+- template: body
+  body: That limit is a property of the pipeline rather than of the book. The text
+    came out of a PDF page by page, and a page break lands where the typesetter
+    put it. A reader with the printed volume turns the page. An extraction inherits
+    every page break the typesetter chose, and a reader has to notice when an argument
+    runs over one.
+- template: body
+  body: Which is a small confession of the account's own method. Everything here
+    is read through a page index built by a script from a scan, and the index is
+    honest about which numbers it read and which it derived. It cannot be honest
+    about a sentence that continues past the edge of the page it captured. The only
+    variable in the record is the man being addressed.
+- template: body
+  body: Set the refusal beside the letter to Hisham b. al-Hakam and the pair makes
+    a shape. To one correspondent, a long argument about the mind, sent as a letter.
+    To another, a flat instruction to stay out of theological discussion. Same speaker,
+    opposite advice, and the difference between the two is the two men. Two decisions
+    by one man about who gets an argument, and no compiler in the chain remarks
+    on either.
+- template: body
+  body: 'A teaching that varies with the student is either pedagogy or inconsistency,
+    and a collection like this one gives a reader no way to tell which. [[NEEDS
+    CLAIM: whether al-Harrani or any later compiler comments on the tension between
+    these two reports]]. A compiler''s silence is not agreement, and it is not disagreement
+    either. A refusal from a man that careful is a choice with reasons behind it
+    rather than an absence of one.'
+- template: body
+  body: The pattern turns up in the biographical material too. Al-Mufid's chapter
+    shows a man who arranges his own burial, refuses a jailer's offer, and says
+    little in public. A person who chose his words with that much care is a person
+    for whom a refusal to answer is a choice with reasons behind it rather than
+    an absence of one. Reconstruction is allowed on a slide as long as the slide
+    says that is what it is.
+- template: body
+  body: 'Reading it that way is a reconstruction and this account marks it as one.
+    What survives on the page is short and can be stated without any reconstruction
+    at all: a man asked a question about atheism and polytheism, and the man he
+    asked told him he was out of his depth, and somebody thought the exchange worth
+    writing down.'
+- template: body
+  body: Worth writing down is the phrase to end on. Everything in this corpus passed
+    that test at least once, in somebody's hands, for reasons that are invisible
+    now. A report that teaches nothing survived because a compiler judged it useful,
+    and asking what he thought it was useful for is a better question than asking
+    whether it happened. What a compiler thought a report was for is a better question
+    than whether it happened.
+- template: closing
+  body: He answered a question about the mind at length and refused a question about
+    the origin of unbelief in one sentence, and both refusals are sitting in the
+    same book.

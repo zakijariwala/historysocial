@@ -1,89 +1,264 @@
-/* Mobile first, and mobile only in practice: the only device that opens this
-   is the phone the carousels are posted from. */
+/* history-social review queue.
+ *
+ * Tokens match tokens/tokens.yaml. The night ground and bone ink are the
+ * account's own mourning pair, which is the right register for a surface
+ * whose whole job is looking hard at cards before they go out.
+ *
+ * No preprocessor, no framework, no web fonts. The bundled EB Garamond and
+ * Space Grotesk are baked into the rendered PNGs, not used by this page.
+ */
 
 :root {
-  --ground: #efeae1;
-  --ink: #191b20;
-  --rule: rgba(25, 27, 32, 0.16);
+  --ground: #14161A;        /* grounds.night */
+  --text: #C9C6C1;          /* inks.bone */
+  --accent: #8A3A2A;        /* inks.rust */
+  --card-bg: #1B1E24;
+  --edge: #2E333B;
+  --dim: #8A8F96;
+  --overlay: #0E1114;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+* { box-sizing: border-box; }
 
 body {
+  margin: 0;
   background: var(--ground);
-  color: var(--ink);
-  font: 17px/1.45 Georgia, "Times New Roman", serif;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-           env(safe-area-inset-bottom) env(safe-area-inset-left);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-header { padding: 22px 20px 10px; }
-h1 { font-size: 22px; font-weight: 400; font-style: italic; letter-spacing: 0.02em; }
+.hidden { display: none !important; }
 
-nav { display: flex; gap: 8px; margin-top: 14px; }
-nav button {
-  flex: 1; padding: 11px 0; border: 1px solid var(--rule); background: none;
-  color: var(--ink); font: inherit; font-size: 15px; border-radius: 2px;
-}
-nav button.on { background: var(--ink); color: var(--ground); border-color: var(--ink); }
-
-main { padding: 8px 20px 60px; }
-
-.screen { display: none; }
-.screen.on { display: block; }
-
-.card { border-top: 1px solid var(--rule); padding: 20px 0; }
-.card h3 { font-size: 21px; font-weight: 400; }
-.card.big h3 { font-size: 30px; line-height: 1.15; }
-.card .meta { font-size: 14px; opacity: 0.65; margin: 6px 0 14px; }
-.card.mourning { background: #14161a; color: #c9c6c1; padding: 20px 16px; }
-
-.button {
-  display: inline-block; padding: 12px 18px; border: 1px solid var(--rule);
-  background: none; color: inherit; font: inherit; font-size: 15px;
-  border-radius: 2px; text-decoration: none;
+.banner {
+  background: var(--accent);
+  color: #F4F2ED;
+  padding: 10px 16px;
+  font-size: 14px;
+  text-align: center;
 }
 
-.none { opacity: 0.55; padding: 24px 0; }
+/* ------------------------------------------------------------------ header */
 
-#back { background: none; border: 0; color: inherit; font: inherit; font-style: italic;
-        opacity: 0.7; padding: 6px 0 14px; }
-
-#post-title { font-size: 27px; font-weight: 400; line-height: 1.15; }
-#post-meta { font-size: 14px; opacity: 0.65; margin: 6px 0 16px; font-style: italic; }
-
-/* One slide per screen, snapped, sized for a phone. */
-#viewer { margin: 0 -20px; }
-#track {
-  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; scrollbar-width: none;
-}
-#track::-webkit-scrollbar { display: none; }
-#track img {
-  flex: 0 0 100%; width: 100%; height: auto; scroll-snap-align: center;
-  display: block;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--ground);
+  border-bottom: 1px solid var(--edge);
+  padding: 18px 16px 0;
 }
 
-#counter { text-align: center; font-size: 14px; opacity: 0.6; padding: 10px 0 16px; }
-
-.actions { display: flex; gap: 10px; }
-.actions .button { flex: 1; text-align: center; }
-
-#caption {
-  margin-top: 18px; padding: 16px; border: 1px solid var(--rule);
-  white-space: pre-wrap; font: 15px/1.5 Georgia, serif; user-select: text;
-  -webkit-user-select: text;
+header h1 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.04em;
 }
 
-#empty { padding: 30px 20px; opacity: 0.6; }
+nav { display: flex; gap: 6px; }
 
-@media (prefers-color-scheme: dark) {
-  :root { --ground: #14161a; --ink: #d8d4cd; --rule: rgba(216, 212, 205, 0.2); }
+.tab {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--dim);
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
-/* Drafts carry unfilled facts. Say so where nobody can miss it. */
-.warn {
-  border: 1px solid var(--rule); padding: 14px 16px; margin: 18px 0 4px;
-  font-size: 15px; line-height: 1.4; opacity: 0.85;
+.tab.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
 }
-.gap { font-style: italic; }
+
+.count {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--dim);
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------------- cards */
+
+.panel { display: none; max-width: 640px; margin: 0 auto; padding: 20px 16px 64px; }
+.panel.active { display: block; }
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--edge);
+  border-radius: 3px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card:hover { border-color: var(--dim); }
+
+/* A draft is not a third section. It stays in NOT POSTED, marked with a rule. */
+.card.is-draft { border-left: 3px solid var(--accent); }
+
+.card .imam { font-size: 19px; margin-bottom: 4px; }
+
+.card .label {
+  color: var(--text);
+  opacity: 0.75;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.card .meta {
+  color: var(--dim);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.flags { display: flex; gap: 18px; }
+.flag-pair { display: inline-flex; align-items: center; gap: 6px; }
+.flag-box { accent-color: var(--accent); cursor: pointer; }
+
+.flag {
+  color: var(--dim);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.empty { color: var(--dim); padding: 40px 0; text-align: center; }
+
+/* ------------------------------------------------------------------ viewer */
+
+.post-view {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  /* Must stay opaque. At partial alpha the queue behind bleeds through and
+     the caption becomes unreadable. */
+  background: var(--overlay);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#close-post {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.viewer-row {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.viewer { position: relative; flex: 1 1 55%; }
+.viewer img { width: 100%; height: auto; display: block; border: 1px solid var(--edge); }
+
+.viewer-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(14, 17, 20, 0.8);
+  color: var(--text);
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(14, 17, 20, 0.75);
+  border: 0;
+  color: var(--text);
+  font-size: 28px;
+  line-height: 1;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.nav-arrow.left { left: 6px; }
+.nav-arrow.right { right: 6px; }
+
+.caption-panel {
+  flex: 1 1 45%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Clears #close-post. */
+.caption-panel h2 {
+  margin: 0 0 10px;
+  padding-right: 40px;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+}
+
+#caption-text {
+  margin: 0;
+  font-family: inherit;
+  font-size: 15px;
+  /* The caption's own line breaks are exactly what gets pasted, while long
+     lines still wrap. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.kbd-hint {
+  max-width: 1200px;
+  margin: 14px auto 0;
+  color: var(--dim);
+  font-size: 12px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 16px auto 0;
+}
+
+#download-all, #copy-caption {
+  background: none;
+  border: 1px solid var(--edge);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 10px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#download-all:hover, #copy-caption:hover { border-color: var(--accent); }
+
+/* -------------------------------------------------------------- breakpoints */
+
+/* Side by side below this leaves both columns too narrow to read. */
+@media (max-width: 900px) {
+  .viewer-row { flex-direction: column; }
+  .viewer, .caption-panel { flex: 1 1 auto; max-width: none; width: 100%; }
+  .caption-panel { max-height: none; }
+}
+
+/* Touch devices have no arrow keys. */
+@media (hover: none) and (pointer: coarse) {
+  .kbd-hint { display: none; }
+}

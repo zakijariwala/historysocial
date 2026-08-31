@@ -1,0 +1,102 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# A NUMBER post: solid cover, the arithmetic stated, the two dates it spans.
+
+post:
+  id: sample-13-fifty-five
+  pillar: number
+  running_head: one life measured three ways
+  cover_title: fifty-five years
+  ink: indigo
+  caption: '128 AH to 183 AH is 55 years. Al-Mufid gives all three numbers on one
+
+    page, and gives a fourth: 35 years of the Imamate. Subtract and the
+
+    arithmetic says something the page never states.
+
+    '
+claims:
+- subject: Musa b. Ja'far
+  assertion: born at al-Abwa' in 128 AH; died 6 Rajab 183 AH; fifty-five years of
+    age; thirty-five years in the Imamate after his father
+  hijri: 183
+  source: SRC-IRS-003
+  locator: "p. 407"
+- subject: Musa b. Ja'far
+  assertion: Harun summoned him out of Medina on 20 Shawwal 179 AH
+  hijri: 179
+  source: SRC-KAF-001
+  locator: "p. 451"
+slides:
+- template: cover
+- template: question
+  body: What do the numbers on one page of al-Mufid add up to when you subtract
+    them?
+- template: body
+  body: Al-Mufid puts four numbers in a single paragraph. Birth at al-Abwa' in 128.
+    Death on 6 Rajab 183. Age fifty-five. Imamate thirty-five years. He states them
+    and moves on to the designation reports without drawing a conclusion from any
+    of them. The arithmetic is left on the page for a reader to do, and doing it
+    is the point of this post.
+- template: body
+  body: 'Start with the span itself. 183 minus 128 is 55, which matches the age
+    al-Mufid gives, so his two figures agree and neither contradicts the other.
+    That agreement is worth stating because it is not guaranteed anywhere. Biographical
+    notices carry inherited numbers, inherited numbers drift as they are copied,
+    and a compiler who never checks can print a birth year and an age that cannot
+    both be true. [[NEEDS CLAIM: whether any source gives a different age at death]].'
+- template: body
+  body: 'Now the second subtraction. 55 minus 35 is 20, so on al-Mufid''s own figures
+    the office came to him at about the age of twenty. [[NEEDS CLAIM: the year of
+    Ja''far b. Muhammad''s death, and the source]]. A man of twenty inheriting a
+    following spread across two provinces is a different story from a mature scholar
+    inheriting one, and the page never says which.'
+- template: body
+  body: The figure of twenty sets the designation reports in a frame. Al-Mufid has
+    the father pointing at a child asleep in a room, and at a boy walking through
+    a door. Those scenes happen years before the office changes hands. The community
+    had been told who was next, and then it waited. That wait is what made the answer
+    stick when the day came, and it is also what gave a rival reading of the office
+    time to form and to find men willing to hold it.
+- template: body
+  body: 'Third subtraction. Al-Kulayni dates the summons out of Medina to 20 Shawwal
+    179, and al-Mufid dates the death to Rajab 183, so the last custody runs a little
+    under four years. [[NEEDS CLAIM: the interval between 20 Shawwal 179 and 6 Rajab
+    183 in lunar months]]. Four years out of thirty-five in office, which leaves
+    thirty-one years unaccounted for by that particular imprisonment.'
+- template: body
+  body: This is where the number card earns its keep, and where most retellings
+    of this life go quiet. The phrase that follows Musa b. Ja'far everywhere speaks
+    of nineteen years in custody. Nineteen does not come out of any subtraction
+    on al-Mufid's page. It has to be assembled from arrests under more than one
+    caliph, and the assembly needs sources this shelf does not hold.
+- template: body
+  body: '[[NEEDS CLAIM: the years and durations of the earlier detentions under
+    al-Mansur and al-Mahdi, with sources]]. Until rows like those exist and somebody
+    has verified them against a printed page, the honest version of the running
+    head at the top of this slide is a question and not a headline. This account
+    prints headlines it can defend to a stranger who owes the tradition nothing.
+    It does not print figures it inherited from other people''s captions.'
+- template: body
+  body: 'One anchor for the earlier arrests survives the test. Al-Kulayni carries
+    a report from ''Ali b. Khalid al-Zabali, who says the escort halted at Zabala
+    when Musa b. Ja''far was brought before al-Mahdi the first time. Read the words
+    the first time again. They carry the weight of the sentence: they place at least
+    one detention a full caliph before Harun, and they assume a second one that
+    al-Zabali expected his hearers to know about without being told.'
+- template: body
+  body: 'Numbers in a biography come in two kinds, and this page has both sitting
+    side by side. The dates and the age are the kind a compiler copies out of a
+    written notice that somebody kept at the time. The thirty-five years of Imamate
+    is the kind a community computes for itself, from a doctrine about the moment
+    authority passes from one man to the next. [[NEEDS CLAIM: whether the thirty-five-year
+    figure appears in any source before al-Mufid]].'
+- template: body
+  body: 'A number card states its arithmetic and the two dates the arithmetic spans,
+    and the two dates here are 128 AH and 183 AH. Everything else on this slide
+    is subtraction from those: 55 years alive, 35 of them in office, about 20 before
+    the office came to him, and under 4 in the final prison at Baghdad. Four operations,
+    one page of one book, and one famous figure that the page cannot produce by
+    any of them.'
+- template: closing
+  body: The famous number attached to this life is the one number al-Mufid's page
+    does not contain, and nobody who repeats it says where they got it.

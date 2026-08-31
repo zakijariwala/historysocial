@@ -58,8 +58,9 @@ the pages around it agree with its offset. Pages that disagree are given the
 offset their neighbours support and marked `derived`; pages with nothing
 readable are marked `none` and lookup prints `p. ?`.
 
-A hit on a `p. ?` page can be read. It can never become a verified claim,
-because Rule 2 wants a printed page.
+A hit on a `p. ?` page can be read, and since decision 21 it can still become
+a verified claim, provided the row carries some other locator the reader can
+follow. What it can never do is claim a page number the extractor never read.
 
 ## 5. The page index speaks bytes, and the searcher folds diacritics
 
@@ -237,3 +238,47 @@ they change:
 
 sample-19 and sample-28 are the two iron covers in the sample set. Compare
 them with sample-01 (rust) and sample-24 (indigo) to judge.
+
+## 21. The page rule became a locator rule
+
+Rule 2 used to read: no printed page number, no verified claim. It has been
+replaced by: no locator, no verified claim, where a locator is whatever
+addresses the passage in the edition named on the row.
+
+The old rule assumed every source is a printing. Most of this shelf is not.
+Fourteen of the twenty-six registered sources are `pagination:
+ebook-reflowed` — al-islam.org, alhassanain and Ansariyan conversions whose
+page numbers were set by the conversion, not by a typesetter. SRC-QAR-001's
+own manifest note said so from the start. The same translation reflows
+differently at each of those three sites, and different countries reprint the
+same title at different pagination, so "p. 407" identifies a passage only for
+the person holding the identical file.
+
+Worse, `verification_block()` never checked `pagination`. A reflowed ebook page
+verified clean, which meant the rule the whole project exists to enforce was
+being satisfied by numbers that exist in no book. A rule that cannot be
+satisfied honestly gets satisfied dishonestly.
+
+`claim.page` is therefore `claim.locator`, free text, still required before a
+row can be verified. What goes in it is the unit the edition actually carries:
+
+    bk. 2, ch. 4, hadith 12      al-Kafi, any printing
+    sermon 27                    Nahj al-Balagha, any printing
+    Leiden 8:271                 al-Tabari, the margin numbers every
+                                 translation and the Arabic both carry
+    p. 407                       still correct where the edition is a printing
+
+The three `pagination: print-edition` sources — SRC-TAB-008, SRC-TAB-040 and
+SRC-SIR-001 — lose nothing: a page in a real printing is a good locator and
+stays one.
+
+What this trades away is machine-checkability. A page number could at least be
+compared against the extracted page index; free text cannot be checked by
+anything but a reader. The gate now enforces that a locator exists and that the
+edition it points into is named, and nothing more. Rule 1 is unchanged: a human
+still has to open the book.
+
+The twelve verified rows on `musa-bridge` carried real printed pages from
+Howard's Irshad and al-Kafi. They were carried over as locators unchanged,
+normalised to `p. 407` form, and stay verified. Nothing already approved had to
+be approved twice.
