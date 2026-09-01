@@ -28,5 +28,59 @@
       "musa-bridge/16.png"
     ],
     "posted_on": null
+  },
+  {
+    "id": "sample-05-thirty-seven",
+    "title": "thirty-seven names",
+    "label": "the arithmetic of a succession",
+    "pillar": "number",
+    "ink": "olive",
+    "occasion": "normal",
+    "status": "ready",
+    "caption": "Al-Mufid lists the children of Musa b. Ja'far by name: thirty-seven, sons\nand daughters, with the mothers marked. A household that size is not a\nfamily detail. It is the size of the problem the succession had to solve.\n",
+    "zip": "sample-05-thirty-seven.zip",
+    "slides": [
+      "sample-05-thirty-seven/01.png",
+      "sample-05-thirty-seven/02.png",
+      "sample-05-thirty-seven/03.png",
+      "sample-05-thirty-seven/04.png",
+      "sample-05-thirty-seven/05.png",
+      "sample-05-thirty-seven/06.png",
+      "sample-05-thirty-seven/07.png",
+      "sample-05-thirty-seven/08.png",
+      "sample-05-thirty-seven/09.png",
+      "sample-05-thirty-seven/10.png",
+      "sample-05-thirty-seven/11.png",
+      "sample-05-thirty-seven/12.png",
+      "sample-05-thirty-seven/13.png"
+    ],
+    "posted_on": null
+  },
+  {
+    "id": "sample-07-testimony",
+    "title": "no mark upon him",
+    "label": "the jurists who were asked to look",
+    "pillar": "collision",
+    "ink": "rust",
+    "occasion": "normal",
+    "status": "ready",
+    "caption": "Al-Sindi b. Shahik did not ask the jurists of Baghdad whether the prisoner\nhad been poisoned. He asked them whether they could see a wound. They\ncould not, and they said so, and he wrote it down. The question you are\nasked decides the answer you can give.\n",
+    "zip": "sample-07-testimony.zip",
+    "slides": [
+      "sample-07-testimony/01.png",
+      "sample-07-testimony/02.png",
+      "sample-07-testimony/03.png",
+      "sample-07-testimony/04.png",
+      "sample-07-testimony/05.png",
+      "sample-07-testimony/06.png",
+      "sample-07-testimony/07.png",
+      "sample-07-testimony/08.png",
+      "sample-07-testimony/09.png",
+      "sample-07-testimony/10.png",
+      "sample-07-testimony/11.png",
+      "sample-07-testimony/12.png",
+      "sample-07-testimony/13.png"
+    ],
+    "posted_on": null
   }
 ]
