@@ -188,6 +188,67 @@ def cmd_unverified(conn, a):
     return 0
 
 
+def cmd_dump(conn, a):
+    """Every claim in full, grouped by post, for checking against the page.
+
+    `unverified` truncates the assertion, which is fine for a worklist and
+    useless when the job is reading a book and deciding whether the row is
+    honest. This prints the whole thing, plus what verification would refuse.
+    """
+    where, args = "", []
+    if a.post:
+        where = " WHERE pc.post_id = ?"
+        args = [a.post]
+    rows = conn.execute(f"""SELECT pc.post_id, cl.* FROM post_claim pc
+                            JOIN claim cl ON cl.id = pc.claim_id{where}
+                            ORDER BY pc.post_id, cl.id""", args).fetchall()
+    if a.unverified_only:
+        rows = [r for r in rows if not r["verified"]]
+
+    current = None
+    for r in rows:
+        if r["post_id"] != current:
+            current = r["post_id"]
+            post = conn.execute("SELECT status FROM post WHERE id = ?",
+                                (current,)).fetchone()
+            print(f'\n{"=" * 74}\n{current}   [{post["status"] if post else "?"}]')
+        mark = "VERIFIED" if r["verified"] else "unverified"
+        print(f'\n  {r["id"]}   {mark}')
+        if r["verified"]:
+            print(f'    by         {r["verified_by"]} on {r["verified_on"]}')
+        print(f'    source     {r["source_key"]}')
+        if r["verified"]:
+            print(f'    edition    {r["edition"]}')
+        else:
+            # An unverified row carries whatever the essay file said, usually
+            # TODO. The manifest is what verify would actually stamp on it.
+            stamped = (manifest_sources().get(r["source_key"]) or {}).get("edition")
+            print(f'    edition    {r["edition"]}   (verify would stamp: {stamped})')
+        print(f'    locator    {r["locator"] or "-"}')
+        print(f'    pillar     {r["pillar"]}')
+        for label, value in (("hijri", r["hijri_date"]), ("ce", r["ce_date"]),
+                             ("dispute", r["dispute_note"])):
+            if value:
+                print(f'    {label:<10} {value}')
+        print(f'    assertion  {r["assertion"]}')
+        block = verification_block(r["source_key"], r["locator"])
+        if block and not r["verified"]:
+            print(f'    REFUSES    {block}')
+
+    # Claims with no post are still claims, and a row nobody links is exactly
+    # the kind of thing that goes unnoticed.
+    orphans = conn.execute("""SELECT * FROM claim WHERE id NOT IN
+                              (SELECT claim_id FROM post_claim) ORDER BY id""").fetchall()
+    if orphans and not a.post:
+        print(f'\n{"=" * 74}\nlinked to no post')
+        for r in orphans:
+            print(f'  {r["id"]}   {r["source_key"]}   {r["locator"] or "-"}   '
+                  f'{r["assertion"][:60]}')
+
+    print(f'\n{len(rows)} claims shown, {sum(1 for r in rows if r["verified"])} verified')
+    return 0
+
+
 def cmd_coverage(conn, a):
     print(f'{"pillar":<12} {"verified":>8} {"unverified":>11} {"total":>7}')
     total_v = total_u = 0
@@ -321,6 +382,11 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("unverified")
     p.add_argument("--pillar", choices=PILLARS)
     p.set_defaults(fn=cmd_unverified)
+
+    p = sub.add_parser("dump", help="every claim in full, for checking by hand")
+    p.add_argument("post", nargs="?", help="one post id; omit for the whole database")
+    p.add_argument("--unverified-only", action="store_true")
+    p.set_defaults(fn=cmd_dump)
 
     sub.add_parser("coverage").set_defaults(fn=cmd_coverage)
 
