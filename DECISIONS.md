@@ -282,3 +282,48 @@ The twelve verified rows on `musa-bridge` carried real printed pages from
 Howard's Irshad and al-Kafi. They were carried over as locators unchanged,
 normalised to `p. 407` form, and stay verified. Nothing already approved had to
 be approved twice.
+
+## 22. The tradition and hostile-witness rule
+
+The README opened with "openly Shia", but until migration 0005 that was an
+editorial stance with no gate enforcing it. `sources/manifest.yaml` modelled no
+traditions, and `verification_block()` checked only formal bibliographic
+presence: registration, edition statement, locator, index-only flag, and
+usability. A claim resting entirely on a Sunni chronicle verified identically to
+one resting on al-Kafi.
+
+The account is openly Shia. Citing a Sunni chronicle down a chain of
+transmission is borrowing authority from a tradition this account does not hold
+authoritative. Citing that same chronicle for what its annalistic record does—what
+it enters, omits, concedes, or files under a year—is treating the source as a
+hostile witness. The hostile witness who records a death without mentioning
+poison is evidence precisely because he is hostile.
+
+The distinction is between **borrowed authority** and **record observation**:
+
+- **Borrowed authority (refused):** Content carried down a transmission chain
+  (e.g., "reports on the authority of 'Amra that 'A'isha said..."). This borrows
+  authority from a non-Shia chain.
+- **Bare fact (refused):** A free-standing historical claim resting only on a
+  non-Shia source (e.g., "alongside the Ka'ba the Arabs had adopted tawaghit...").
+- **Record observation (allowed as hostile witness):** An assertion about what
+  the opposing record itself enters, omits, or juxtaposes (e.g., "the Arabic
+  chronicle records the death at Baghdad in the same year as that of Muhammad b.
+  al-Sammak the qadi").
+
+Every source in `sources/manifest.yaml` is now tagged `tradition: shia|sunni`.
+A claim citing a non-Shia source verifies only when explicitly declared with
+`--role hostile-witness`. The code (`db.hostile_witness_block()`) scans for
+`CHAIN_MARKERS` and `RECORD_MARKERS`. These markers are **tripwires, not
+proofs**: natural language can disguise borrowed authority, so `--role
+hostile-witness` is a human attestation and the machine checks only catch
+obvious transmission patterns. Furthermore, `lint_post.py` enforces that a
+hostile witness cannot stand alone: a post must carry verified Shia claims for
+the hostile witness to be argued against.
+
+Under this rule, `sample-19-two-stones` was retired. Its entire thesis was Ibn
+Ishaq's qualification of an 'A'isha narration. Because no Shia source carries
+the narration, and because the essay's core argument *was* the narration, the
+post could not survive without borrowing non-Shia authority and was dropped
+rather than rewritten.
+

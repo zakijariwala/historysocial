@@ -45,6 +45,7 @@ sources:
     text_key: qarashi-the-life-of-imam-musa-bin-jafar-al-kazim
     file: qarashi--the-life-of-imam-musa-bin-jafar-al-kazim.pdf
     title: The Life of Imam Musa bin Ja'far al-Kazim
+    tradition: shia
     author: Baqir Sharif al-Qarashi
     translator: Jasim al-Rasheed
     publisher: Ansariyan Publications, Qum
@@ -64,6 +65,7 @@ sources:
     text_key: qarashi-the-life-of-imam-mahdi-a-s
     file: qarashi--the-life-of-imam-mahdi-a-s.pdf
     title: The Life of Imam al-Mahdi
+    tradition: shia
     author: Baqir Sharif al-Qarashi
     translator: "TODO"
     publisher: Ansariyan Publications, Qum
@@ -78,6 +80,7 @@ sources:
     text_key: irshad-kitab-al-irshad-1
     file: irshad--kitab-al-irshad-1.pdf
     title: "Kitab al-Irshad, Part 1: the life of 'Ali b. Abi Talib"
+    tradition: shia
     author: Shaykh al-Mufid
     translator: "TODO: this conversion does not name one"
     publisher: alhassanain.org (conversion)
@@ -93,6 +96,7 @@ sources:
     text_key: irshad-kitab-al-irshad-part-1
     file: irshad--kitab-al-irshad-part-1.pdf
     title: "Kitab al-Irshad, Part I (section on Imam 'Ali)"
+    tradition: shia
     author: Shaykh al-Mufid
     translator: "TODO"
     publisher: "TODO"
@@ -109,6 +113,7 @@ sources:
     text_key: irshad-howard-candidate
     file: irshad-howard-candidate.pdf
     title: "Kitab al-Irshad: the Book of Guidance into the Lives of the Twelve Imams"
+    tradition: shia
     author: Shaykh al-Mufid
     translator: "I. K. A. Howard"
     publisher: "Balagha Books / Muhammadi Trust"
@@ -126,6 +131,7 @@ sources:
     text_key: al-mufid
     file: al mufid.pdf
     title: The Emendation of a Shi'ite Creed (Tashih al-I'tiqad)
+    tradition: shia
     author: Shaykh al-Mufid
     translator: "TODO"
     publisher: World Organization for Islamic Services
@@ -141,6 +147,7 @@ sources:
     text_key: kafi-alkafi-201601
     file: kafi--alkafi-201601.pdf
     title: "Al-Kafi, Volume 1 of 8"
+    tradition: shia
     author: Muhammad b. Ya'qub al-Kulayni
     translator: "Muhammad Sarwar"
     publisher: "Islamic Seminary"
@@ -156,6 +163,7 @@ sources:
     text_key: nahjul-balagha-part-1-the-sermons
     file: nahjul_balagha_part_1_-_the_sermons.pdf
     title: "Nahj al-Balagha, Part 1: the sermons"
+    tradition: shia
     author: "'Ali b. Abi Talib (comp. al-Sharif al-Radi)"
     translator: "TODO"
     publisher: "TODO"
@@ -170,6 +178,7 @@ sources:
     text_key: nahjul-balagha-part-2-letters-and-sayings
     file: nahjul_balagha_part_2_letters_and_sayings.pdf
     title: "Nahj al-Balagha, Part 2: letters and sayings"
+    tradition: shia
     author: "'Ali b. Abi Talib (comp. al-Sharif al-Radi)"
     translator: "TODO"
     publisher: "TODO"
@@ -184,6 +193,7 @@ sources:
     text_key: as-sahifa-al-kamilah-al-sajjadiyya
     file: as-sahifa_al-kamilah_al-sajjadiyya_.pdf
     title: "As-Sahifa al-Kamilah al-Sajjadiyya (The Psalms of Islam)"
+    tradition: shia
     author: "'Ali Zayn al-'Abidin"
     translator: "TODO: the copy credits a translator, confirm the name"
     publisher: Muhammadi Trust of Great Britain and Northern Ireland
@@ -198,6 +208,7 @@ sources:
     text_key: treatise-on-rights-risalat-al-huquq
     file: treatise_on_rights_risalat_al-huquq.pdf
     title: Treatise on Rights (Risalat al-Huquq)
+    tradition: shia
     author: "'Ali Zayn al-'Abidin"
     translator: "TODO"
     publisher: "TODO"
@@ -212,6 +223,7 @@ sources:
     text_key: tuhaf-al-uqul
     file: tuhaf_al-uqul.pdf
     title: "Tuhaf al-'Uqul (The Masterpieces of the Mind)"
+    tradition: shia
     author: Ibn Shu'ba al-Harrani
     translator: "TODO"
     publisher: Ansariyan Publications, Qum
@@ -228,6 +240,7 @@ sources:
     text_key: uyun-akhbar-ar-ridha-volume-1
     file: uyun_akhbar_ar-ridha_volume_1.pdf
     title: "'Uyun Akhbar al-Rida, Volume 1"
+    tradition: shia
     author: Ibn Babawayh al-Saduq
     translator: "Dr. Ali Peiravi & Lisa Zaynab Morgan"
     publisher: "Ansariyan Publications, Qum (digital edition by Al-Islam.org)"
@@ -245,6 +258,7 @@ sources:
     text_key: uyun-akhbar-ar-ridha-volume-2
     file: uyun_akhbar_ar-ridha_volume_2.pdf
     title: "'Uyun Akhbar al-Rida, Volume 2"
+    tradition: shia
     author: Ibn Babawayh al-Saduq
     translator: "TODO"
     publisher: Ansariyan Publications, Qum
@@ -259,6 +273,7 @@ sources:
     text_key: fourteen-the-fourteen-infallibles
     file: fourteen--the-fourteen-infallibles.pdf
     title: The Fourteen Infallibles
+    tradition: shia
     author: Yasin T. al-Jibouri
     translator: n/a
     publisher: alhassanain.org
@@ -276,6 +291,7 @@ sources:
     text_key: fourteen-nuqoosh-e-ismat-eng-trns-s-athar-h-sh-rizvi
     file: fourteen--nuqoosh-e-ismat-eng-trns-s-athar-h-sh-rizvi.pdf
     title: "Nuqoosh-e-Ismat: life sketches of the Fourteen Infallibles"
+    tradition: shia
     author: Sayyid Zeeshan Haider Jawadi
     translator: S. Athar Husain S. H. Rizvi
     publisher: "TODO"
@@ -290,10 +306,11 @@ sources:
     text_key: tabari-tabarivolume08
     file: tabari--tabarivolume08.pdf
     title: "The History of al-Tabari, Volume VIII: The Victory of Islam"
+    tradition: sunni
     author: Muhammad b. Jarir al-Tabari
     translator: Michael Fishbein
     publisher: State University of New York Press
-    edition: "TODO"
+    edition: "SUNY Press, Albany, translated by Michael Fishbein. ISBN 0-7914-3149-5 (cloth), 0-7914-3150-9 (paperback). Leiden page numbers run in the margins."
     isbn: "TODO"
     licence: "user-supplied (in copyright; local only, never redistributed)"
     pagination: print-edition
@@ -308,6 +325,7 @@ sources:
     text_key: tabari-the-history-of-al-tabari
     file: tabari--the-history-of-al-tabari.pdf
     title: "The History of al-Tabari, Volume XL: Index"
+    tradition: sunni
     author: "Alex V. Popovkin (comp.), ed. Everett K. Rowson"
     translator: n/a
     publisher: State University of New York Press
@@ -328,10 +346,11 @@ sources:
     text_key: sira-guillaume-guillaumeathelifeofmuhammad
     file: sira-guillaume--guillaumeathelifeofmuhammad.pdf
     title: "The Life of Muhammad: a translation of Ishaq's Sirat Rasul Allah"
+    tradition: sunni
     author: Ibn Ishaq / Ibn Hisham
     translator: A. Guillaume
     publisher: Oxford University Press, Karachi
-    edition: "TODO"
+    edition: "Oxford University Press, Karachi. First published 1955; reissued in Pakistan 1967; thirteenth impression 1998. ISBN 0 19 636033 1."
     isbn: "TODO"
     licence: "user-supplied (in copyright; local only, never redistributed)"
     pagination: print-edition
@@ -343,6 +362,7 @@ sources:
     text_key: sira-guillaume-thelifeofmohammedguillaume
     file: sira-guillaume--thelifeofmohammedguillaume.pdf
     title: "The Life of Muhammad (scan, no text layer)"
+    tradition: sunni
     author: Ibn Ishaq / Ibn Hisham
     translator: A. Guillaume
     publisher: Oxford University Press
@@ -361,6 +381,7 @@ sources:
     text_key: sira-subhani-the-message-201506
     file: sira-subhani--the-message-201506.pdf
     title: "The Message: the life of the Holy Prophet of Islam"
+    tradition: shia
     author: Ja'far Subhani
     translator: "TODO"
     publisher: "TODO"
@@ -377,6 +398,7 @@ sources:
     text_key: openiti-tabari-tarikh-ara
     file: openiti--tabari-tarikh-ara.txt
     title: "Ta'rikh al-rusul wa'l-muluk (Arabic)"
+    tradition: sunni
     author: Muhammad b. Jarir al-Tabari
     translator: n/a
     publisher: "Dar al-Turath"
@@ -401,6 +423,7 @@ sources:
     text_key: degoeje-tabari-annales-01
     file: degoeje--tabari-annales-01.txt
     title: "Annales, ed. M. J. de Goeje, series I (Leiden, Brill, 1879)"
+    tradition: sunni
     author: Muhammad b. Jarir al-Tabari
     translator: n/a
     publisher: E. J. Brill, Leiden
@@ -419,6 +442,7 @@ sources:
     text_key: degoeje-tabari-annales-02
     file: degoeje--tabari-annales-02.txt
     title: "Annales, ed. M. J. de Goeje, series II (Leiden, Brill, 1890)"
+    tradition: sunni
     author: Muhammad b. Jarir al-Tabari
     translator: n/a
     publisher: E. J. Brill, Leiden
@@ -434,6 +458,7 @@ sources:
     text_key: wustenfeld-yaqut-mujam-01
     file: wustenfeld--yaqut-mujam-01.txt
     title: "Mu'jam al-buldan, ed. Wustenfeld, vol. I (Leipzig, 1866)"
+    tradition: sunni
     author: Yaqut al-Hamawi
     translator: n/a
     publisher: F. A. Brockhaus, Leipzig
@@ -451,6 +476,7 @@ sources:
     text_key: wustenfeld-yaqut-mujam-02
     file: wustenfeld--yaqut-mujam-02.txt
     title: "Mu'jam al-buldan, ed. Wustenfeld, vol. II (Leipzig, 1867)"
+    tradition: sunni
     author: Yaqut al-Hamawi
     translator: n/a
     publisher: F. A. Brockhaus, Leipzig

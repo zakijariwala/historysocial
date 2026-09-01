@@ -3,8 +3,8 @@
 A deterministic pipeline for long-form essay carousels: 12 to 20 slides, one
 anchor a week plus two singles, openly Shia, sourced to a named edition.
 
-Claims live in SQLite. Slides render to 1080x1350 PNGs in GitHub Actions.
-Review happens on a phone, behind Cloudflare Access. No laptop in the loop.
+Claims live in SQLite. Slides render locally to 1080x1350 PNGs, deployed to
+Cloudflare Pages for mobile review behind Cloudflare Access.
 
 ---
 
@@ -40,14 +40,15 @@ python tools/lint_post.py --post musa-bridge --report
 
 ```
 1. read           tools/lookup.py "al-Sindi" --source irshad-howard --context 1
-2. record         tools/db.py claim-add ... --source SRC-IRS-003 --page 407
+2. record         tools/db.py claim-add ... --source SRC-IRS-003 --locator "p. 407"
 3. verify         tools/db.py verify CLM-0001 --by zaki       ← a human, always
 4. write          edit essays/<post>.yaml
 5. load           tools/load_essay.py essays/<post>.yaml
 6. lint           tools/lint_post.py --post <post> --report
 7. mark ready     tools/db.py status <post> ready
-8. push           Actions renders, builds site/, deploys
-9. review         on the phone: swipe, DOWNLOAD ALL, COPY CAPTION
+8. render & site  python render/render.py --all-ready && python tools/build_site.py
+9. deploy         npx wrangler pages deploy site --project-name=history-social
+10. review        on the phone: swipe, DOWNLOAD ALL, COPY CAPTION
 ```
 
 Step 3 is the only step a machine cannot do.
@@ -66,7 +67,7 @@ templates/        cover, question, body, closing. Four, and that is the system
 tokens/           five inks, four grounds, the type scale, the mourning pair
 render/           render.py, duotone.py
 tools/            everything else, one job each
-site/             the phone app. Static, reads index.json
+site/             the phone app. Static review UI reading data/index.json
 out/              gitignored. PNGs and manifests
 ```
 
@@ -86,8 +87,9 @@ out/              gitignored. PNGs and manifests
 | `apply_review.py` | write the human review into the bank; delete what was rejected |
 | `mourning.py` | is today inside the mourning window (advises, never decides) |
 | `needs_claims.py` | regenerate NEEDS_CLAIMS.md from the placeholders in the database |
-| `build_index.py` | site/index.json, zips, PNG copies |
+| `build_site.py` | site/data/index.json, zips, PNG copies for mobile review |
 | `build_samples.py` | render the fifteen samples into out/samples/ |
+
 
 ## Four templates, two typefaces, five inks
 

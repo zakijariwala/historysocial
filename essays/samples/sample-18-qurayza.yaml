@@ -1,0 +1,132 @@
+# SAMPLE. scratch.db only. Candidate claims, none verified.
+# STRESS: 15 slides, a subject two centuries earlier than the Musa material.
+
+post:
+  id: sample-18-qurayza
+  pillar: collision
+  running_head: a treaty broken by one man in one room
+  cover_title: the promise huyayy gave
+  cover_image: met-449028
+  ink: rust
+  caption: 'Al-Tabari''s volume on the Medina years keeps the conversation that
+    broke
+
+    the treaty: Huyayy b. Akhtab talking Ka''b b. Asad into it, Ka''b refusing,
+
+    Huyayy offering to share whatever happened. Fishbein''s translation, page
+
+    15.
+
+    '
+claims:
+- subject: Ka'b b. Asad
+  assertion: Huyayy told Ka'b that Quraysh and Ghatafan had encamped with their
+    leaders at Dhanab Naqama beside Uhud and had covenanted not to withdraw until
+    they rooted out Muhammad
+  source: SRC-TAB-008
+  locator: "p. 15"
+- subject: Ka'b b. Asad
+  assertion: Ka'b answered that he had seen nothing from Muhammad except truth and
+    faithfulness, and asked to be left as he was
+  source: SRC-TAB-008
+  locator: "p. 15"
+- subject: Ka'b b. Asad
+  assertion: Huyayy promised on oath that if Quraysh and Ghatafan retreated without
+    killing Muhammad he would enter the fortress and share whatever happened; Ka'b
+    then broke his treaty
+  source: SRC-TAB-008
+  locator: "p. 15"
+slides:
+- template: cover
+- template: question
+  body: What did one man have to promise another to make him break a treaty?
+- template: body
+  body: 'Al-Tabari keeps the conversation itself. Huyayy b. Akhtab tells Ka''b b.
+    Asad that Quraysh and Ghatafan are encamped at Dhanab Naqama beside Uhud with
+    their leaders and their chiefs, and that they have made a treaty and covenant
+    with him not to withdraw until they root out Muhammad and everyone with him.
+    That is the pitch in one sentence: overwhelming force, already committed, already
+    in position, and a named place a listener could ride out and look at before
+    morning.'
+- template: body
+  body: Ka'b does not believe a word of it. He tells Huyayy that he has brought
+    him everlasting humiliation, and calls the promised army a cloud that has already
+    shed its water, a cloud that thunders and lightens and has nothing left in it.
+    A man who refuses a military alliance in a weather metaphor is a man who has
+    watched coalitions gather before, and watched them go home again with nothing
+    done and his own position worse for having joined.
+- template: body
+  body: Then comes the sentence that makes the passage worth a carousel. Leave me
+    to continue with Muhammad as I am now, Ka'b says, for I have seen nothing from
+    Muhammad except truth and faithfulness. That is a Jewish chief of Medina, quoted
+    inside a Muslim chronicle, giving his reason for keeping a treaty. The chronicle
+    did not have to keep it.
+- template: body
+  body: 'Chroniclers keep what their material gives them and what their argument
+    can carry, and this line makes the break that follows worse rather than better.
+    It establishes on the record that Ka''b knew the treaty was working, that he
+    said so out loud, and that he broke it anyway. A compiler protecting a reputation
+    would have cut it. [[NEEDS CLAIM: which of al-Tabari''s named authorities this
+    report comes through, in Fishbein''s volume VIII]].'
+- template: body
+  body: 'Huyayy keeps wheedling. That is the translator''s word, and Fishbein footnotes
+    it. [[NEEDS CLAIM: the Arabic verb behind Fishbein''s wheedling, and his note
+    on it]]. A translator''s choice at a hinge like this decides how a reader hears
+    the whole exchange: wheedling makes Huyayy small and Ka''b weak, where a colder
+    verb would leave two men negotiating. An English page number is a weaker citation
+    than an Arabic one for this reason.'
+- template: body
+  body: What moves Ka'b in the end is not the argument. It is a bond. Huyayy gives
+    a promise and an oath by God that if Quraysh and Ghatafan retreat without having
+    killed Muhammad, he will enter the fortress with Ka'b, so that whatever happens
+    to Ka'b happens to him. He is not offering better odds or a larger army. He
+    is offering to stand inside the consequences of his own advice.
+- template: body
+  body: 'Read as politics, that is a man with nothing left to trade putting his
+    own body on the table. Read as narrative, it is the chronicle stating why the
+    treaty broke: one man accepting personal risk, with no zeal and no doctrine in it,
+    in front of another man who had already called his bluff. Ka''b then broke his
+    treaty, the chronicle says, and renounced the bond that had existed between
+    him and the Prophet.'
+- template: body
+  body: 'The clause about renouncing a bond is doing legal work in that sentence.
+    A treaty here is a document with conditions and a formal way out, and the chronicle
+    marks that Ka''b used the exit rather than acting without one. That detail survives
+    because somebody in the chain thought the procedure mattered. [[NEEDS CLAIM:
+    what the treaty between the Prophet and the Banu Qurayza is reported to have
+    contained]].'
+- template: body
+  body: 'That question matters because the rest of the episode turns on it, and
+    this shelf holds the volume that narrates it. What the shelf does not hold is
+    a second independent chronicle of the same week. [[NEEDS CLAIM: whether Ibn
+    Ishaq via Guillaume carries the same conversation, and at what page]]. Guillaume
+    is on the shelf; the check is an afternoon''s work.'
+- template: body
+  body: Doing that check is how a carousel earns the right to quote a conversation
+    from the year 5. Two chronicles preserving the same exchange, with different
+    chains of transmission behind them, is evidence that something like it was being
+    told early. One chronicle preserving it, quoted twice in two different posts,
+    is one chronicle wearing a second coat, and a reader has no way to tell the
+    difference from the slide.
+- template: body
+  body: 'The SUNY volume has to be registered before any of this can be verified.
+    [[NEEDS CLAIM: the edition statement, translator''s name and ISBN of the volume
+    on this shelf]]. The manifest records Fishbein as the translator, leaves the
+    edition as TODO, and the database refuses to verify a claim against a TODO edition.
+    Nothing in this carousel can go past draft until somebody copies four lines
+    off a title page.'
+- template: body
+  body: 'Care is owed here for a second reason beyond the citation mechanics. This
+    is a Jewish clan in a Muslim chronicle, on the way to an outcome that later
+    readers argue about at length. [[NEEDS CLAIM: what happened to the Banu Qurayza
+    after the siege, according to the volume on this shelf]]. Reporting what a page
+    says, and naming the page, is the account''s whole method. It holds hardest where the subject is hardest.'
+- template: body
+  body: What the page says here is narrow, and worth stating as it stands.
+    Two men talked in a fortress. One had a coalition to sell and no credibility
+    left. The other had a working treaty, an accurate read of the odds, and no appetite
+    for war. The sale went through on a personal guarantee. The chronicle names
+    both men, names the camp, and keeps the refusal that came before the agreement.
+- template: closing
+  body: Ka'b broke a treaty he had just described as working, and the price was
+    one man's promise to share the outcome.

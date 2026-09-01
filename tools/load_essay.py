@@ -59,19 +59,22 @@ def load_file(conn: sqlite3.Connection, path: Path) -> str:
         claim_id = claim.get("id") or f"{post_id}-c{j:02d}"
         conn.execute(
             """INSERT INTO claim (id, subject, assertion, hijri_date, ce_date,
-                                  source_key, edition, locator, pillar, dispute_note)
-               VALUES (?,?,?,?,?,?,?,?,?,?)
+                                  source_key, edition, locator, pillar, dispute_note,
+                                  corroboration)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET
                  subject=excluded.subject, assertion=excluded.assertion,
                  hijri_date=excluded.hijri_date, ce_date=excluded.ce_date,
                  source_key=excluded.source_key, locator=excluded.locator,
-                 pillar=excluded.pillar, dispute_note=excluded.dispute_note""",
+                 pillar=excluded.pillar, dispute_note=excluded.dispute_note,
+                 corroboration=excluded.corroboration""",
             (claim_id, claim["subject"], claim["assertion"],
              str(claim.get("hijri") or "") or None,
              str(claim.get("ce") or "") or None,
              claim["source"], claim.get("edition", "TODO"),
              str(claim.get("locator") or claim.get("page") or "") or None,
-             claim.get("pillar", post["pillar"]), claim.get("dispute")))
+             claim.get("pillar", post["pillar"]), claim.get("dispute"),
+             claim.get("corroboration")))
         conn.execute("INSERT OR IGNORE INTO post_claim VALUES (?,?)",
                      (post_id, claim_id))
 

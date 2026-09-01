@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
 import re
 import sqlite3
 import sys
@@ -91,7 +92,94 @@ def manifest_sources() -> dict[str, dict]:
     return doc.get("sources") or {}
 
 
-def verification_block(source_key: str, locator: str | None) -> str | None:
+def tradition_of(source_key: str) -> str | None:
+    return (manifest_sources().get(source_key) or {}).get("tradition")
+
+
+# A claim on a non-Shia source has to be ABOUT that record. These are the
+# words that mark such a sentence: the chronicle does something.
+RECORD_MARKERS = (
+    "chronicle", "the translation", "the entry", "the notice", "the text",
+    "records", "enters", "carries", "omits", "gives no", "gives the",
+    "places", "files", "notes", "prints", "sets down", "passes over",
+    "says nothing", "is silent",
+)
+
+# And these mark the opposite: content arriving down a chain of transmission,
+# which is authority borrowed rather than a record observed.
+CHAIN_MARKERS = (
+    "on the authority of", "narrated", "narrates", "heard from",
+    "reports that", "reported that", "transmits", "transmitted from",
+    "said that", "told", "related from", "traced to",
+)
+
+
+def hostile_witness_block(source_key: str, assertion: str,
+                          role: str | None) -> str | None:
+    """Why a non-Shia source may not carry this claim, or None when it may.
+
+    Decision 22. The account is openly Shia. Citing al-Tabari for what his
+    chronicle omits is an argument about the opposing record and the evidence
+    is worth having precisely because the witness is hostile. Citing him for
+    what happened is borrowing authority from a source this account does not
+    hold authoritative. The two look identical in a schema that records only
+    which source was used, so the claim has to say which it is.
+    """
+    if tradition_of(source_key) == "shia":
+        return None
+    if role != "hostile-witness":
+        return (f"{source_key} is {tradition_of(source_key) or 'untagged'}. A "
+                f"non-Shia source may only be cited as a hostile witness, and "
+                f"this row does not declare it. Pass --role hostile-witness, "
+                f"and only if the assertion is about what that record does.")
+    low = (assertion or "").lower()
+    hit = next((m for m in CHAIN_MARKERS if m in low), None)
+    if hit:
+        return (f"the assertion carries {hit!r}, which marks content arriving "
+                f"down a chain of transmission. A hostile witness is cited for "
+                f"what its record does, never for what its chain carries. "
+                f"Re-source the fact from a Shia authority or drop the claim.")
+    if not any(m in low for m in RECORD_MARKERS):
+        return (f"the assertion names no record. A hostile-witness claim has to "
+                f"say what {source_key} itself enters, omits or concedes; as "
+                f"written this is a bare fact resting on a non-Shia source.")
+    return None
+
+
+def corroboration_block(source_key: str, corroboration: str | None) -> str | None:
+    """Why this claim's corroboration is insufficient, or None when it holds.
+
+    The account is openly Shia. A non-Shia source may be cited, but never as
+    the sole authority: the chronicle standing beside al-Mufid is an argument,
+    the chronicle standing alone is a different publication.
+    """
+    if tradition_of(source_key) == "shia":
+        return None
+    sources = manifest_sources()
+    if not corroboration or not str(corroboration).strip():
+        return (f"{source_key} is {tradition_of(source_key) or 'untagged'}, and a "
+                f"non-Shia source cannot be the sole authority for a claim. Give "
+                f"--corroboration \"SRC-XXX-000 <locator>\" naming the Shia source "
+                f"that carries the same assertion.")
+    key = str(corroboration).split()[0].strip()
+    rec = sources.get(key)
+    if rec is None:
+        return (f"corroboration names {key}, which is not registered in "
+                f"sources/manifest.yaml.")
+    if rec.get("tradition") != "shia":
+        return (f"corroboration names {key}, which is "
+                f"{rec.get('tradition') or 'untagged'}. Corroboration has to come "
+                f"from a Shia source; two chronicles agreeing is still no Shia "
+                f"authority.")
+    if len(str(corroboration).split()) < 2:
+        return (f"corroboration names {key} but no locator in it. Give the "
+                f"chapter, page or number that carries the assertion.")
+    return None
+
+
+def verification_block(source_key: str, locator: str | None,
+                       corroboration: str | None = None,
+                       assertion: str = "", role: str | None = None) -> str | None:
     """Why this claim may NOT be verified, or None when it may."""
     if not locator or not str(locator).strip():
         return ("no locator. Rule 2: a claim nobody can look up cannot be "
@@ -112,7 +200,40 @@ def verification_block(source_key: str, locator: str | None) -> str | None:
                 f"thing sits; it cannot itself be the source of a claim.")
     if rec.get("usable") is False:
         return f"{source_key} is marked unusable in the manifest."
-    return None
+    return hostile_witness_block(source_key, assertion, role)
+
+
+def check_locator_integrity(source_key: str, locator: str | None) -> list[str]:
+    """Warnings about page index integrity for a locator."""
+    if not locator:
+        return []
+    sources = manifest_sources()
+    meta = sources.get(source_key) or {}
+    tkey = meta.get("text_key") or source_key
+    index_path = ROOT / "sources" / "pages" / f"{tkey}.pages.jsonl"
+    if not index_path.exists():
+        return []
+
+    m = re.match(r"^(?:p\.\s*)?(\d+|[ivxlcdm]+|\d+:\d+)$", str(locator).strip(), re.I)
+    if not m:
+        return []
+    page_num = m.group(1)
+
+    try:
+        rows = [json.loads(ln) for ln in index_path.read_text(encoding="utf-8").splitlines() if ln]
+    except Exception:
+        return []
+    matches = [r for r in rows if str(r.get("printed_page", "")).lower() == page_num.lower()]
+
+    warns = []
+    if len(matches) > 1:
+        pdf_pages = [r.get("pdf_page") for r in matches]
+        warns.append(f'locator "{locator}" in {source_key} is ambiguous (resolves to {len(matches)} PDF pages: {pdf_pages}). Use a unique structural locator (chapter/hadith).')
+    elif len(matches) == 1:
+        m_row = matches[0]
+        if m_row.get("source") == "derived":
+            warns.append(f'locator "{locator}" in {source_key} resolves to a derived page (PDF {m_row.get("pdf_page")}, guessed from neighbours). Verify against the printed running head.')
+    return warns
 
 
 def next_id(conn: sqlite3.Connection) -> str:
@@ -143,11 +264,14 @@ def cmd_claim_add(conn, a):
     edition = a.edition or (sources.get(a.source, {}) or {}).get("edition") or "TODO"
     conn.execute(
         """INSERT INTO claim (id, subject, assertion, hijri_date, ce_date,
-                              source_key, edition, locator, pillar, dispute_note)
-           VALUES (?,?,?,?,?,?,?,?,?,?)""",
+                              source_key, edition, locator, pillar, dispute_note,
+                              corroboration, role)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
         (cid, a.subject, a.assertion, a.hijri, a.ce, a.source, edition,
-         a.locator, a.pillar, a.dispute))
+         a.locator, a.pillar, a.dispute, a.corroboration, a.role))
     conn.commit()
+    for w in check_locator_integrity(a.source, a.locator):
+        print(f"warning: {w}", file=sys.stderr)
     print(f"{cid}  unverified  {a.source} {a.locator or '-'}")
     return 0
 
@@ -158,17 +282,23 @@ def cmd_verify(conn, a):
         print(f"no claim {a.id}", file=sys.stderr)
         return 2
     locator = a.locator if a.locator is not None else row["locator"]
-    block = verification_block(row["source_key"], locator)
+    corrob = a.corroboration if a.corroboration is not None else row["corroboration"]
+    role = a.role if a.role is not None else row["role"]
+    block = verification_block(row["source_key"], locator, corrob,
+                               row["assertion"], role)
     if block:
         print(f"REFUSED {a.id}: {block}", file=sys.stderr)
         return 1
     conn.execute("""UPDATE claim SET verified = 1, verified_by = ?, verified_on = ?,
-                                     locator = ?, edition = ?
+                                     locator = ?, edition = ?,
+                                     corroboration = ?, role = ?
                     WHERE id = ?""",
                  (a.by, dt.date.today().isoformat(), locator,
                   a.edition or manifest_sources()[row["source_key"]]["edition"],
-                  a.id))
+                  corrob, role, a.id))
     conn.commit()
+    for w in check_locator_integrity(row["source_key"], locator):
+        print(f"WARNING: {w}", file=sys.stderr)
     print(f"{a.id}  VERIFIED  {row['source_key']} {locator}  by {a.by}")
     return 0
 
@@ -231,9 +361,16 @@ def cmd_dump(conn, a):
             if value:
                 print(f'    {label:<10} {value}')
         print(f'    assertion  {r["assertion"]}')
-        block = verification_block(r["source_key"], r["locator"])
+        if r["role"]:
+            print(f'    role       {r["role"]}')
+        if r["corroboration"]:
+            print(f'    corrob     {r["corroboration"]}')
+        block = verification_block(r["source_key"], r["locator"],
+                                   r["corroboration"], r["assertion"], r["role"])
         if block and not r["verified"]:
             print(f'    REFUSES    {block}')
+        for w in check_locator_integrity(r["source_key"], r["locator"]):
+            print(f'    PAGE-WARN  {w}')
 
     # Claims with no post are still claims, and a row nobody links is exactly
     # the kind of thing that goes unnoticed.
@@ -370,6 +507,12 @@ def build_parser() -> argparse.ArgumentParser:
                                      "'sermon 27', 'Leiden 8:271', 'p. 407'")
     p.add_argument("--pillar", required=True, choices=PILLARS)
     p.add_argument("--dispute", help="where the chronicles disagree, name both")
+    p.add_argument("--role", choices=("hostile-witness",),
+                   help="required when --source is not Shia: this claim is an "
+                        "observation about that record, not a fact on its authority")
+    p.add_argument("--corroboration",
+                   help="required when --source is not Shia: the Shia source "
+                        "and locator carrying the same assertion, e.g. \"SRC-IRS-003 p. 407\"")
     p.set_defaults(fn=cmd_claim_add)
 
     p = sub.add_parser("verify")
@@ -377,6 +520,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--by", required=True)
     p.add_argument("--locator")
     p.add_argument("--edition")
+    p.add_argument("--corroboration")
+    p.add_argument("--role", choices=("hostile-witness",))
     p.set_defaults(fn=cmd_verify)
 
     p = sub.add_parser("unverified")

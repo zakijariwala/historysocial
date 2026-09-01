@@ -62,11 +62,11 @@ fill in the editions, verify claim rows, and deploy.
 
 ## Phase 7 - delivery
 
-- [x] `.github/workflows/render.yml`
 - [x] `site/`: TODAY, READY, ARCHIVE, swipeable viewer, iOS-safe clipboard
-- [x] `tools/build_index.py`: index.json, zips, PNG copies
+- [x] `tools/build_site.py`: index.json, zips, PNG copies into `site/data/`
 - [x] `tools/mourning.py` + `tokens/mourning.yaml`
-- [!] never deployed and never run in Actions: no Cloudflare credentials here
+- [x] Deployed live to Cloudflare Pages (`https://history-social.pages.dev`)
+- [!] Cloudflare Access configuration pending in Zero Trust dashboard
 
 ## Phase 8 - first essay
 
@@ -111,5 +111,6 @@ fill in the editions, verify claim rows, and deploy.
 - [x] Review the eleven cover images yourself in `images/bank/`; the review in
       `images/review.yaml` is mine, and Rule 3 should have your eyes on it
 - [x] Fill the wafat dates in `tokens/mourning.yaml` from Sistani's calendar
-- [!] DEPLOYMENT.md: Pages project, token, Access policy, first run (Blocked: requires Cloudflare credentials setup by the user)
+- [!] Configure Cloudflare Access in Zero Trust dashboard per DEPLOYMENT.md § 3
 - [x] `python tools/db.py status musa-bridge ready` when the essay is clean
+

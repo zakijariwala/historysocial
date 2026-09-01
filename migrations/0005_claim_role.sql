@@ -1,0 +1,27 @@
+-- 0005_claim_role: how a claim uses its source, not just which source it is.
+--
+-- Decision 22. A non-Shia source may be cited only as a hostile witness: the
+-- claim must assert something about that record - what it enters, omits,
+-- concedes, or where it files a thing - and never a free-standing fact carried
+-- on its authority.
+--
+--   allowed   "the Arabic chronicle records the death at Baghdad in the same
+--              year as that of Muhammad b. al-Sammak the qadi"
+--              subject is the chronicle's own behaviour. A Shia source cannot
+--              supply this, and it is evidence BECAUSE the witness is hostile.
+--
+--   refused   "reports on the authority of 'Amra that 'A'isha said they always
+--              heard Isaf and Na'ila were a man and a woman of Jurham"
+--              a transmission chain carrying content. That is borrowing
+--              authority from a source this account does not hold authoritative.
+--
+--   refused   "alongside the Ka'ba the Arabs had adopted tawaghit, temples
+--              which they venerated as they venerated the Ka'ba"
+--              a bare historical fact. True or not, the only thing standing
+--              behind it here is Ibn Ishaq.
+--
+-- NULL is correct on every Shia-sourced row. The machine cannot judge whether
+-- a sentence is really an observation about a record, so `role` is a human
+-- declaration and the checks around it are tripwires, not proofs.
+
+ALTER TABLE claim ADD COLUMN role TEXT;

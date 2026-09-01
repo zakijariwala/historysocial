@@ -80,23 +80,23 @@ a per-item licence check that this pipeline deliberately does not automate. Add
 them by hand to `images/bank.yaml` with the licence recorded, then review them
 in `images/review.yaml`.
 
-## 6. Nothing has been deployed
+## 6. Cloudflare Access configuration is pending
 
-No Cloudflare account, API token, account ID or Pages project is available in
-this environment, and creating one is an outward-facing action nobody was awake
-to approve. The workflow, the site and the build are complete and untested
-against a live Pages project.
+Deployments to Cloudflare Pages are live (current production deployment: `1042ab88`
+at `https://history-social.pages.dev`). However, Cloudflare Access has not yet been
+configured in the Cloudflare Zero Trust dashboard, leaving the staging review
+origin publicly accessible.
 
-**Unblock:** DEPLOYMENT.md, top to bottom. It is about fifteen minutes.
+**Unblock:** Follow DEPLOYMENT.md § 3 to create a Self-hosted Access Application
+protecting `history-social.pages.dev`.
 
-## 7. The Actions workflow has never run
+## 7. Automated CI render workflow retired in favor of local builds
 
-Same reason. It is written against `ubuntu-latest`, installs Chromium through
-Playwright and the bundled fonts from `fonts/`, and fails the job if
-`fc-list` cannot see them after install. The render, the linters, the index
-build and the sample renders have all been run locally on Windows, which is
-where the real risk lies: Chromium on Linux may hyphenate or wrap a line
-differently.
+The original plan in `.github/workflows/render.yml` (rendering inside GitHub Actions)
+has been superseded by local rendering via `render/render.py` + `tools/build_site.py`
+and deploying `site/` via `npx wrangler pages deploy site`.
 
-**Unblock:** push, watch the first run, and compare one rendered slide against
-the local PNG of the same slide.
+**Unblock:** Nothing blocked. Local rendering guarantees identical font metrics,
+avoids CI headless Chromium line-breaking drift, and keeps the database workflow
+fast and local.
+

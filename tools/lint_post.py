@@ -31,6 +31,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 import yaml  # noqa: E402
 
+import db  # noqa: E402
 from lint_prose import Finding, check_post, load  # noqa: E402
 
 TOKENS = ROOT / "tokens" / "tokens.yaml"
@@ -48,6 +49,12 @@ def gates(conn: sqlite3.Connection, post, slides, claims,
         out.append(Finding("FAIL", None, "no-verified-claim",
                            f"{len(claims)} claims linked, none verified. A slide "
                            f"renders only from rows marked verified."))
+    elif len(verified) < len(claims):
+        unverified_ids = [c["id"] for c in claims if not c["verified"]]
+        out.append(Finding("FAIL", None, "unverified-claims-linked",
+                           f"{len(unverified_ids)} of {len(claims)} claims linked to this post "
+                           f"are unverified ({', '.join(unverified_ids)}). Every linked claim "
+                           f"must be verified before the post can render."))
     sources = (yaml.safe_load(MANIFEST.read_text(encoding="utf-8")) or {}).get(
         "sources", {}) if MANIFEST.exists() else {}
     for c in verified:
@@ -60,6 +67,26 @@ def gates(conn: sqlite3.Connection, post, slides, claims,
         # verified. Edit the manifest afterwards and every row stamped before
         # the edit still carries the old wording, so one post can cite two
         # editions of one book without any other check noticing.
+        # A non-Shia source may be cited, never alone. The account is openly
+        # Shia; a chronicle standing beside al-Mufid is an argument, a
+        # chronicle standing alone is a different publication.
+        if (sources.get(c["source_key"]) or {}).get("tradition") != "shia":
+            block = db.hostile_witness_block(c["source_key"], c["assertion"],
+                                             c["role"])
+            if block:
+                out.append(Finding("FAIL", None, "non-shia-authority",
+                                   f'{c["id"]} rests on {c["source_key"]}: {block}'))
+            # A hostile witness is cited against something. If the post carries
+            # no Shia claim, the chronicle is not being argued with, it is
+            # simply being believed.
+            elif not any(
+                (sources.get(o["source_key"]) or {}).get("tradition") == "shia"
+                for o in verified):
+                out.append(Finding("FAIL", None, "no-shia-authority",
+                                   f'{c["id"]} is the hostile witness, and this post '
+                                   f'carries no verified Shia claim for it to stand '
+                                   f'against. A post cannot rest on the chronicle alone.'))
+
         registered = sources.get(c["source_key"])
         if registered is None:
             out.append(Finding("FAIL", None, "source-not-registered",

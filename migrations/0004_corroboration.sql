@@ -1,0 +1,23 @@
+-- 0004_corroboration: a non-Shia source may never be the sole authority.
+--
+-- The account is openly Shia. Until now that was a sentence in the README with
+-- no machinery behind it: sources/manifest.yaml modelled no tradition at all,
+-- and verification_block() gated on locator, registration, edition, index-only
+-- and usable. Nothing asked whose tradition a source belonged to, so a claim
+-- resting entirely on Ibn Ishaq or al-Tabari verified exactly like one resting
+-- on al-Kafi.
+--
+-- Every source now carries `tradition: shia|sunni` in the manifest. A claim
+-- whose source is not Shia cannot be verified unless this column names the
+-- Shia source that carries the same assertion, in the form:
+--
+--     SRC-IRS-003 p. 407
+--
+-- This does not ban the chronicles. Citing al-Tabari against al-Mufid is a
+-- real argument and the account makes it deliberately - the hostile witness who
+-- records a death with no cause is evidence precisely because he is hostile.
+-- What the rule bans is the chronicle standing alone.
+--
+-- NULL is correct and expected on every Shia-sourced row.
+
+ALTER TABLE claim ADD COLUMN corroboration TEXT;

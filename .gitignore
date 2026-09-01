@@ -3,14 +3,12 @@ sources/*
 !sources/manifest.yaml
 !sources/README.md
 
-# Rendered output. PNGs are never committed.
+# Intermediate rendered output. Raw PNGs in out/ are never committed.
 out/
-site/posts/
-site/index.json
 *.zip
 
-# Cover source images ARE committed: they are inputs, and the render job in
-# Actions must not depend on a museum API being up. Rendered slides are not.
+# Review site data: site/data/ holds the generated index.json and slide PNGs
+# that serve as the deploy payload for Cloudflare Pages.
 
 # Scratch database for cover-variant work. Not truth.
 scratch.db
