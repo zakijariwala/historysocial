@@ -29,6 +29,13 @@ claims:
     between him and the man who sent him
   source: SRC-KAF-001
   locator: "p. 450"
+- subject: Musa b. Ja'far
+  assertion: >-
+    al-Kafi names the caliph Abu Ja'far as abu Dawaniq, using both names of
+    him in the same report
+  source: SRC-KAF-001
+  locator: "p. 449"
+
 slides:
 - template: cover
 - template: question
@@ -48,8 +55,7 @@ slides:
     man himself would rather leave open.
 - template: body
   body: 'Running a trap like that is cheap, which is the third thing to notice about
-    the receipt. It costs the treasury a sum nobody will miss. [[NEEDS CLAIM: the
-    amount of property described in the report, al-Kafi p. 450]]. It buys a file
+    the receipt. It costs the treasury a sum nobody will miss. The shelf does not establish the amount of property described in this report. It buys a file
     of signatures from the leading men of a family the state already watches, and
     it buys them without an arrest, a raid, or a single accusation that anybody
     would afterwards have to prove in front of a judge.'
@@ -62,7 +68,7 @@ slides:
 - template: body
   body: 'Then comes the detail the report is built for. The messenger says that
     the man brought his head close and told him everything that had passed between
-    him and the caliph, as though he had been a third person in the room. Abu al-Dawaniq is Abu Ja''far al-Mansur, and al-Kafi uses both names of him in the same report. A modern
+    him and the caliph, as though he had been a third person in the room. Abu al-Dawaniq is Abu Ja''far al-Mansur; al-Kafi uses both names in the same report. A modern
     reader will take that as a claim about knowledge. Take it first as a claim about
     what the family already understood.'
 - template: body
@@ -80,9 +86,7 @@ slides:
     a network before it tried to hold the man at the centre of it, and both attempts
     leave the same kind of trace.
 - template: body
-  body: 'A network is the right word for what the state was after here. [[NEEDS
-    CLAIM: what the sources say about agents collecting funds for the family in
-    this period, and where they operated]]. Money moving from Khurasan to Medina
+  body: 'A network is the right word for what the state was after here. The shelf does not establish the geographical operating areas of Musa''s financial agents. Money moving from Khurasan to Medina
     implies people at both ends, a route between them, an understanding about rates
     and conditions, and a habit old enough and regular enough to be worth imitating
     in a forgery. Forgeries copy what already exists.'
@@ -93,7 +97,7 @@ slides:
     shows the same machinery working two generations earlier. It also shows a caliph
     who knew the machinery existed and wanted its paperwork rather than its money.
 - template: body
-  body: 'No source on this shelf carries the story outside al-Kafi. Without a second witness this remains one community''s account
+  body: 'No source registered on this shelf carries this report outside al-Kafi. Without a second witness this remains one community''s account
     of its own founder outwitting a caliph, and that is a genre with a strong motive
     and a long history. What keeps it interesting is the administrative furniture:
     the script, the stated conditions, the signature, the file taken back to a ruler
